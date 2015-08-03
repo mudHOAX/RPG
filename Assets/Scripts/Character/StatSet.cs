@@ -13,55 +13,55 @@
         MagicEvade = 0;
     }
 
-    public int Speed
+    public byte Speed
     {
         get;
         set;
     }
 
-    public int Strength
+    public byte Strength
     {
         get;
         set;
     }
 
-    public int Magic
+    public byte Magic
     {
         get;
         set;
     }
 
-    public int Spirit
+    public byte Spirit
     {
         get;
         set;
     }
 
-    public int Attack
+    public byte Attack
     {
         get;
         set;
     }
 
-    public int Defence
+    public byte Defence
     {
         get;
         set;
     }
 
-    public int Evade
+    public byte Evade
     {
         get;
         set;
     }
 
-    public int MagicDefence
+    public byte MagicDefence
     {
         get;
         set;
     }
 
-    public int MagicEvade
+    public byte MagicEvade
     {
         get;
         set;
