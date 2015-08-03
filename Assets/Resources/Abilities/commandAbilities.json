@@ -1,0 +1,842 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Flee",
+    "Description": "Escape from battle with high probability.",
+    "AbilityPoints": 40,
+    "MPCost": 0
+  },
+  {
+    "Id": 2,
+    "Name": "Detect",
+    "Description": "See the enemy's items.",
+    "AbilityPoints": 40,
+    "MPCost": 0 
+  },
+  {
+    "Id": 3,
+    "Name": "What's That!?",
+    "Description": "Allows back attack.",
+    "AbilityPoints": 40,
+    "MPCost": 2 
+  },
+  {
+    "Id": 4,
+    "Name": "Soul Blade",
+    "Description": "Draws out the hidden power in thief swords.",
+    "AbilityPoints": 35,
+    "MPCost": 6
+  },
+  {
+    "Id": 5,
+    "Name": "Annoy",
+    "Description": "Causes Trouble to the target.",
+    "AbilityPoints": 50,
+    "MPCost": 4
+  },
+  {
+    "Id": 6,
+    "Name": "Sacrifice",
+    "Description": "Sacrifice yourself to restore HP and MP to the other party members.",
+    "AbilityPoints": 55,
+    "MPCost": 32
+  },
+  {
+    "Id": 7,
+    "Name": "Lucky Seven",
+    "Description": "Deals physical damage by luck.",
+    "AbilityPoints": 85,
+    "MPCost": 6
+  },
+  {
+    "Id": 8,
+    "Name": "Thievery",
+    "Description": "Deals physical damage to the target based on amount of stealing done..",
+    "AbilityPoints": 100,
+    "MPCost": 8
+  },
+  {
+    "Id": 9,
+    "Name": "Shiva",
+    "Description": "Causes Ice damage to all enemies.",
+    "AbilityPoints": 20,
+    "MPCost": 24
+  },
+  {
+    "Id": 10,
+    "Name": "Ifrit",
+    "Description": "Causes Fire damage to all enemies.",
+    "AbilityPoints": 35,
+    "MPCost": 26
+  },
+  {
+    "Id": 11,
+    "Name": "Ramuh",
+    "Description": "Causes Thunder damage to all enemies.",
+    "AbilityPoints": 30,
+    "MPCost": 22
+  },
+  {
+    "Id": 12,
+    "Name": "Atomos",
+    "Description": "Reduces all enemies' HP. Damage based on enemy HP.",
+    "AbilityPoints": 30,
+    "MPCost": 32
+  },
+  {
+    "Id": 13,
+    "Name": "Odin",
+    "Description": "Causes KO to all enemies.",
+    "AbilityPoints": 30,
+    "MPCost": 28
+  },
+  {
+    "Id": 14,
+    "Name": "Leviathan",
+    "Description": "Causes Water damage to all enemies.",
+    "AbilityPoints": 40,
+    "MPCost": 42
+  },
+  {
+    "Id": 15,
+    "Name": "Bahamut",
+    "Description": "Causes Non-elemental damage to all enemies.",
+    "AbilityPoints": 80,
+    "MPCost": 56
+  },
+  {
+    "Id": 16,
+    "Name": "Ark",
+    "Description": "Causes Shadow damage to all enemies.",
+    "AbilityPoints": 100,
+    "MPCost": 80
+  },
+  {
+    "Id": 17,
+    "Name": "Cure",
+    "Description": "Restores HP of single/multiple targets.",
+    "AbilityPoints": 30,
+    "MPCost": 6
+  },
+  {
+    "Id": 18,
+    "Name": "Cura",
+    "Description": "Restores a lot of HP of single/multiple targets.",
+    "AbilityPoints": 50,
+    "MPCost": 10
+  },
+  {
+    "Id": 19,
+    "Name": "Curaga",
+    "Description": "Restores big-time HP of single/multiple targets.",
+    "AbilityPoints": 155,
+    "MPCost": 22
+  },
+  {
+    "Id": 20,
+    "Name": "Life",
+    "Description": "Recover from KO.",
+    "AbilityPoints": 30,
+    "MPCost": 8
+  },
+  {
+    "Id": 21,
+    "Name": "Scan",
+    "Description": "Scan enemy to determine HP, MP, and weaknesses.",
+    "AbilityPoints": 25,
+    "MPCost": 4
+  },
+  {
+    "Id": 22,
+    "Name": "Panacea",
+    "Description": "Removes Venom and Poison.",
+    "AbilityPoints": 15,
+    "MPCost": 4
+  },
+  {
+    "Id": 23,
+    "Name": "Stona",
+    "Description": "Removes Petrify and Gradual Petrify.",
+    "AbilityPoints": 25,
+    "MPCost": 8
+  },
+  {
+    "Id": 24,
+    "Name": "Shell",
+    "Description": "Reduces damage from magic attacks.",
+    "AbilityPoints": 35,
+    "MPCost": 6
+  },
+  {
+    "Id": 25,
+    "Name": "Protect",
+    "Description": "Reduces damage from physical attacks.",
+    "AbilityPoints": 30,
+    "MPCost": 6
+  },
+  {
+    "Id": 26,
+    "Name": "Silence",
+    "Description": "Causes Silence, which disables magic in single/multiple targets.",
+    "AbilityPoints": 30,
+    "MPCost": 8
+  },
+  {
+    "Id": 27,
+    "Name": "Mini",
+    "Description": "Makes single/multiple targets smaller.",
+    "AbilityPoints": 40,
+    "MPCost": 8
+  },
+  {
+    "Id": 28,
+    "Name": "Reflect",
+    "Description": "Reflects magic attacks back onto caster.",
+    "AbilityPoints": 20,
+    "MPCost": 6
+  },
+  {
+    "Id": 29,
+    "Name": "Confuse",
+    "Description": "Causes Confuse, which makes single/multiple targets erratic.",
+    "AbilityPoints": 35,
+    "MPCost": 8
+  },
+  {
+    "Id": 30,
+    "Name": "Berserk",
+    "Description": "Causes single/multiple targets to attack uncontrollably.",
+    "AbilityPoints": 30,
+    "MPCost": 6
+  },
+  {
+    "Id": 31,
+    "Name": "Blind",
+    "Description": "Causes Darkness, which hinders accuracy of physical attacks.",
+    "AbilityPoints": 40,
+    "MPCost": 6
+  },
+  {
+    "Id": 32,
+    "Name": "Float",
+    "Description": "Allows single/multiple targets to float in the air.",
+    "AbilityPoints": 20,
+    "MPCost": 6
+  },
+  {
+    "Id": 33,
+    "Name": "Fire",
+    "Description": "Causes Fire damage to single/multiple targets.",
+    "AbilityPoints": 25,
+    "MPCost": 6
+  },
+  {
+    "Id": 34,
+    "Name": "Fira",
+    "Description": "Causes a lot of Fire damage to single/multiple targets.",
+    "AbilityPoints": 50,
+    "MPCost": 12
+  },
+  {
+    "Id": 35,
+    "Name": "Firaga",
+    "Description": "Causes big-time Fire damage to single/multiple targets.",
+    "AbilityPoints": 75,
+    "MPCost": 24
+  },
+  {
+    "Id": 36,
+    "Name": "Sleep",
+    "Description": "Puts single/multiple targets to sleep.",
+    "AbilityPoints": 20,
+    "MPCost": 10
+  },
+  {
+    "Id": 37,
+    "Name": "Blizzard",
+    "Description": "Causes Ice damage to single/multiple targets.",
+    "AbilityPoints": 25,
+    "MPCost": 6
+  },
+  {
+    "Id": 38,
+    "Name": "Blizzara",
+    "Description": "Causes a lot of Ice damage to single/multiple targets.",
+    "AbilityPoints": 50,
+    "MPCost": 12
+  },
+  {
+    "Id": 39,
+    "Name": "Blizzaga",
+    "Description": "Causes big-time Ice damage to single/multiple targets.",
+    "AbilityPoints": 85,
+    "MPCost": 24
+  },
+  {
+    "Id": 40,
+    "Name": "Slow",
+    "Description": "Slows down ATB gauge.",
+    "AbilityPoints": 20,
+    "MPCost": 6
+  },
+  {
+    "Id": 41,
+    "Name": "Thunder",
+    "Description": "Causes Thunder damage to single/multiple targets.",
+    "AbilityPoints": 25,
+    "MPCost": 6
+  },
+  {
+    "Id": 42,
+    "Name": "Thundara",
+    "Description": "Causes a lot of Thunder damage to single/multiple targets.",
+    "AbilityPoints": 50,
+    "MPCost": 12
+  },
+  {
+    "Id": 43,
+    "Name": "Thundaga",
+    "Description": "Causes big-time Thunder damage to single/multiple targets.",
+    "AbilityPoints": 80,
+    "MPCost": 24
+  },
+  {
+    "Id": 44,
+    "Name": "Stop",
+    "Description": "Stops targets from taking any action.",
+    "AbilityPoints": 25,
+    "MPCost": 8
+  },
+  {
+    "Id": 45,
+    "Name": "Poison",
+    "Description": "Causes Poison to single/multiple targets.",
+    "AbilityPoints": 35,
+    "MPCost": 8
+  },
+  {
+    "Id": 46,
+    "Name": "Bio",
+    "Description": "Causes Non-elemental damage and Poison to sing./mult. targets.",
+    "AbilityPoints": 40,
+    "MPCost": 18
+  },
+  {
+    "Id": 47,
+    "Name": "Osmose",
+    "Description": "Absorbs MP from the target and transfers it to the spell caster.",
+    "AbilityPoints": 70,
+    "MPCost": 2
+  },
+  {
+    "Id": 48,
+    "Name": "Drain",
+    "Description": "Drains HP from the target and transfers it to the spell caster.",
+    "AbilityPoints": 60,
+    "MPCost": 14
+  },
+  {
+    "Id": 49,
+    "Name": "Demi",
+    "Description": "Amount of damage depends on the target's HP.",
+    "AbilityPoints": 30,
+    "MPCost": 18
+  },
+  {
+    "Id": 50,
+    "Name": "Comet",
+    "Description": "Causes Non-elemental damage.",
+    "AbilityPoints": 55,
+    "MPCost": 16
+  },
+  {
+    "Id": 51,
+    "Name": "Death",
+    "Description": "KO's the target.",
+    "AbilityPoints": 45,
+    "MPCost": 20
+  },
+  {
+    "Id": 52,
+    "Name": "Break",
+    "Description": "Causes Petrify.",
+    "AbilityPoints": 30,
+    "MPCost": 18
+  },
+  {
+    "Id": 53,
+    "Name": "Water",
+    "Description": "Causes Water damage to single/multiple targets.",
+    "AbilityPoints": 55,
+    "MPCost": 22
+  },
+  {
+    "Id": 54,
+    "Name": "Meteor",
+    "Description": "Causes Non-elemental damage to all enemies.",
+    "AbilityPoints": 95,
+    "MPCost": 42
+  },
+  {
+    "Id": 55,
+    "Name": "Flare",
+    "Description": "Causes Non-elemental damage.",
+    "AbilityPoints": 95,
+    "MPCost": 40
+  },
+  {
+    "Id": 56,
+    "Name": "Doomsday",
+    "Description": "Causes Shadow damage to all targets.",
+    "AbilityPoints": 150,
+    "MPCost": 72
+  },
+  {
+    "Id": 57,
+    "Name": "Darkside",
+    "Description": "Reduces your HP to cause Shadow damage to the enemy.",
+    "AbilityPoints": 30,
+    "MPCost": 0
+  },
+  {
+    "Id": 58,
+    "Name": "Minus Strike",
+    "Description": "Damages with the difference between your max HP and current HP.",
+    "AbilityPoints": 35,
+    "MPCost": 8
+  },
+  {
+    "Id": 59,
+    "Name": "Iai Strike",
+    "Description": "Knocks Out the target.",
+    "AbilityPoints": 40,
+    "MPCost": 16
+  },
+  {
+    "Id": 60,
+    "Name": "Power Break",
+    "Description": "Reduces the enemy's Attack Pwr.",
+    "AbilityPoints": 40,
+    "MPCost": 8
+  },
+  {
+    "Id": 61,
+    "Name": "Armor Break",
+    "Description": "Reduces the enemy's Defense.",
+    "AbilityPoints": 30,
+    "MPCost": 4
+  },
+  {
+    "Id": 62,
+    "Name": "Mental Break",
+    "Description": "Reduces the enemy's Magic Def.",
+    "AbilityPoints": 45,
+    "MPCost": 8
+  },
+  {
+    "Id": 63,
+    "Name": "Magic Break",
+    "Description": "Reduces the enemy's Magic.",
+    "AbilityPoints": 25,
+    "MPCost": 4
+  },
+  {
+    "Id": 64,
+    "Name": "Charge!",
+    "Description": "Makes all Near Death party members 'Attack.'",
+    "AbilityPoints": 30,
+    "MPCost": 10
+  },
+  {
+    "Id": 65,
+    "Name": "Thunder Slash",
+    "Description": "Causes Thunder damage to the enemy.",
+    "AbilityPoints": 30,
+    "MPCost": 24
+  },
+  {
+    "Id": 66,
+    "Name": "Stock Break",
+    "Description": "Causes Non-elemental damage to all enemies.",
+    "AbilityPoints": 35,
+    "MPCost": 26
+  },
+  {
+    "Id": 67,
+    "Name": "Climhazzard",
+    "Description": "Causes Non-elemental damage to all enemies.",
+    "AbilityPoints": 70,
+    "MPCost": 32
+  },
+  {
+    "Id": 68,
+    "Name": "Shock",
+    "Description": "Deals physical damage to the enemy.",
+    "AbilityPoints": 60,
+    "MPCost": 46
+  },
+  {
+    "Id": 67,
+    "Name": "Goblin Punch",
+    "Description": "Causes Non-elemental damage to the enemy.",
+    "AbilityPoints": 0,
+    "MPCost": 4
+  },
+  {
+    "Id": 68,
+    "Name": "Lv5 Death",
+    "Description": "KOs all enemies whose levels are multiples of 5.",
+    "AbilityPoints": 0,
+    "MPCost": 20
+  },
+  {
+    "Id": 69,
+    "Name": "Lv4 Holy",
+    "Description": "Causes Holy damage to enemies whose levels are multiples of 4.",
+    "AbilityPoints": 0,
+    "MPCost": 22
+  },
+  {
+    "Id": 70,
+    "Name": "Lv3 Def-less",
+    "Description": "Reduces Defense of enemies whose levels are multiples of 3.",
+    "AbilityPoints": 0,
+    "MPCost": 12
+  },
+  {
+    "Id": 71,
+    "Name": "Doom",
+    "Description": "Casts Doom on the target.",
+    "AbilityPoints": 0,
+    "MPCost": 12
+  },
+  {
+    "Id": 72,
+    "Name": "Roulette",
+    "Description": "Randomly KOs a target.",
+    "AbilityPoints": 0,
+    "MPCost": 18
+  },
+  {
+    "Id": 73,
+    "Name": "Aqua Breath",
+    "Description": "Causes Water damage to all enemies.",
+    "AbilityPoints": 0,
+    "MPCost": 14
+  },
+  {
+    "Id": 74,
+    "Name": "Mighty Guard",
+    "Description": "Casts Shell and Protect on all party members.",
+    "AbilityPoints": 0,
+    "MPCost": 64
+  },
+  {
+    "Id": 75,
+    "Name": "Matra Magic",
+    "Description": "Reduces the target's HP to 1.",
+    "AbilityPoints": 0,
+    "MPCost": 8
+  },
+  {
+    "Id": 76,
+    "Name": "Bad Breath",
+    "Description": "Causes Confuse, Darkness, Poison, Slow, and Mini to the enemy.",
+    "AbilityPoints": 0,
+    "MPCost": 16
+  },
+  {
+    "Id": 77,
+    "Name": "Limit Glove",
+    "Description": "Causes Non-elemental damage to the target when your HP is 1.",
+    "AbilityPoints": 0,
+    "MPCost": 10
+  },
+  {
+    "Id": 78,
+    "Name": "1,000 Needles",
+    "Description": "Reduces the enemy's HP by 1,000.",
+    "AbilityPoints": 0,
+    "MPCost": 8
+  },
+  {
+    "Id": 79,
+    "Name": "Pumpkin Head",
+    "Description": "Damages with the difference between your max HP and current HP.",
+    "AbilityPoints": 0,
+    "MPCost": 12
+  },
+  {
+    "Id": 80,
+    "Name": "Night",
+    "Description": "Causes Sleep to all targets.",
+    "AbilityPoints": 0,
+    "MPCost": 14
+  },
+  {
+    "Id": 81,
+    "Name": "Twister",
+    "Description": "Causes Wind damage to all enemies.",
+    "AbilityPoints": 0,
+    "MPCost": 22
+  },
+  {
+    "Id": 82,
+    "Name": "Earth Shake",
+    "Description": "Causes Earth damage to all enemies.",
+    "AbilityPoints": 0,
+    "MPCost": 20
+  },
+  {
+    "Id": 83,
+    "Name": "Angel's Snack",
+    "Description": "Uses Remedy on all party members.",
+    "AbilityPoints": 0,
+    "MPCost": 4
+  },
+  {
+    "Id": 84,
+    "Name": "Frog Drop",
+    "Description": "Amount of damage depends on the number of frogs you have caught.",
+    "AbilityPoints": 0,
+    "MPCost": 10
+  },
+  {
+    "Id": 85,
+    "Name": "White Wind",
+    "Description": "Restores HP of all party members.",
+    "AbilityPoints": 0,
+    "MPCost": 14
+  },
+  {
+    "Id": 86,
+    "Name": "Vanish",
+    "Description": "Makes a party member disappear.",
+    "AbilityPoints": 0,
+    "MPCost": 8
+  },
+  {
+    "Id": 87,
+    "Name": "Frost",
+    "Description": "Causes Freeze to the enemy.",
+    "AbilityPoints": 0,
+    "MPCost": 8
+  },
+  {
+    "Id": 88,
+    "Name": "Mustard Bomb",
+    "Description": "Causes Heat to the enemy.",
+    "AbilityPoints": 0,
+    "MPCost": 10
+  },
+  {
+    "Id": 89,
+    "Name": "Magic Hammer",
+    "Description": "Reduces the enemy's MP.",
+    "AbilityPoints": 0,
+    "MPCost": 2
+  },
+  {
+    "Id": 90,
+    "Name": "Auto-Life",
+    "Description": "Casts Life when KO'd.",
+    "AbilityPoints": 0,
+    "MPCost": 14
+  },
+  {
+    "Id": 91,
+    "Name": "Reis's Wind",
+    "Description": "Casts Regen on all party members.",
+    "AbilityPoints": 40,
+    "MPCost": 12
+  },
+  {
+    "Id": 92,
+    "Name": "Lancer",
+    "Description": "Reduces the enemy's HP and MP.",
+    "AbilityPoints": 20,
+    "MPCost": 10
+  },
+  {
+    "Id": 93,
+    "Name": "White Draw",
+    "Description": "Restores MP of all party members.",
+    "AbilityPoints": 90,
+    "MPCost": 36
+  },
+  {
+    "Id": 94,
+    "Name": "Luna",
+    "Description": "Causes Berserk to all targets.",
+    "AbilityPoints": 30,
+    "MPCost": 12
+  },
+  {
+    "Id": 95,
+    "Name": "Six Dragons",
+    "Description": "Drains HP and MP from two party members to give to other two.",
+    "AbilityPoints": 25,
+    "MPCost": 28
+  },
+  {
+    "Id": 96,
+    "Name": "Cherry Blossom",
+    "Description": "Causes Non-elemental damage to all enemies.",
+    "AbilityPoints": 40,
+    "MPCost": 46
+  },
+  {
+    "Id": 97,
+    "Name": "Dragon's Crest",
+    "Description": "Deals physical damage to the enemy based on number of dragons killed.",
+    "AbilityPoints": 45,
+    "MPCost": 16
+  },
+  {
+    "Id": 97,
+    "Name": "Dragon Breath",
+    "Description": "Reduces HP of all enemies.",
+    "AbilityPoints": 205,
+    "MPCost": 78
+  },
+  {
+    "Id": 98,
+    "Name": "Carbuncle",
+    "Description": "Casts Reflect, Haste (Emerald), Protect (Moonstone), or Vanish (Diamond) on all party members.",
+    "AbilityPoints": 35,
+    "MPCost": 24
+  },
+  {
+    "Id": 99,
+    "Name": "Fenrir",
+    "Description": "Causes Earth damage or Wind Damage (Maiden Prayer) to all enemies.",
+    "AbilityPoints": 55,
+    "MPCost": 30
+  },
+  {
+    "Id": 100,
+    "Name": "Phoenix",
+    "Description": "Causes Fire damage to all enemies, and all party members recover from KO.",
+    "AbilityPoints": 40,
+    "MPCost": 32
+  },
+  {
+    "Id": 101,
+    "Name": "Madeen",
+    "Description": "Causes Holy Damage to all enemies.",
+    "AbilityPoints": 102,
+    "MPCost": 54
+  },
+  {
+    "Id": 102,
+    "Name": "Regen",
+    "Description": "Gradually restores HP.",
+    "AbilityPoints": 25,
+    "MPCost": 14
+  },
+  {
+    "Id": 103,
+    "Name": "Full-life",
+    "Description": "Recover from KO with full HP.",
+    "AbilityPoints": 90,
+    "MPCost": 24
+  },
+  {
+    "Id": 104,
+    "Name": "Esuna",
+    "Description": "Removes various abnormal status effects.",
+    "AbilityPoints": 80,
+    "MPCost": 20
+  },
+  {
+    "Id": 105,
+    "Name": "Haste",
+    "Description": "Speeds up ATB gauge.",
+    "AbilityPoints": 30,
+    "MPCost": 8
+  },
+  {
+    "Id": 106,
+    "Name": "Dispel",
+    "Description": "Removes abnormal status caused by magic attacks.",
+    "AbilityPoints": 35,
+    "MPCost": 16
+  },
+  {
+    "Id": 107,
+    "Name": "Might",
+    "Description": "Raises physical attack power.",
+    "AbilityPoints": 25,
+    "MPCost": 14
+  },
+  {
+    "Id": 108,
+    "Name": "Jewel",
+    "Description": "Extracts Ore from a target.",
+    "AbilityPoints": 50,
+    "MPCost": 4
+  },
+  {
+    "Id": 109,
+    "Name": "Holy",
+    "Description": "Causes Holy damage.",
+    "AbilityPoints": 110,
+    "MPCost": 36
+  },
+  {
+    "Id": 110,
+    "Name": "Chakra",
+    "Description": "Restores HP and MP of one party member.",
+    "AbilityPoints": 30,
+    "MPCost": 4
+  },
+  {
+    "Id": 111,
+    "Name": "Spare Change",
+    "Description": "Causes Non-elemental damage to the enemy by using gil.",
+    "AbilityPoints": 90,
+    "MPCost": 0
+  },
+  {
+    "Id": 112,
+    "Name": "Curse",
+    "Description": "Makes the enemy weak against some elemental property.",
+    "AbilityPoints": 20,
+    "MPCost": 12
+  },
+  {
+    "Id": 113,
+    "Name": "Aura",
+    "Description": "Casts Auto-Life and Regen on one party member.",
+    "AbilityPoints": 25,
+    "MPCost": 12
+  },
+  {
+    "Id": 114,
+    "Name": "No Mercy",
+    "Description": "Causes Non-elemental damage to the enemy.",
+    "AbilityPoints": 25,
+    "MPCost": 12
+  },
+  {
+    "Id": 115,
+    "Name": "Revive",
+    "Description": "Recover from KO.",
+    "AbilityPoints": 35,
+    "MPCost": 20
+  },
+  {
+    "Id": 116,
+    "Name": "Demi Shock",
+    "Description": "Amount of damage depends on the enemy's HP.",
+    "AbilityPoints": 50,
+    "MPCost": 20
+  },
+  {
+    "Id": 117,
+    "Name": "Countdown",
+    "Description": "Casts Doom on the enemy.",
+    "AbilityPoints": 40,
+    "MPCost": 16
+  }
+]

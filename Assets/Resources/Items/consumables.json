@@ -1,0 +1,548 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Potion",
+    "Description": "Restores 100 HP outside of battle, or 150 HP in battle. Potency is doubled with Chemist. Used automatically with Auto-Potion.",
+    "Cost": 50,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 2,
+    "Name": "Hi-Potion",
+    "Description": "Restores 300 HP outside of battle, or 450 HP in battle. Potency is doubled with Chemist. Used automatically with Auto-Potion.",
+    "Cost": 200,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 3,
+    "Name": "Phoenix Down",
+    "Description": "Revives a single character from KO. Instant death to undead target.",
+    "Cost": 150,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 4,
+    "Name": "Phoenix Pinion",
+    "Description": "Recovers a character from KO, recovering 1-10 HP. Instant death to undead target. HP drops to 1-10 if target is a zombie. Has no effect if target is a zombie and KO. Can only be used in battle.",
+    "Cost": 0,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 5,
+    "Name": "Elixir",
+    "Description": "Fully restores HP and MP.",
+    "Cost": 0,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 6,
+    "Name": "Annoyntment",
+    "Description": "Cures Trouble status.",
+    "Cost": 150,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 7,
+    "Name": "Antidote",
+    "Description": "Cures Poison and Venom statuses.",
+    "Cost": 50,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 8,
+    "Name": "Soft",
+    "Description": "Cures Petrify and Gradual Petrify status.",
+    "Cost": 100,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 9,
+    "Name": "Gysahl Green",
+    "Description": "Used to call a chocobo (on field) or cure Berserk (in battle).",
+    "Cost": 80,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 10,
+    "Name": "Eye Drops",
+    "Description": "Cures Darkness status.",
+    "Cost": 50,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 11,
+    "Name": "Echo Screen",
+    "Description": "Cures Silence status.",
+    "Cost": 50,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 12,
+    "Name": "Vaccine",
+    "Description": "Cures Virus status.",
+    "Cost": 100,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 13,
+    "Name": "Magic Tag",
+    "Description": "Cures Zombie.",
+    "Cost": 100,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 14,
+    "Name": "Remedy",
+    "Description": "Restores 100 MP outside of battle, or 150 MP in battle. Potency is doubled with Chemist.",
+    "Cost": 0,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 15,
+    "Name": "Tent",
+    "Description": "Use when talking to a moogle to restore a large amount of HP and MP. In battle can inflict Darkness, Poison, and Silence statuses.",
+    "Cost": 800,
+    "Type": "Recovery"
+  },
+  {
+    "Id": 16,
+    "Name": "Dark Matter",
+    "Description": "Deals 9999 damage to the enemy. Rare item. Can be used as an add-on.",
+    "Cost": 0,
+    "Type": "Jewels"
+  },
+  {
+    "Id": 17,
+    "Name": "Dead Pepper",
+    "Description": "Deals 30 damage for every dead pepper in the inventory. Lets Choco reach new areas when used on the field.",
+    "Cost": 0,
+    "Type": "Jewels"
+  },
+  {
+    "Id": 18,
+    "Name": "Silver Pendant",
+    "Description": "Garnet's pendant.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 19,
+    "Name": "Memory Earring",
+    "Description": "One of four rare jewels. Given by Eiko in Madain Sari.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 20,
+    "Name": "Falcon Claw",
+    "Description": "One of the four jewels.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 21,
+    "Name": "Desert Star",
+    "Description": "One of the four jewels.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 22,
+    "Name": "Ticket",
+    "Description": "A ticket to the play in Alexandria, owned by Vivi.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 23,
+    "Name": "Blank's Medicine",
+    "Description": "Blank gives this item before exploring the Evil Forest. Used to cure Garnet of the Plant Brain's seed.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 24,
+    "Name": "Continental Map",
+    "Description": "Given by Blank in the Evil Forest.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 25,
+    "Name": "World Map",
+    "Description": "Given by Regent Cid before leaving Lindblum.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 26,
+    "Name": "Moogle's Flute",
+    "Description": "Given to by Mogster in the Evil Forest. Allows one to call on a moogle anywhere on the world map.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 27,
+    "Name": "Kupo Nut",
+    "Description": "Given to the moogle husband in Gizamaluke's Grotto for rewards. Can be found in Lindblum in the 'Vivi's shopping' ATE and more are obtained by delivering letters for the moogles.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 28,
+    "Name": "Gizamaluke Bell",
+    "Description": "Given by a wounded soldier in Gizamaluke's Grotto. Opens the door to the Bell Room.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 29,
+    "Name": "Holy Bell",
+    "Description": "Found in the cavern of Gizamaluke's Grotto that opens the left door in the Bell Room.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 30,
+    "Name": "Protection Bell",
+    "Description": "Found under a bed in Burmecia.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 31,
+    "Name": "Gate Pass",
+    "Description": "This is an item given to Steiner at the Bohden Gate.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 32,
+    "Name": "Supersoft",
+    "Description": "Given by Doctor Tot in his tower in Treno.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 33,
+    "Name": "Unusual Potion",
+    "Description": "This is given in the Theater Avenue by Cinna. Another part of Cid's 'cure'.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 34,
+    "Name": "Beautiful Potion",
+    "Description": "A potion given by Alice in the weapon shop, after Lindblum lies in ruins.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 35,
+    "Name": "Strange Potion",
+    "Description": "Another ingredient for the supposed 'cure' to Cid's problem. Found in the studio of Self-Proclaimed Artist Michael in the Theater District.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 36,
+    "Name": "Gulug Stone",
+    "Description": "An item retrieved after battling Ark in Oeilvert.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 37,
+    "Name": "Earth Mirror",
+    "Description": "An item recovered from a wall in Ipsen's Castle. One of the four mirrors used to open the seal to Terra.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 38,
+    "Name": "Water Mirror",
+    "Description": "An item recovered from a wall in Ipsen's Castle. One of the four mirrors used to open the seal to Terra.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 39,
+    "Name": "Fire Mirror",
+    "Description": "An item recovered from a wall in Ipsen's Castle. One of the four mirrors used to open the seal to Terra.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 40,
+    "Name": "Wind Mirror",
+    "Description": "An item recovered from a wall in Ipsen's Castle. One of the four mirrors used to open the seal to Terra.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 41,
+    "Name": "King of Jump Rope",
+    "Description": "Reward from the Jump Rope game after 1,000+ leaps.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 42,
+    "Name": "Athlete Queen",
+    "Description": "The final item received when Vivi is victorious in his races against Hippaul.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 43,
+    "Name": "Mayor's Key",
+    "Description": "Discovered in the mayor's house in Dali. Used to enter the locked part of the windmill. Can only be obtained by leaving Treno during the card tournament and traveling to Dali.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 44,
+    "Name": "Moccha Coffee",
+    "Description": "Another of the many coffees found on Gaia. Found in the Bohden Arch next to the spring. Part of Morrid's coffee sidequest.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 45,
+    "Name": "Kirman Coffee",
+    "Description": "Found in Eiko's kitchen in Madain Sari. Part of Morrid's coffee sidequest.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 46,
+    "Name": "Burman Coffee",
+    "Description": "Found in a chest in the locked part of the Dali windmill, along with 30,000 gil. Not accessible until the player has the mayor's key. Can only be obtained by leaving Treno during the card tournament, and traveling to Dali.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 47,
+    "Name": "Master Hunter",
+    "Description": "Received after the Festival of the Hunt in Lindblum, along with other items depending on who of the party is victorious.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 48,
+    "Name": "Mini-Brahne",
+    "Description": "A mini figurine found in the Dali Mayor's House. Can only be obtained by leaving Treno during the card tournament and traveling to Dali.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 49,
+    "Name": "Mini-Cid",
+    "Description": "A mini figurine and the cheapest of all the items which can be bought in the Treno auction house, with a starting bid of only 500 gil.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 50,
+    "Name": "Mini-Burmecia",
+    "Description": "A mini figurine found in Tantalus's hideout in the Theater District, Lindblum.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 51,
+    "Name": "Autograph",
+    "Description": "Given to by Lowell in the Theater District studio in Lindblum.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 52,
+    "Name": "Moogle Suit",
+    "Description": "A disguise used by Lowell to avert the rabid fans in Lindblum. Found in a chest of drawers in the studio near the station.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 53,
+    "Name": "Griffin's Heart",
+    "Description": "An artifact bid on in the Treno Auction house. Can be sold for profit.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 54,
+    "Name": "Doga's Artifact",
+    "Description": "A rare item which can be bought in the auction site in Treno. Can be sold for profit, and used for playing music in the Black Mage Village.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 55,
+    "Name": "Une's Mirror",
+    "Description": "A rare item which can be bought in the auction site in Treno. Can be sold for profit, and used for playing music in the Black Mage Village.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 56,
+    "Name": "Rat Tail",
+    "Description": "This item can be bid upon in the Treno Auction house. Can be sold for profit.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 57,
+    "Name": "Magical Fingertip",
+    "Description": "A rare and expensive item bid on in the Treno auction house. After buying Doga's Artifact, Une's Mirror, Rat Tail, and Griffin's Heart first, and selling them to the citizens of Treno. Must also speak to an old man in Daguerreo to make the item appear. Sold only once. Given to the old man in Daguerreo to get the Excalibur.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 58,
+    "Name": "Red Stone",
+    "Description": "One of the four colored stones on the Conde Petie Mountain Path.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 59,
+    "Name": "Blue Stone",
+    "Description": "One of the four colored stones on the Conde Petie Mountain Path.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 60,
+    "Name": "Yellow Stone",
+    "Description": "One of the four colored stones on the Conde Petie Mountain Path.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 61,
+    "Name": "Green Stone",
+    "Description": "One of the four colored stones on the Conde Petie Mountain Path.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 62,
+    "Name": "Aries",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 63,
+    "Name": "Taurus",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 64,
+    "Name": "Gemini",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 65,
+    "Name": "Cancer",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 66,
+    "Name": "Leo",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 67,
+    "Name": "Virgo",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 68,
+    "Name": "Libra",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 69,
+    "Name": "Scorpio",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 70,
+    "Name": "Sagittarius",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 71,
+    "Name": "Capricorn",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 72,
+    "Name": "Aquarius",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 73,
+    "Name": "Pisces",
+    "Description": "Given to Queen Stella for a reward. There are 13 Stellazzio coins in all.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 74,
+    "Name": "Ophiuchus",
+    "Description": "Found in Quan's Dwelling after giving Queen Stella twelve Stellazzio coins. Given to Queen Stella for the Hammer Key Item.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 75,
+    "Name": "Chocograph Piece",
+    "Description": "There are 6 in all and after acquiring all 6 they form the Mist Ocean chocograph. Obtained from Chocobo Hot and Cold minigame.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 76,
+    "Name": "Rank S Medal",
+    "Description": "Gotten by obtaining a S Rank in Treasure Hunting by finding enough treasures in the game, then going to Daguerreo and talking to the Four-Armed Man.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 77,
+    "Name": "Superslick",
+    "Description": "Obtained from Ruby after delivering a series of Mognet letters. Used to make hair shine, or to fix the machine in Mognet Central.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  },
+  {
+    "Id": 78,
+    "Name": "Strategy Guide",
+    "Description": "Obtained by defeating Ozma.",
+    "Cost": 0,
+    "Type": "KeyItem"
+  }
+]

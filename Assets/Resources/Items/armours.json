@@ -1,0 +1,134 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Straw Hat",
+    "Description": "Provides a southern, tropical feel.",
+    "Cost": 0,
+    "Type": "Hat",
+    "Defence": 0,
+    "Evasion": 0,
+    "MagicDefence": 0,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 2,
+    "Name": "Leather Hat",
+    "Description": "Not a suitable item to wear in combat.",
+    "Cost": 150,
+    "Type": "Hat",
+    "Defence": 0,
+    "Evasion": 0,
+    "MagicDefence": 6,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 3,
+    "Name": "Headgear",
+    "Description": "Wearing it will make you popular.",
+    "Cost": 330,
+    "Type": "Hat",
+    "Defence": 2,
+    "Evasion": 0,
+    "MagicDefence": 6,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 4,
+    "Name": "Feather Hat",
+    "Description": "Hat that raises Spirit.",
+    "Cost": 200,
+    "Type": "Hat",
+    "Defence": 0,
+    "Evasion": 0,
+    "MagicDefence": 7,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 5,
+    "Name": "Steepled Hat",
+    "Description": "Hats worn by mages.",
+    "Cost": 260,
+    "Type": "Hat",
+    "Defence": 0,
+    "Evasion": 0,
+    "MagicDefence": 9,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 6,
+    "Name": "Magus Hat",
+    "Description": "Hat suited for mages.",
+    "Cost": 400,
+    "Type": "Hat",
+    "Defence": 0,
+    "Evasion": 0,
+    "MagicDefence": 10,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 7,
+    "Name": "Bandana",
+    "Description": "Mysterious bandana that makes you light-footed.",
+    "Cost": 500,
+    "Type": "Hat",
+    "Defence": 0,
+    "Evasion": 2,
+    "MagicDefence": 12,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 8,
+    "Name": "Mage's Hat",
+    "Description": "Hat that holds magic powers.",
+    "Cost": 600,
+    "Type": "Hat",
+    "Defence": 0,
+    "Evasion": 0,
+    "MagicDefence": 14,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 9,
+    "Name": "Ritual Hat",
+    "Description": "Hat worn for ceremonies and festivals in Conde Petie.",
+    "Cost": 1000,
+    "Type": "Hat",
+    "Defence": 0,
+    "Evasion": 0,
+    "MagicDefence": 16,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 10,
+    "Name": "Twist Headband",
+    "Description": "Headband that raises Strength.",
+    "Cost": 1200,
+    "Type": "Hat",
+    "Defence": 0,
+    "Evasion": 0,
+    "MagicDefence": 17,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 11,
+    "Name": "Lamia's Tiara",
+    "Description": "Tiara worn by Lamia.",
+    "Cost": 800,
+    "Type": "Hat",
+    "Defence": 0,
+    "Evasion": 0,
+    "MagicDefence": 17,
+    "Abilities": [ ]
+  },
+  {
+    "Id": 12,
+    "Name": "Mantra Band",
+    "Description": "Draws on hidden strength.",
+    "Cost": 800,
+    "Type": "Hat",
+    "Defence": 1,
+    "Evasion": 0,
+    "MagicDefence": 19,
+    "Abilities": [ ]
+  }
+]
