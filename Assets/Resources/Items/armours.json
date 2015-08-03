@@ -185,11 +185,1184 @@
     "Cost": 2180,
     "Type": "Hat",
     "Stats": {
-      "Defence": 1,
+      "Defence": 0,
       "Evasion": 0,
-      "MagicDefence": 26,
+      "MagicDefence": 23,
       "Speed": 1,
       "Strength": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 15,
+    "Name": "Red Hat",
+    "Description": "Dark-red hat.",
+    "Cost": 3000,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 1,
+      "Evasion": 0,
+      "MagicDefence": 26
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 16,
+    "Name": "Black Hood",
+    "Description": "Hood from a foreign land.",
+    "Cost": 2550,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 27
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 17,
+    "Name": "Golden Hairpin",
+    "Description": "Hairpin that holds magic powers.",
+    "Cost": 3700,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 32,
+      "Magic": 1,
+      "MagicEvade": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 18,
+    "Name": "Adaman Hat",
+    "Description": "Extremely durable hat.",
+    "Cost": 3050,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 3,
+      "Evasion": 0,
+      "MagicDefence": 33
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 19,
+    "Name": "Coronet",
+    "Description": "Coronet that radiates a mysterious light.",
+    "Cost": 3050,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 1,
+      "Evasion": 0,
+      "MagicDefence": 35
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 20,
+    "Name": "Flash Hat",
+    "Description": "Holy hat.",
+    "Cost": 5200,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 2,
+      "MagicDefence": 37,
+      "Speed": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 21,
+    "Name": "Thief Hat",
+    "Description": "Hats for thieves.",
+    "Cost": 7100,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 3,
+      "MagicDefence": 38,
+      "Speed": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 22,
+    "Name": "Holy Miter",
+    "Description": "Holy hat.",
+    "Cost": 8300,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 39,
+      "Magic": 1,
+      "Spirit": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 23,
+    "Name": "Golden Skullcap",
+    "Description": "Known for providing great defense.",
+    "Cost": 15000,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 2,
+      "Evasion": 0,
+      "MagicDefence": 47
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 24,
+    "Name": "Circlet",
+    "Description": "Circlet protected by magic.",
+    "Cost": 20000,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 51
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 25,
+    "Name": "Rubber Helm",
+    "Description": "Helm worn by soldier trainees.",
+    "Cost": 250,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 5
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 26,
+    "Name": "Bronze Helm",
+    "Description": "Helm made of bronze.",
+    "Cost": 330,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 6
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 27,
+    "Name": "Iron Helm",
+    "Description": "Helm made of iron.",
+    "Cost": 450,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 7,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 28,
+    "Name": "Barbut",
+    "Description": "Headgear that raises Spirit.",
+    "Cost": 600,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 9,
+      "Spirit": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 29,
+    "Name": "Mythril Helm",
+    "Description": "Helm made of mythril.",
+    "Cost": 1000,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 11,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 30,
+    "Name": "Gold Helm",
+    "Description": "Helm made of gold.",
+    "Cost": 1800,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 13,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 31,
+    "Name": "Cross Helm",
+    "Description": "Helm that raises Strength.",
+    "Cost": 2200,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 16,
+      "Strength": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 32,
+    "Name": "Diamond Helm",
+    "Description": "Helm made of diamond.",
+    "Cost": 3000,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 20,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 33,
+    "Name": "Platinum Helm",
+    "Description": "Helm made of platinum.",
+    "Cost": 4600,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 23
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 34,
+    "Name": "Kaiser Helm",
+    "Description": "Helm that raises Strength and Magic.",
+    "Cost": 7120,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 26,
+      "Strength": 1,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 35,
+    "Name": "Genji Helmet",
+    "Description": "Very famous brand of helmet.",
+    "Cost": 0,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 29,
+      "Defence": 2,
+      "Magic": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 36,
+    "Name": "Grand Helm",
+    "Description": "The greatest helmet.",
+    "Cost": 20000,
+    "Type": "Helmet",
+    "Stats": {
+      "MagicDefence": 33,
+      "Speed": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 37,
+    "Name": "Pearl Armlet",
+    "Description": "Provides a southern, tropical feel.",
+    "Cost": 0,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 0,
+      "MagicEvade": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 38,
+    "Name": "Jade Armlet",
+    "Description": "Armlet made of jade.",
+    "Cost": 3400,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 0,
+      "MagicEvade": 29
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 29,
+    "Name": "Wrist",
+    "Description": "Regular Wristlet.",
+    "Cost": 130,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 5,
+      "MagicEvade": 3
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 30,
+    "Name": "Leather Wrist",
+    "Description": "Wristlet that raises Spirit when equipped.",
+    "Cost": 200,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 7,
+      "MagicEvade": 5,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 31,
+    "Name": "Glass Armlet",
+    "Description": "Armlet made of glass.",
+    "Cost": 250,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 10,
+      "MagicEvade": 7
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 32,
+    "Name": "Bone Wrist",
+    "Description": "Wristlet made from bones.",
+    "Cost": 330,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 13,
+      "MagicEvade": 9,
+      "Strength": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 33,
+    "Name": "Mythril Armlet",
+    "Description": "Armlet made of mythril.",
+    "Cost": 500,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 17,
+      "MagicEvade": 11,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 34,
+    "Name": "Magic Armlet",
+    "Description": "Armlet packed with magic.",
+    "Cost": 1000,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 18,
+      "MagicEvade": 16,
+      "Magic": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 35,
+    "Name": "Egoist's Armlet",
+    "Description": "Armlet made in the dark world.",
+    "Cost": 2000,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 20,
+      "MagicEvade": 20
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 36,
+    "Name": "Chimera Armlet",
+    "Description": "Armlet adorned with Chimera wings.",
+    "Cost": 1200,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 22,
+      "MagicEvade": 14
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 37,
+    "Name": "Thief Gloves",
+    "Description": "Gloves used by thieves.",
+    "Cost": 50000,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 26,
+      "MagicEvade": 13,
+      "Speed": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 38,
+    "Name": "N-Kai Armlet",
+    "Description": "Armlet formerly worn by a ninja.",
+    "Cost": 3000,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 27,
+      "MagicEvade": 0,
+      "Spirit": 2,
+      "Defence": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 39,
+    "Name": "Dragon Wrist",
+    "Description": "Wristlet made from dragon bones.",
+    "Cost": 4800,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 29,
+      "MagicEvade": 12,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 40,
+    "Name": "Power Wrist",
+    "Description": "Wristlet guard that raises Strength when equipped.",
+    "Cost": 5100,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 30,
+      "MagicEvade": 10,
+      "Strength": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 41,
+    "Name": "Bracer",
+    "Description": "Bracer used by gamblers.",
+    "Cost": 24000,
+    "Type": "Armlet",
+    "Stats": {
+      "Evade": 35,
+      "MagicEvade": 18,
+      "Strength": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 42,
+    "Name": "Bronze Gloves",
+    "Description": "Gloves made of bronze.",
+    "Cost": 480,
+    "Type": "Gauntlet",
+    "Stats": {
+      "Evade": 8,
+      "MagicEvade": 2,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 43,
+    "Name": "Silver Gloves",
+    "Description": "Combat gloves.",
+    "Cost": 720,
+    "Type": "Gauntlet",
+    "Stats": {
+      "Evade": 10,
+      "MagicEvade": 5
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 44,
+    "Name": "Mythril Gloves",
+    "Description": "Gloves made of mythril.",
+    "Cost": 980,
+    "Type": "Gauntlet",
+    "Stats": {
+      "Evade": 13,
+      "MagicEvade": 7,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 45,
+    "Name": "Thunder Gloves",
+    "Description": "Gloves with a thunder god's power dwelling inside.",
+    "Cost": 1200,
+    "Type": "Gauntlet",
+    "Stats": {
+      "Evade": 16,
+      "MagicEvade": 10
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 46,
+    "Name": "Diamond Gloves",
+    "Description": "Gloves made of diamond.",
+    "Cost": 2000,
+    "Type": "Gauntlet",
+    "Stats": {
+      "Evade": 19,
+      "MagicEvade": 13
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 47,
+    "Name": "Aegis Gloves",
+    "Description": "Gloves worn exclusively by knights.",
+    "Cost": 7000,
+    "Type": "Gauntlet",
+    "Stats": {
+      "Evade": 30,
+      "MagicEvade": 10,
+      "Defence": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 48,
+    "Name": "Genji Gloves",
+    "Description": "Very famous brand of gloves.",
+    "Cost": 0,
+    "Type": "Gauntlet",
+    "Stats": {
+      "Evade": 27,
+      "MagicEvade": 12,
+      "Magic": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 49,
+    "Name": "Gauntlets",
+    "Description": "Gloves worn by swordsmen.",
+    "Cost": 8000,
+    "Type": "Gauntlet",
+    "Stats": {
+      "Evade": 36,
+      "MagicEvade": 7,
+      "Speed": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 50,
+    "Name": "Defense Gloves",
+    "Description": "Protects you from various attacks.",
+    "Cost": 6000,
+    "Type": "Gauntlet",
+    "Stats": {
+      "Evade": 25,
+      "MagicEvade": 20,
+      "Defence": 1,
+      "MagicDefence": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 51,
+    "Name": "Venetia Shield",
+    "Description": "Popular shield among soldiers.",
+    "Cost": 2800,
+    "Type": "Gauntlet",
+    "Stats": {
+      "Evade": 17,
+      "MagicEvade": 26,
+      "MagicDefence": 1,
+      "Strength": 1,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 52,
+    "Name": "Aloha T-shirt",
+    "Description": "Provides a southern, tropical feel.",
+    "Cost": 0,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 0,
+      "MagicDefence": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 53,
+    "Name": "Leather Shirt",
+    "Description": "Clothes made of leather.",
+    "Cost": 270,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 0,
+      "MagicDefence": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 54,
+    "Name": "Silk Shirt",
+    "Description": "Silk burns easily.",
+    "Cost": 400,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 7,
+      "MagicDefence": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 55,
+    "Name": "Leather Plate",
+    "Description": "Plate worn for combat.",
+    "Cost": 530,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 8,
+      "MagicDefence": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 56,
+    "Name": "Bronze Vest",
+    "Description": "Plate made of bronze.",
+    "Cost": 670,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 9,
+      "MagicDefence": 1,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 57,
+    "Name": "Chain Plate",
+    "Description": "Plate that provides brimming strength.",
+    "Cost": 810,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 10,
+      "MagicDefence": 0,
+      "Strength": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 58,
+    "Name": "Mythril Vest",
+    "Description": "Vest braided with mythril.",
+    "Cost": 1180,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 12,
+      "MagicDefence": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 59,
+    "Name": "Adaman Vest",
+    "Description": "Very durable vest.",
+    "Cost": 1600,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 14,
+      "MagicDefence": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 60,
+    "Name": "Magician Cloak",
+    "Description": "Cloak that holds magic powers.",
+    "Cost": 1850,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 15,
+      "MagicDefence": 2,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 61,
+    "Name": "Survival Vest",
+    "Description": "Vest that raises Spirit.",
+    "Cost": 2900,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 17,
+      "MagicDefence": 0,
+      "Spirit": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 62,
+    "Name": "Brigandine",
+    "Description": "Clothes that raise Strength.",
+    "Cost": 4300,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 20,
+      "MagicDefence": 0,
+      "Strength": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 63,
+    "Name": "Judo Uniform",
+    "Description": "Clothes from a foreign land.",
+    "Cost": 5000,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 23,
+      "MagicDefence": 0,
+      "Strength": 1,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 64,
+    "Name": "Gaia Gear",
+    "Description": "Robe blessed by the earth god.",
+    "Cost": 8700,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 25,
+      "MagicDefence": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 65,
+    "Name": "Power Vest",
+    "Description": "Raises Strength.",
+    "Cost": 7200,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 27,
+      "MagicDefence": 0,
+      "Strength": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 66,
+    "Name": "Demon's Vest",
+    "Description": "Supposedly, a vest that belonged to a demon.",
+    "Cost": 10250,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 31,
+      "MagicDefence": 0,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 67,
+    "Name": "Minerva's Plate",
+    "Description": "Plate worn by women.",
+    "Cost": 12200,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 34,
+      "MagicDefence": 1,
+      "Strength": 1,
+      "Magic": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 68,
+    "Name": "Ninja Gear",
+    "Description": "Gear that makes you light-footed.",
+    "Cost": 14000,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 35,
+      "MagicDefence": 0,
+      "Speed": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 69,
+    "Name": "Dark Gear",
+    "Description": "Gear that raises Spirit.",
+    "Cost": 16300,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 37,
+      "MagicDefence": 0,
+      "Spirit": 3
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 70,
+    "Name": "Rubber Suit",
+    "Description": "Suit worn by women.",
+    "Cost": 20000,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 39,
+      "MagicDefence": 1,
+      "Evade": 2,
+      "MagicEvade": 3
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 71,
+    "Name": "Brave Suit",
+    "Description": "Extremely durable suit",
+    "Cost": 26000,
+    "Type": "LightArmour",
+    "Stats": {
+      "Defence": 42,
+      "MagicDefence": 0,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 72,
+    "Name": "Bronze Armor",
+    "Description": "Armor made of bronze.",
+    "Cost": 650,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 9,
+      "MagicDefence": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 73,
+    "Name": "Linen Cuirass",
+    "Description": "Armor packed with magic.",
+    "Cost": 800,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 10,
+      "MagicDefence": 0,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 74,
+    "Name": "Chain Mail",
+    "Description": "Armor made with chains.",
+    "Cost": 1200,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 12,
+      "MagicDefence": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 75,
+    "Name": "Mythril Armor",
+    "Description": "Armor made of mythril.",
+    "Cost": 1830,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 15,
+      "MagicDefence": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 76,
+    "Name": "Plate Mail",
+    "Description": "Armor that raises Spirit.",
+    "Cost": 2320,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 17,
+      "MagicDefence": 1,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 77,
+    "Name": "Gold Armor",
+    "Description": "Armor made of gold.",
+    "Cost": 2950,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 19,
+      "MagicDefence": 0,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 78,
+    "Name": "Shield Armor",
+    "Description": "Armor that provides excellent protection.",
+    "Cost": 4300,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 23,
+      "MagicDefence": 5
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 79,
+    "Name": "Demon's Mail",
+    "Description": "Armor made in the dark world.",
+    "Cost": 5900,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 27,
+      "MagicDefence": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 80,
+    "Name": "Diamond Armor",
+    "Description": "Armor made of diamond.",
+    "Cost": 8800,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 33,
+      "MagicDefence": 2,
+      "Strength": 1,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 81,
+    "Name": "Platina Armor",
+    "Description": "Armor made of platinum.",
+    "Cost": 10500,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 36,
+      "MagicDefence": 0
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 82,
+    "Name": "Carabini Mail",
+    "Description": "Armor protected by extraordinary powers.",
+    "Cost": 12300,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 39,
+      "MagicDefence": 1,
+      "Speed": 1,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 83,
+    "Name": "Dragon Mail",
+    "Description": "Armor made from a dragon’s scales.",
+    "Cost": 14000,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 42,
+      "MagicDefence": 0,
+      "Strength": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 84,
+    "Name": "Genji Armor",
+    "Description": "Very famous brand of armor.",
+    "Cost": 0,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 45,
+      "MagicDefence": 1,
+      "Magic": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 85,
+    "Name": "Maximillian",
+    "Description": "Armor worn exclusively by knights.",
+    "Cost": 0,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 54,
+      "MagicDefence": 0,
+      "Spirit": 3
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 86,
+    "Name": "Grand Armor",
+    "Description": "The greatest armor.",
+    "Cost": 45000,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 59,
+      "MagicDefence": 0,
+      "Strength": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 87,
+    "Name": "Tin Armor",
+    "Description": "Tin armor that looks like a toy.",
+    "Cost": 50000,
+    "Type": "HeavyArmour",
+    "Stats": {
+      "Defence": 62,
+      "MagicDefence": 27,
+      "Evade": 32,
+      "MagicEvade": 17
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 88,
+    "Name": "Cotton Robe",
+    "Description": "Ordinary robe.",
+    "Cost": 1000,
+    "Type": "Robe",
+    "Stats": {
+      "Defence": 10,
+      "MagicDefence": 2,
+      "Strength": 1,
+      "Magic": 1,
+      "MagicDefense": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 89,
+    "Name": "Silk Robe",
+    "Description": "Robe made of silk.",
+    "Cost": 2000,
+    "Type": "Robe",
+    "Stats": {
+      "Defence": 16,
+      "MagicDefence": 2,
+      "Strength": 1,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 90,
+    "Name": "Magician Robe",
+    "Description": "Robe made for mages.",
+    "Cost": 3000,
+    "Type": "Robe",
+    "Stats": {
+      "Defence": 21,
+      "MagicDefence": 3,
+      "Magic": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 91,
+    "Name": "Glutton's Robe",
+    "Description": "Robe worn by Qus.",
+    "Cost": 6000,
+    "Type": "Robe",
+    "Stats": {
+      "Defence": 41,
+      "MagicDefence": 4,
+      "Strength": 1,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 92,
+    "Name": "Light Robe",
+    "Description": "Robe possessed by the spirit of light.",
+    "Cost": 20000,
+    "Type": "Robe",
+    "Stats": {
+      "Defence": 41,
+      "MagicDefence": 6,
+      "Strength": 1,
+      "Magic": 1,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 93,
+    "Name": "White Robe",
+    "Description": "Robe made for white mages.",
+    "Cost": 8000,
+    "Type": "Robe",
+    "Stats": {
+      "Defence": 42,
+      "MagicDefence": 4,
+      "Magic": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 94,
+    "Name": "Black Robe",
+    "Description": "Robe made for black mages.",
+    "Cost": 8000,
+    "Type": "Robe",
+    "Stats": {
+      "Defence": 43,
+      "MagicDefence": 4,
+      "Magic": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 95,
+    "Name": "Robe of Lords",
+    "Description": "The greatest robe.",
+    "Cost": 30000,
+    "Type": "Robe",
+    "Stats": {
+      "Defence": 46,
+      "MagicDefence": 5,
+      "Speed": 1,
+      "Strength": 1,
+      "Magic": 1,
+      "Spirit": 1
     },
     "Abilities": [ ]
   }
