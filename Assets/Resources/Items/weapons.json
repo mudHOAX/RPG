@@ -5,7 +5,9 @@
     "Description": "Weapon used by thieves.",
     "Cost": 320,
     "Type": "Dagger",
-    "Attack": 12,
+    "Stats": {
+      "Attack": 12
+    },
     "StatusEffects": [ ],
     "Abilities": [ ]
   },
@@ -15,7 +17,9 @@
     "Description": "Weapon originally used for combating mages.",
     "Cost": 500,
     "Type": "Dagger",
-    "Attack": 14
+    "Stats": {
+      "Attack": 14
+    }
   },
   {
     "Id": 3,
@@ -23,7 +27,9 @@
     "Description": "Thief dagger made of Mythril.",
     "Cost": 950,
     "Type": "Dagger",
-    "Attack": 18
+    "Stats": {
+      "Attack": 18
+    }
   },
   {
     "Id": 4,
@@ -31,7 +37,9 @@
     "Description": "Light dagger that is easy to handle.",
     "Cost": 2300,
     "Type": "Dagger",
-    "Attack": 30
+    "Stats": {
+      "Attack": 30
+    }
   },
   {
     "Id": 5,
@@ -39,7 +47,9 @@
     "Description": "Popular weapon among thieves.",
     "Cost": 6000,
     "Type": "Dagger",
-    "Attack": 42
+    "Stats": {
+      "Attack": 42
+    }
   },
   {
     "Id": 6,
@@ -47,7 +57,10 @@
     "Description": "The most powerful thief's dagger.",
     "Cost": 17000,
     "Type": "Dagger",
-    "Attack": 71
+    "Stats": {
+      "Attack": 71,
+      "Speed": 1
+    }
   },
   {
     "Id": 7,
@@ -55,7 +68,9 @@
     "Description": "Standard thief's sword.",
     "Cost": 300,
     "Type": "ThiefSword",
-    "Attack": 21
+    "Stats": {
+      "Attack": 21
+    }
   },
   {
     "Id": 8,
@@ -63,7 +78,9 @@
     "Description": "Standard thief's sword.",
     "Cost": 700,
     "Type": "ThiefSword",
-    "Attack": 24
+    "Stats": {
+      "Attack": 24
+    }
   },
   {
     "Id": 9,
@@ -71,7 +88,9 @@
     "Description": "Sword made by processing trouble knife.",
     "Cost": 1000,
     "Type": "ThiefSword",
-    "Attack": 31
+    "Stats": {
+      "Attack": 31
+    }
   },
   {
     "Id": 10,
@@ -79,7 +98,9 @@
     "Description": "Also known as 'The Viper.'",
     "Cost": 2000,
     "Type": "ThiefSword",
-    "Attack": 37
+    "Stats": {
+      "Attack": 37
+    }
   },
   {
     "Id": 11,
@@ -87,7 +108,9 @@
     "Description": "Weapon with an angel's spirit dwelling inside.",
     "Cost": 9000,
     "Type": "ThiefSword",
-    "Attack": 44
+    "Stats": {
+      "Attack": 44
+    }
   },
   {
     "Id": 12,
@@ -95,7 +118,9 @@
     "Description": "Sword made by processing 'Epitaph's Fragment.'",
     "Cost": 12000,
     "Type": "ThiefSword",
-    "Attack": 53
+    "Stats": {
+      "Attack": 53
+    }
   },
   {
     "Id": 13,
@@ -103,7 +128,10 @@
     "Description": "Sword from a foreign land.",
     "Cost": 6000,
     "Type": "ThiefSword",
-    "Attack": 62
+    "Stats": {
+      "Attack": 62,
+      "Magic": 2
+    }
   },
   {
     "Id": 14,
@@ -111,7 +139,9 @@
     "Description": "Weapon that defines a great thief.",
     "Cost": 0,
     "Type": "ThiefSword",
-    "Attack": 86
+    "Stats": {
+      "Attack": 86
+    }
   },
   {
     "Id": 15,
@@ -119,7 +149,9 @@
     "Description": "Considered the most powerful weapon in the world.",
     "Cost": 0,
     "Type": "ThiefSword",
-    "Attack": 100
+    "Stats": {
+      "Attack": 100
+    }
   },
   {
     "Id": 16,
@@ -127,7 +159,9 @@
     "Description": "Combat rod.",
     "Cost": 260,
     "Type": "Rod",
-    "Attack": 11
+    "Stats": {
+      "Attack": 11
+    }
   },
   {
     "Id": 17,
@@ -135,7 +169,9 @@
     "Description": "Rod made of mythril.",
     "Cost": 560,
     "Type": "Rod",
-    "Attack": 14
+    "Stats": {
+      "Attack": 14
+    }
   },
   {
     "Id": 18,
@@ -143,7 +179,10 @@
     "Description": "Rod adorned with beautiful stars.",
     "Cost": 760,
     "Type": "Rod",
-    "Attack": 14
+    "Stats": {
+      "Attack": 14,
+      "Spirit": 2
+    }
   },
   {
     "Id": 19,
@@ -151,7 +190,9 @@
     "Description": "Weapon that can restore target's HP.",
     "Cost": 1770,
     "Type": "Rod",
-    "Attack": 23
+    "Stats": {
+      "Attack": 23
+    }
   },
   {
     "Id": 20,
@@ -159,7 +200,9 @@
     "Description": "Holy rod.",
     "Cost": 3180,
     "Type": "Rod",
-    "Attack": 27
+    "Stats": {
+      "Attack": 27
+    }
   },
   {
 
@@ -168,7 +211,9 @@
     "Description": "Rod used by mages.",
     "Cost": 4000,
     "Type": "Rod",
-    "Attack": 31
+    "Stats": {
+      "Attack": 31
+    }
   },
   {
 
@@ -177,7 +222,9 @@
     "Description": "Legendary weapon that holds powerful magic.",
     "Cost": 0,
     "Type": "Rod",
-    "Attack": 36
+    "Stats": {
+      "Attack": 36
+    }
   },
   {
 
@@ -186,7 +233,9 @@
     "Description": "Long-range combat weapon.",
     "Cost": 400,
     "Type": "Racket",
-    "Attack": 13
+    "Stats": {
+      "Attack": 13
+    }
   },
   {
     "Id": 24,
@@ -194,7 +243,9 @@
     "Description": "Long-range weapon that holds mysterious powers.",
     "Cost": 750,
     "Type": "Racket",
-    "Attack": 17
+    "Stats": {
+      "Attack": 17
+    }
   },
   {
     "Id": 25,
@@ -202,7 +253,10 @@
     "Description": "Long-range weapon that holds magic powers.",
     "Cost": 1350,
     "Type": "Racket",
-    "Attack": 23
+    "Stats": {
+      "Attack": 23,
+      "Magic": 2
+    }
   },
   {
     "Id": 26,
@@ -210,7 +264,9 @@
     "Description": "Long-range weapon made of mythril.",
     "Cost": 2250,
     "Type": "Racket",
-    "Attack": 27
+    "Stats": {
+      "Attack": 27
+    }
   },
   {
     "Id": 27,
@@ -218,7 +274,9 @@
     "Description": "Long-range holy racket.",
     "Cost": 11000,
     "Type": "Racket",
-    "Attack": 35
+    "Stats": {
+      "Attack": 35
+    }
   },
   {
     "Id": 28,
@@ -226,7 +284,9 @@
     "Description": "The most powerful long-range racket.",
     "Cost": 0,
     "Type": "Racket",
-    "Attack": 45
+    "Stats": {
+      "Attack": 45
+    }
   },
   {
     "Id": 29,
@@ -234,7 +294,9 @@
     "Description": "Flute with a golem's power dwelling inside.",
     "Cost": 2700,
     "Type": "Flute",
-    "Attack": 17
+    "Stats": {
+      "Attack": 17
+    }
   },
   {
     "Id": 30,
@@ -242,7 +304,9 @@
     "Description": "Flute with Lamia's power dwelling inside.",
     "Cost": 3800,
     "Type": "Flute",
-    "Attack": 21
+    "Stats": {
+      "Attack": 21
+    }
   },
   {
     "Id": 31,
@@ -250,7 +314,9 @@
     "Description": "Flute with an angel's power dwelling inside.",
     "Cost": 4500,
     "Type": "Flute",
-    "Attack": 24
+    "Stats": {
+      "Attack": 24
+    }
   },
   {
     "Id": 32,
@@ -258,7 +324,9 @@
     "Description": "Flute that holds magic powers.",
     "Cost": 5700,
     "Type": "Flute",
-    "Attack": 27
+    "Stats": {
+      "Attack": 27
+    }
   },
   {
     "Id": 33,
@@ -266,7 +334,9 @@
     "Description": "Flute with a siren's power dwelling inside.",
     "Cost": 7000,
     "Type": "Flute",
-    "Attack": 30
+    "Stats": {
+      "Attack": 30
+    }
   },
   {
     "Id": 34,
@@ -274,7 +344,9 @@
     "Description": "Legendary flute that is said to enchant anyone who hears its tune.",
     "Cost": 0,
     "Type": "Flute",
-    "Attack": 33
+    "Stats": {
+      "Attack": 33
+    }
   },
   {
     "Id": 35,
@@ -282,7 +354,9 @@
     "Description": "Ordinary sword used in combat.",
     "Cost": 330,
     "Type": "Sword",
-    "Attack": 12
+    "Stats": {
+      "Attack": 12
+    }
   },
   {
     "Id": 36,
@@ -290,7 +364,9 @@
     "Description": "Sword made of iron.",
     "Cost": 660,
     "Type": "Sword",
-    "Attack": 16
+    "Stats": {
+      "Attack": 16
+    }
   },
   {
     "Id": 37,
@@ -298,7 +374,9 @@
     "Description": "Sword made of mythril.",
     "Cost": 1300,
     "Type": "Sword",
-    "Attack": 20
+    "Stats": {
+      "Attack": 20
+    }
   },
   {
     "Id": 38,
@@ -306,7 +384,9 @@
     "Description": "Sword varnished with blood.",
     "Cost": 0,
     "Type": "Sword",
-    "Attack": 24
+    "Stats": {
+      "Attack": 24
+    }
   },
   {
     "Id": 39,
@@ -314,7 +394,9 @@
     "Description": "Weapon with an ice spirit dwelling inside.",
     "Cost": 3780,
     "Type": "Sword",
-    "Attack": 35
+    "Stats": {
+      "Attack": 35
+    }
   },
   {
     "Id": 40,
@@ -322,7 +404,9 @@
     "Description": "Sword made of coral.",
     "Cost": 4000,
     "Type": "Sword",
-    "Attack": 38
+    "Stats": {
+      "Attack": 38
+    }
   },
   {
     "Id": 41,
@@ -330,7 +414,9 @@
     "Description": "Sword made of diamond.",
     "Cost": 4700,
     "Type": "Sword",
-    "Attack": 42
+    "Stats": {
+      "Attack": 42
+    }
   },
   {
     "Id": 42,
@@ -338,7 +424,9 @@
     "Description": "Weapon with a fire spirit dwelling inside.",
     "Cost": 5190,
     "Type": "Sword",
-    "Attack": 46
+    "Stats": {
+      "Attack": 46
+    }
   },
   {
     "Id": 43,
@@ -346,7 +434,9 @@
     "Description": "Weapon that has Rune inscriptions.",
     "Cost": 8900,
     "Type": "Sword",
-    "Attack": 57
+    "Stats": {
+      "Attack": 57
+    }
   },
   {
     "Id": 44,
@@ -354,7 +444,10 @@
     "Description": "Sword possessing a guardian angel.",
     "Cost": 9340,
     "Type": "Sword",
-    "Attack": 65
+    "Stats": {
+      "Attack": 65,
+      "Spirit": 3
+    }
   },
   {
     "Id": 45,
@@ -362,7 +455,13 @@
     "Description": "Long sword used by holy knights.",
     "Cost": 0,
     "Type": "KnightSword",
-    "Attack": 23
+    "Stats": {
+      "Attack": 23,
+      "Strength": 2,
+      "Speed": 1,
+      "Magic": 2,
+      "Spirit": 5
+    }
   },
   {
     "Id": 46,
@@ -370,7 +469,9 @@
     "Description": "Sword that can only be used by chosen knights.",
     "Cost": 14000,
     "Type": "KnightSword",
-    "Attack": 74
+    "Stats": {
+      "Attack": 74
+    }
   },
   {
     "Id": 47,
@@ -378,7 +479,9 @@
     "Description": "Light sword used by holy knights.",
     "Cost": 0,
     "Type": "KnightSword",
-    "Attack": 77
+    "Stats": {
+      "Attack": 77
+    }
   },
   {
     "Id": 48,
@@ -386,7 +489,9 @@
     "Description": "Knight sword bearing divine inscriptions.",
     "Cost": 0,
     "Type": "KnightSword",
-    "Attack": 87
+    "Stats": {
+      "Attack": 87
+    }
   },
   {
     "Id": 49,
@@ -394,7 +499,9 @@
     "Description": "The ultimate sword, used by a legendary king. It was forged in another world.",
     "Cost": 0,
     "Type": "KnightSword",
-    "Attack": 108
+    "Stats": {
+      "Attack": 108
+    }
   },
   {
     "Id": 50,
@@ -402,7 +509,9 @@
     "Description": "Staff used by black mages.",
     "Cost": 320,
     "Type": "Staff",
-    "Attack": 12
+    "Stats": {
+      "Attack": 12
+    }
   },
   {
     "Id": 51,
@@ -418,7 +527,9 @@
     "Description": "Staff with a divine ice power dwelling inside.",
     "Cost": 980,
     "Type": "Staff",
-    "Attack": 16
+    "Stats": {
+      "Attack": 16
+    }
   },
   {
     "Id": 53,
@@ -426,7 +537,9 @@
     "Description": "Staff with a divine thunder power dwelling inside.",
     "Cost": 1200,
     "Type": "Staff",
-    "Attack": 16
+    "Stats": {
+      "Attack": 16
+    }
   },
   {
     "Id": 54,
@@ -434,7 +547,9 @@
     "Description": "Staff made from a legendary tree.",
     "Cost": 2400,
     "Type": "Staff",
-    "Attack": 23
+    "Stats": {
+      "Attack": 23
+    }
   },
   {
     "Id": 55,
@@ -442,7 +557,9 @@
     "Description": "Weapon that radiates a mysterious light.",
     "Cost": 3200,
     "Type": "Staff",
-    "Attack": 27
+    "Stats": {
+      "Attack": 27
+    }
   },
   {
     "Id": 56,
@@ -450,7 +567,9 @@
     "Description": "Staff with a water god dwelling inside.",
     "Cost": 4500,
     "Type": "Staff",
-    "Attack": 29
+    "Stats": {
+      "Attack": 29
+    }
   },
   {
     "Id": 57,
@@ -458,7 +577,9 @@
     "Description": "Staff that holds powerful magic.",
     "Cost": 6000,
     "Type": "Staff",
-    "Attack": 32
+    "Stats": {
+      "Attack": 32
+    }
   },
   {
     "Id": 58,
@@ -466,7 +587,9 @@
     "Description": "Legendary staff that once belonged to a grand magician.",
     "Cost": 0,
     "Type": "Staff",
-    "Attack": 35
+    "Stats": {
+      "Attack": 35
+    }
   },
   {
     "Id": 59,
@@ -474,7 +597,9 @@
     "Description": "Spear used by dragon knights.",
     "Cost": 880,
     "Type": "Spear",
-    "Attack": 18
+    "Stats": {
+      "Attack": 18
+    }
   },
   {
     "Id": 60,
@@ -482,7 +607,9 @@
     "Description": "Spear made of mythril.",
     "Cost": 1100,
     "Type": "Spear",
-    "Attack": 20
+    "Stats": {
+      "Attack": 20
+    }
   },
   {
     "Id": 61,
@@ -490,7 +617,9 @@
     "Description": "Spear adorned with brilliant gems. Originally made as a decoration.",
     "Cost": 1600,
     "Type": "Spear",
-    "Attack": 25
+    "Stats": {
+      "Attack": 25
+    }
   },
   {
     "Id": 62,
@@ -498,7 +627,9 @@
     "Description": "Spear made of ice.",
     "Cost": 2430,
     "Type": "Spear",
-    "Attack": 32
+    "Stats": {
+      "Attack": 32
+    }
   },
   {
     "Id": 63,
@@ -506,7 +637,9 @@
     "Description": "Also known as the spear of enchantment.",
     "Cost": 3580,
     "Type": "Spear",
-    "Attack": 37
+    "Stats": {
+      "Attack": 37
+    }
   },
   {
     "Id": 64,
@@ -514,7 +647,9 @@
     "Description": "Heavy weapon that can deal massive damage.",
     "Cost": 4700,
     "Type": "Spear",
-    "Attack": 42
+    "Stats": {
+      "Attack": 42
+    }
   },
   {
     "Id": 65,
@@ -522,7 +657,9 @@
     "Description": "Spear made from a magic stone.",
     "Cost": 6000,
     "Type": "Spear",
-    "Attack": 52
+    "Stats": {
+      "Attack": 52
+    }
   },
   {
     "Id": 66,
@@ -530,7 +667,9 @@
     "Description": "Holy spear.",
     "Cost": 11000,
     "Type": "Spear",
-    "Attack": 62
+    "Stats": {
+      "Attack": 62
+    }
   },
   {
     "Id": 67,
@@ -538,7 +677,9 @@
     "Description": "Spear from the distant past.",
     "Cost": 0,
     "Type": "Spear",
-    "Attack": 71
+    "Stats": {
+      "Attack": 71
+    }
   },
   {
     "Id": 68,
@@ -546,7 +687,9 @@
     "Description": "Legendary spear made from a dragon king's hair. It is known as 'The divider of heaven'.",
     "Cost": 0,
     "Type": "Spear",
-    "Attack": 77
+    "Stats": {
+      "Attack": 77
+    }
   },
   {
     "Id": 69,
@@ -554,7 +697,9 @@
     "Description": "Combat fork used by the Qu clan.",
     "Cost": 1100,
     "Type": "Fork",
-    "Attack": 21
+    "Stats": {
+      "Attack": 21
+    }
   },
   {
     "Id": 70,
@@ -562,7 +707,9 @@
     "Description": "Mysterious fork that causes the opposite effect of 'Soft'.",
     "Cost": 3100,
     "Type": "Fork",
-    "Attack": 34
+    "Stats": {
+      "Attack": 34
+    }
   },
   {
     "Id": 71,
@@ -570,7 +717,9 @@
     "Description": "Fork made of mythril.",
     "Cost": 4700,
     "Type": "Fork",
-    "Attack": 42
+    "Stats": {
+      "Attack": 42
+    }
   },
   {
     "Id": 72,
@@ -578,7 +727,9 @@
     "Description": "Fork made of silver.",
     "Cost": 7400,
     "Type": "Fork",
-    "Attack": 53
+    "Stats": {
+      "Attack": 53
+    }
   },
   {
     "Id": 73,
@@ -586,7 +737,9 @@
     "Description": "Popular fork among gourmands.",
     "Cost": 10300,
     "Type": "Fork",
-    "Attack": 68
+    "Stats": {
+      "Attack": 68
+    }
   },
   {
     "Id": 74,
@@ -594,7 +747,9 @@
     "Description": "Legendary fork known for its ability to crush anything.",
     "Cost": 0,
     "Type": "Fork",
-    "Attack": 77
+    "Stats": {
+      "Attack": 77
+    }
   },
   {
     "Id": 75,
@@ -602,7 +757,9 @@
     "Description": "Ordinary claws used for combat.",
     "Cost": 4000,
     "Type": "Claw",
-    "Attack": 23
+    "Stats": {
+      "Attack": 23
+    }
   },
   {
     "Id": 76,
@@ -610,7 +767,9 @@
     "Description": "Combat knuckles.",
     "Cost": 5000,
     "Type": "Claw",
-    "Attack": 33
+    "Stats": {
+      "Attack": 33
+    }
   },
   {
     "Id": 77,
@@ -618,7 +777,9 @@
     "Description": "Claws made of mythril.",
     "Cost": 6500,
     "Type": "Claw",
-    "Attack": 39
+    "Stats": {
+      "Attack": 39
+    }
   },
   {
     "Id": 78,
@@ -626,7 +787,9 @@
     "Description": "Weapon with deadly venom on the tip.",
     "Cost": 8000,
     "Type": "Claw",
-    "Attack": 45
+    "Stats": {
+      "Attack": 45
+    }
   },
   {
     "Id": 79,
@@ -634,7 +797,9 @@
     "Description": "Weapon made from a dragon's claw.",
     "Cost": 0,
     "Type": "Claw",
-    "Attack": 53
+    "Stats": {
+      "Attack": 53
+    }
   },
   {
     "Id": 80,
@@ -642,7 +807,9 @@
     "Description": "Long, sharp claws.",
     "Cost": 13500,
     "Type": "Claw",
-    "Attack": 62
+    "Stats": {
+      "Attack": 62
+    }
   },
   {
     "Id": 81,
@@ -650,7 +817,9 @@
     "Description": "Powerful claws that can kill opponents with one hit.",
     "Cost": 16000,
     "Type": "Claw",
-    "Attack": 70
+    "Stats": {
+      "Attack": 70
+    }
   },
   {
     "Id": 82,
@@ -658,7 +827,9 @@
     "Description": "Claws with a wind spirit dwelling inside.",
     "Cost": 18000,
     "Type": "Claw",
-    "Attack": 75
+    "Stats": {
+      "Attack": 75
+    }
   },
   {
     "Id": 83,
@@ -666,7 +837,9 @@
     "Description": "Weapon once used by a legendary hero.",
     "Cost": 16000,
     "Type": "Claw",
-    "Attack": 79
+    "Stats": {
+      "Attack": 79
+    }
   },
   {
     "Id": 84,
@@ -674,7 +847,9 @@
     "Description": "Legendary combat claws that use the power of darkness to unleash a destructive force beyond imagination.",
     "Cost": 0,
     "Type": "Claw",
-    "Attack": 83
+    "Stats": {
+      "Attack": 83
+    }
   },
   {
     "Id": 85,
@@ -682,7 +857,9 @@
     "Description": "Throwing weapon used with the command 'Throw'. It cannot be equipped.",
     "Cost": 200,
     "Type": "ThrowingWeapon",
-    "Attack": 25
+    "Stats": {
+      "Attack": 25
+    }
   },
   {
     "Id": 86,
@@ -690,7 +867,9 @@
     "Description": "Throwing weapon, more powerful than the Pinwheel. It is used with the command 'Throw' and cannot be equipped.",
     "Cost": 500,
     "Type": "ThrowingWeapon",
-    "Attack": 36
+    "Stats": {
+      "Attack": 36
+    }
   },
   {
     "Id": 87,
@@ -698,7 +877,9 @@
     "Description": "Throwing weapon, more powerful than the Rising Sun. It is used with the command 'Throw' and cannot be equipped.",
     "Cost": 0,
     "Type": "ThrowingWeapon",
-    "Attack": 64
+    "Stats": {
+      "Attack": 64
+    }
   },
   {
     "Id": 88,
@@ -706,6 +887,8 @@
     "Description": "Cinna's hammer.",
     "Cost": 0,
     "Type": "Hammer",
-    "Attack": 12
+    "Stats": {
+      "Attack": 12
+    }
   }
 ]
