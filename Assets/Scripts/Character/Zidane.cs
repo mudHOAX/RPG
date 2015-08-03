@@ -14,10 +14,10 @@ public class Zidane : BaseCharacter
 
         Gear = new GearSet
         {
-            Weapon = ItemManager.Weapons.GetById(1)
+            Weapon = ItemManager.Weapons.GetById(1),
+            Head = ItemManager.Armours.GetById(14)
         };
-
-        AddExperience(uint.MaxValue);
+        
         Debug.Log("------------------------------");
         Debug.Log("Level: " + Level);
         Debug.Log("Speed: " + Stats.Speed);

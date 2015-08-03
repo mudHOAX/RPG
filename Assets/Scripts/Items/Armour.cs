@@ -6,19 +6,7 @@
         set;
     }
 
-    public int Defence
-    {
-        get;
-        set;
-    }
-
-    public int Evasion
-    {
-        get;
-        set;
-    }
-
-    public int MagicDefence
+    public StatSet Stats
     {
         get;
         set;

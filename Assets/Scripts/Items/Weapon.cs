@@ -6,11 +6,9 @@
         set;
     }
 
-    public int Attack
+    public StatSet Stats
     {
         get;
         set;
-    }
-    
-
+    }  
 }

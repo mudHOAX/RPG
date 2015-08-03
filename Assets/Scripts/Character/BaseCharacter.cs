@@ -10,6 +10,7 @@ public abstract class BaseCharacter : MonoBehaviour
     private uint exp = 0;
     private StatSet baseStats;
     private StatSet stats;
+    private GearSet gear;
 
     public string Name
     {
@@ -78,8 +79,21 @@ public abstract class BaseCharacter : MonoBehaviour
 
     public GearSet Gear
     {
-        get;
-        protected set;
+        get { return gear; }
+        protected set
+        {
+            gear = value;
+            if (gear.Weapon != null)
+                stats += gear.Weapon.Stats;
+            if (gear.Head != null)
+                stats += gear.Head.Stats;
+            if (gear.Arm != null)
+                stats += gear.Arm.Stats;
+            if (gear.Body != null)
+                stats += gear.Body.Stats;
+            if (gear.AddOn != null)
+                stats += gear.AddOn.Stats;
+        }
     }
 
     public void AddExperience(uint experience)
@@ -109,12 +123,12 @@ public abstract class BaseCharacter : MonoBehaviour
     private StatSet CalculateStatIncrease()
     {
         StatSet statIncrease = new StatSet();
-
-        // TODO Get Gear bonus.
-        byte speedBonus = 0;
-        byte strengthBonus = 0;
-        byte magicBonus = 0;
-        byte spiritBonus = 0;
+        StatSet gearBonus = Gear.Weapon.Stats + Gear.Head.Stats + Gear.Arm.Stats + Gear.Body.Stats + Gear.AddOn.Stats;
+        
+        int speedBonus = gearBonus.Speed;
+        int strengthBonus = gearBonus.Strength;
+        int magicBonus = gearBonus.Magic;
+        int spiritBonus = gearBonus.Spirit;
 
         statIncrease.Speed = (byte)((BaseStats.Speed + Math.Floor((double)(level * 1 / 10)) + Math.Floor((double)((Stats.Speed - BaseStats.Speed) / 32)) + speedBonus) - Stats.Speed);
         statIncrease.Strength = (byte)((BaseStats.Strength + Math.Floor((double)(level * 3 / 10)) + Math.Floor((double)(levelUpCounter * 3 + (Stats.Strength - BaseStats.Strength)) / 32) + strengthBonus) - Stats.Strength);

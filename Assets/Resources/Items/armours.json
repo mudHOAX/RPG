@@ -5,9 +5,11 @@
     "Description": "Provides a southern, tropical feel.",
     "Cost": 0,
     "Type": "Hat",
-    "Defence": 0,
-    "Evasion": 0,
-    "MagicDefence": 0,
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 0
+    },
     "Abilities": [ ]
   },
   {
@@ -16,9 +18,11 @@
     "Description": "Not a suitable item to wear in combat.",
     "Cost": 150,
     "Type": "Hat",
-    "Defence": 0,
-    "Evasion": 0,
-    "MagicDefence": 6,
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 6
+    },
     "Abilities": [ ]
   },
   {
@@ -27,9 +31,11 @@
     "Description": "Wearing it will make you popular.",
     "Cost": 330,
     "Type": "Hat",
-    "Defence": 2,
-    "Evasion": 0,
-    "MagicDefence": 6,
+    "Stats": {
+      "Defence": 2,
+      "Evasion": 0,
+      "MagicDefence": 6
+    },
     "Abilities": [ ]
   },
   {
@@ -38,9 +44,12 @@
     "Description": "Hat that raises Spirit.",
     "Cost": 200,
     "Type": "Hat",
-    "Defence": 0,
-    "Evasion": 0,
-    "MagicDefence": 7,
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 7,
+      "Spirit": 1
+    },
     "Abilities": [ ]
   },
   {
@@ -49,9 +58,12 @@
     "Description": "Hats worn by mages.",
     "Cost": 260,
     "Type": "Hat",
-    "Defence": 0,
-    "Evasion": 0,
-    "MagicDefence": 9,
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 9,
+      "Strength": 1
+    },
     "Abilities": [ ]
   },
   {
@@ -60,9 +72,11 @@
     "Description": "Hat suited for mages.",
     "Cost": 400,
     "Type": "Hat",
-    "Defence": 0,
-    "Evasion": 0,
-    "MagicDefence": 10,
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 10
+    },
     "Abilities": [ ]
   },
   {
@@ -71,9 +85,13 @@
     "Description": "Mysterious bandana that makes you light-footed.",
     "Cost": 500,
     "Type": "Hat",
-    "Defence": 0,
-    "Evasion": 2,
-    "MagicDefence": 12,
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 2,
+      "MagicDefence": 12,
+      "Spirit": 1,
+      "Speed": 1
+    },
     "Abilities": [ ]
   },
   {
@@ -82,9 +100,12 @@
     "Description": "Hat that holds magic powers.",
     "Cost": 600,
     "Type": "Hat",
-    "Defence": 0,
-    "Evasion": 0,
-    "MagicDefence": 14,
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 14,
+      "Strength": 1
+    },
     "Abilities": [ ]
   },
   {
@@ -93,9 +114,11 @@
     "Description": "Hat worn for ceremonies and festivals in Conde Petie.",
     "Cost": 1000,
     "Type": "Hat",
-    "Defence": 0,
-    "Evasion": 0,
-    "MagicDefence": 16,
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 16
+    },
     "Abilities": [ ]
   },
   {
@@ -104,9 +127,12 @@
     "Description": "Headband that raises Strength.",
     "Cost": 1200,
     "Type": "Hat",
-    "Defence": 0,
-    "Evasion": 0,
-    "MagicDefence": 17,
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 17,
+      "Strength": 1
+    },
     "Abilities": [ ]
   },
   {
@@ -115,9 +141,13 @@
     "Description": "Tiara worn by Lamia.",
     "Cost": 800,
     "Type": "Hat",
-    "Defence": 0,
-    "Evasion": 0,
-    "MagicDefence": 17,
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 17,
+      "Magic": 1,
+      "Spirit": 1
+    },
     "Abilities": [ ]
   },
   {
@@ -126,9 +156,41 @@
     "Description": "Draws on hidden strength.",
     "Cost": 800,
     "Type": "Hat",
-    "Defence": 1,
-    "Evasion": 0,
-    "MagicDefence": 19,
+    "Stats": {
+      "Defence": 1,
+      "Evasion": 0,
+      "MagicDefence": 19,
+      "Magic": 1,
+      "Spirit": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 13,
+    "Name": "Dark Hat",
+    "Description": "Old hat, steeped in legend.",
+    "Cost": 1800,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 0,
+      "Evasion": 0,
+      "MagicDefence": 21
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 14,
+    "Name": "Green Beret",
+    "Description": "Improves movement.",
+    "Cost": 2180,
+    "Type": "Hat",
+    "Stats": {
+      "Defence": 1,
+      "Evasion": 0,
+      "MagicDefence": 26,
+      "Speed": 1,
+      "Strength": 1
+    },
     "Abilities": [ ]
   }
 ]

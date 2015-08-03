@@ -1,14 +1,14 @@
 ﻿public class StatSet
 {
-    const byte MAX_SPEED = 50;
-    const byte MAX_STRENGTH = 99;
-    const byte MAX_MAGIC = 99;
-    const byte MAX_SPIRIT = 50;
+    const int MAX_SPEED = 50;
+    const int MAX_STRENGTH = 99;
+    const int MAX_MAGIC = 99;
+    const int MAX_SPIRIT = 50;
 
-    private byte speed = 0;
-    private byte strength = 0;
-    private byte magic = 0;
-    private byte spirit = 0;
+    private int speed = 0;
+    private int strength = 0;
+    private int magic = 0;
+    private int spirit = 0;
 
     public StatSet()
     {
@@ -23,7 +23,7 @@
         MagicEvade = 0;
     }
 
-    public byte Speed
+    public int Speed
     {
         get { return speed; }
         set
@@ -35,7 +35,7 @@
         }
     }
 
-    public byte Strength
+    public int Strength
     {
         get { return strength; }
         set
@@ -47,7 +47,7 @@
         }
     }
 
-    public byte Magic
+    public int Magic
     {
         get { return magic; }
         set
@@ -59,7 +59,7 @@
         }
     }
 
-    public byte Spirit
+    public int Spirit
     {
         get { return spirit; }
         set
@@ -71,31 +71,31 @@
         }
     }
 
-    public byte Attack
+    public int Attack
     {
         get;
         set;
     }
 
-    public byte Defence
+    public int Defence
     {
         get;
         set;
     }
 
-    public byte Evade
+    public int Evade
     {
         get;
         set;
     }
 
-    public byte MagicDefence
+    public int MagicDefence
     {
         get;
         set;
     }
 
-    public byte MagicEvade
+    public int MagicEvade
     {
         get;
         set;
@@ -120,65 +120,89 @@
 
     public static StatSet operator +(StatSet lhs, StatSet rhs)
     {
+        if (ReferenceEquals(lhs, null))
+            lhs = new StatSet();
+
+        if (ReferenceEquals(rhs, null))
+            rhs = new StatSet();
+
         return new StatSet()
         {
-            Speed = (byte)(lhs.Speed + rhs.Speed),
-            Strength = (byte)(lhs.Strength + rhs.Strength),
-            Magic = (byte)(lhs.Magic + rhs.Magic),
-            Spirit = (byte)(lhs.Spirit + rhs.Spirit),
-            Attack = (byte)(lhs.Attack + rhs.Attack),
-            Defence = (byte)(lhs.Defence + rhs.Defence),
-            Evade = (byte)(lhs.Evade + rhs.Evade),
-            MagicDefence = (byte)(lhs.MagicDefence + rhs.MagicDefence),
-            MagicEvade = (byte)(lhs.MagicEvade + rhs.MagicEvade)
+            Speed = lhs.Speed + rhs.Speed,
+            Strength = lhs.Strength + rhs.Strength,
+            Magic = lhs.Magic + rhs.Magic,
+            Spirit = lhs.Spirit + rhs.Spirit,
+            Attack = lhs.Attack + rhs.Attack,
+            Defence = lhs.Defence + rhs.Defence,
+            Evade = lhs.Evade + rhs.Evade,
+            MagicDefence = lhs.MagicDefence + rhs.MagicDefence,
+            MagicEvade = lhs.MagicEvade + rhs.MagicEvade
         };
     }
 
     public static StatSet operator -(StatSet lhs, StatSet rhs)
     {
+        if (ReferenceEquals(lhs, null))
+            lhs = new StatSet();
+
+        if (ReferenceEquals(rhs, null))
+            rhs = new StatSet();
+
         return new StatSet()
         {
-            Speed = (byte)(lhs.Speed - rhs.Speed),
-            Strength = (byte)(lhs.Strength - rhs.Strength),
-            Magic = (byte)(lhs.Magic - rhs.Magic),
-            Spirit = (byte)(lhs.Spirit - rhs.Spirit),
-            Attack = (byte)(lhs.Attack - rhs.Attack),
-            Defence = (byte)(lhs.Defence - rhs.Defence),
-            Evade = (byte)(lhs.Evade - rhs.Evade),
-            MagicDefence = (byte)(lhs.MagicDefence - rhs.MagicDefence),
-            MagicEvade = (byte)(lhs.MagicEvade - rhs.MagicEvade)
+            Speed = lhs.Speed - rhs.Speed,
+            Strength = lhs.Strength - rhs.Strength,
+            Magic = lhs.Magic - rhs.Magic,
+            Spirit = lhs.Spirit - rhs.Spirit,
+            Attack = lhs.Attack - rhs.Attack,
+            Defence = lhs.Defence - rhs.Defence,
+            Evade = lhs.Evade - rhs.Evade,
+            MagicDefence = lhs.MagicDefence - rhs.MagicDefence,
+            MagicEvade = lhs.MagicEvade - rhs.MagicEvade
         };
     }
 
     public static StatSet operator *(StatSet lhs, StatSet rhs)
     {
+        if (ReferenceEquals(lhs, null))
+            lhs = new StatSet();
+
+        if (ReferenceEquals(rhs, null))
+            rhs = new StatSet();
+
         return new StatSet()
         {
-            Speed = (byte)(lhs.Speed * rhs.Speed),
-            Strength = (byte)(lhs.Strength * rhs.Strength),
-            Magic = (byte)(lhs.Magic * rhs.Magic),
-            Spirit = (byte)(lhs.Spirit * rhs.Spirit),
-            Attack = (byte)(lhs.Attack * rhs.Attack),
-            Defence = (byte)(lhs.Defence * rhs.Defence),
-            Evade = (byte)(lhs.Evade * rhs.Evade),
-            MagicDefence = (byte)(lhs.MagicDefence * rhs.MagicDefence),
-            MagicEvade = (byte)(lhs.MagicEvade * rhs.MagicEvade)
+            Speed = lhs.Speed * rhs.Speed,
+            Strength = lhs.Strength * rhs.Strength,
+            Magic = lhs.Magic * rhs.Magic,
+            Spirit = lhs.Spirit * rhs.Spirit,
+            Attack = lhs.Attack * rhs.Attack,
+            Defence = lhs.Defence * rhs.Defence,
+            Evade = lhs.Evade * rhs.Evade,
+            MagicDefence = lhs.MagicDefence * rhs.MagicDefence,
+            MagicEvade = lhs.MagicEvade * rhs.MagicEvade
         };
     }
 
     public static StatSet operator /(StatSet lhs, StatSet rhs)
     {
+        if (lhs == null)
+            lhs = new StatSet();
+
+        if (rhs == null)
+            rhs = new StatSet();
+
         return new StatSet()
         {
-            Speed = (byte)(lhs.Speed / rhs.Speed),
-            Strength = (byte)(lhs.Strength / rhs.Strength),
-            Magic = (byte)(lhs.Magic / rhs.Magic),
-            Spirit = (byte)(lhs.Spirit / rhs.Spirit),
-            Attack = (byte)(lhs.Attack / rhs.Attack),
-            Defence = (byte)(lhs.Defence / rhs.Defence),
-            Evade = (byte)(lhs.Evade / rhs.Evade),
-            MagicDefence = (byte)(lhs.MagicDefence / rhs.MagicDefence),
-            MagicEvade = (byte)(lhs.MagicEvade / rhs.MagicEvade)
+            Speed = lhs.Speed / rhs.Speed,
+            Strength = lhs.Strength / rhs.Strength,
+            Magic = lhs.Magic / rhs.Magic,
+            Spirit = lhs.Spirit / rhs.Spirit,
+            Attack = lhs.Attack / rhs.Attack,
+            Defence = lhs.Defence / rhs.Defence,
+            Evade = lhs.Evade / rhs.Evade,
+            MagicDefence = lhs.MagicDefence / rhs.MagicDefence,
+            MagicEvade = lhs.MagicEvade / rhs.MagicEvade
         };
     }
 
