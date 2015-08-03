@@ -446,6 +446,6 @@ public abstract class BaseCharacter
         { 631 },
         { 632 },
         { 642 }
-    }
+    };
     #endregion
 }
