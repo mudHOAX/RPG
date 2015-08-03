@@ -184,6 +184,9 @@
 
     public static bool operator <(StatSet lhs, StatSet rhs)
     {
+        if (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null))
+            return false;
+
         return lhs.Speed < rhs.Speed
              && lhs.Strength < rhs.Strength
              && lhs.Magic < rhs.Magic
@@ -197,6 +200,9 @@
 
     public static bool operator >(StatSet lhs, StatSet rhs)
     {
+        if (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null))
+            return false;
+
         return lhs.Speed > rhs.Speed
              && lhs.Strength > rhs.Strength
              && lhs.Magic > rhs.Magic
@@ -210,6 +216,12 @@
 
     public static bool operator <=(StatSet lhs, StatSet rhs)
     {
+        if (ReferenceEquals(lhs, null) && ReferenceEquals(rhs, null))
+            return true;
+
+        if (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null))
+            return false;
+
         return lhs.Speed <= rhs.Speed
              && lhs.Strength <= rhs.Strength
              && lhs.Magic <= rhs.Magic
@@ -223,6 +235,12 @@
 
     public static bool operator >=(StatSet lhs, StatSet rhs)
     {
+        if (ReferenceEquals(lhs, null) && ReferenceEquals(rhs, null))
+            return true;
+
+        if (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null))
+            return false;
+
         return lhs.Speed >= rhs.Speed
              && lhs.Strength >= rhs.Strength
              && lhs.Magic >= rhs.Magic
@@ -236,6 +254,12 @@
 
     public static bool operator ==(StatSet lhs, StatSet rhs)
     {
+        if (ReferenceEquals(lhs, null) && ReferenceEquals(rhs, null))
+            return true;
+
+        if (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null))
+            return false;
+
         return lhs.Speed == rhs.Speed
             && lhs.Strength == rhs.Strength
             && lhs.Magic == rhs.Magic
@@ -249,6 +273,12 @@
 
     public static bool operator !=(StatSet lhs, StatSet rhs)
     {
+        if (ReferenceEquals(lhs, null) && ReferenceEquals(rhs, null))
+            return false;
+
+        if (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null))
+            return true;
+
         return lhs.Speed != rhs.Speed
             && lhs.Strength != rhs.Strength
             && lhs.Magic != rhs.Magic

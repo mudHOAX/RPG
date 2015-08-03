@@ -1,6 +1,8 @@
-﻿public class Zidane : BaseCharacter
+﻿using UnityEngine;
+
+public class Zidane : BaseCharacter
 {
-    public Zidane(StatSet baseStats)
+    public Zidane()
     {
         BaseStats = new StatSet
         {
@@ -9,5 +11,19 @@
             Magic = 18,
             Spirit = 23
         };
+
+        Gear = new GearSet
+        {
+            Weapon = ItemManager.Weapons.GetById(1)
+        };
+
+        AddExperience(uint.MaxValue);
+        Debug.Log("------------------------------");
+        Debug.Log("Level: " + Level);
+        Debug.Log("Speed: " + Stats.Speed);
+        Debug.Log("Strength: " + Stats.Strength);
+        Debug.Log("Magic: " + Stats.Magic);
+        Debug.Log("Spirit: " + Stats.Spirit);
+        Debug.Log("------------------------------");
     }
 }

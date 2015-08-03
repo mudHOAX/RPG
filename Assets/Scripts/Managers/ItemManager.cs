@@ -3,28 +3,21 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
 
-public class ItemManager : MonoBehaviour
+public static class ItemManager
 {
-    public readonly ItemCollection<Weapon> weapons = new ItemCollection<Weapon> { };
-    public readonly ItemCollection<Armour> armours = new ItemCollection<Armour> { };
-    public readonly ItemCollection<Consumable> consumables = new ItemCollection<Consumable> { };
-
-    private Dictionary<Type, string> resourceMap = new Dictionary<Type, string>
+    public static readonly ItemCollection<Weapon> Weapons = Load<Weapon>();
+    public static readonly ItemCollection<Armour> Armours = Load<Armour>();
+    public static readonly ItemCollection<Consumable> Consumables = Load<Consumable>();
+    
+    private static ItemCollection<T> Load<T>() where T : Item
     {
-        { typeof(Weapon), "Items/weapons" },
-        { typeof(Armour), "Items/armours" },
-        { typeof(Consumable), "Items/consumables" }
-    };
+        Dictionary<Type, string> resourceMap = new Dictionary<Type, string>
+        {
+            { typeof(Weapon), "Items/weapons" },
+            { typeof(Armour), "Items/armours" },
+            { typeof(Consumable), "Items/consumables" }
+        };
 
-    public ItemManager()
-    {
-        weapons = Load<Weapon>();
-        armours = Load<Armour>();
-        consumables = Load<Consumable>();
-    }
-
-    private ItemCollection<T> Load<T>() where T : Item
-    {
         string resourcePath;
 
         if (resourceMap.TryGetValue(typeof(T), out resourcePath)) {

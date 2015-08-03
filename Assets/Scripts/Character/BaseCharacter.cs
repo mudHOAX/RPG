@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
-public abstract class BaseCharacter
+public abstract class BaseCharacter : MonoBehaviour
 {
     const byte MAX_CHARACTER_LEVEL = 99;
-    private byte level;
-    private byte levelUpCounter;
-    private uint exp;
+    private byte level = 1;
+    private byte levelUpCounter = 0;
+    private uint exp = 0;
     private StatSet baseStats;
     private StatSet stats;
 
@@ -83,16 +84,16 @@ public abstract class BaseCharacter
 
     public void AddExperience(uint experience)
     {
-        exp += experience;
-        while (experience > 0)
+        while (level < MAX_CHARACTER_LEVEL && exp + experience > experienceMap[level])
         {
-            exp++;
-            if (level < MAX_CHARACTER_LEVEL && exp >= experienceMap[level + 1])
-                LevelUp();
-            experience--;
+            uint difference = experienceMap[level] - exp;
+            exp = experienceMap[level];
+            experience -= difference;
+            LevelUp();
         }
+        exp += experience;
     }
-
+    
     private void LevelUp()
     {
         if (level < MAX_CHARACTER_LEVEL)
@@ -108,31 +109,29 @@ public abstract class BaseCharacter
     private StatSet CalculateStatIncrease()
     {
         StatSet statIncrease = new StatSet();
-        double speedLevelBonus = Math.Floor((level * 1) * 0.1);
-        double speedBonus = Math.Floor((double)((Stats.Speed - BaseStats.Speed) / 32));
-        double strengthLevelBonus = Math.Floor((level * 3) * 0.3);
-        double strengthBonus = Math.Floor((double)(levelUpCounter * 3 + (Stats.Strength - BaseStats.Strength) / 32));
-        double magicLevelBonus = Math.Floor((level * 3) * 0.3);
-        double magicBonus = Math.Floor((double)(levelUpCounter * 3 + (Stats.Magic - BaseStats.Magic) / 32));
-        double spiritLevelBonus = Math.Floor((level * 3) * 0.15);
-        double spiritBonus = Math.Floor((double)(levelUpCounter * 1 + (Stats.Spirit - BaseStats.Spirit) / 32));
 
-        statIncrease.Speed = (byte)(Stats.Speed - (byte)(BaseStats.Speed + speedLevelBonus + speedBonus));
-        statIncrease.Strength = (byte)(Stats.Strength - (byte)(BaseStats.Strength + strengthLevelBonus + strengthBonus));
-        statIncrease.Magic = (byte)(Stats.Magic - (byte)(BaseStats.Magic + magicLevelBonus + magicBonus));
-        statIncrease.Spirit = (byte)(Stats.Spirit - (byte)(BaseStats.Spirit + spiritLevelBonus + spiritBonus));
+        // TODO Get Gear bonus.
+        byte speedBonus = 0;
+        byte strengthBonus = 0;
+        byte magicBonus = 0;
+        byte spiritBonus = 0;
+
+        statIncrease.Speed = (byte)((BaseStats.Speed + Math.Floor((double)(level * 1 / 10)) + Math.Floor((double)((Stats.Speed - BaseStats.Speed) / 32)) + speedBonus) - Stats.Speed);
+        statIncrease.Strength = (byte)((BaseStats.Strength + Math.Floor((double)(level * 3 / 10)) + Math.Floor((double)(levelUpCounter * 3 + (Stats.Strength - BaseStats.Strength)) / 32) + strengthBonus) - Stats.Strength);
+        statIncrease.Magic = (byte)((BaseStats.Magic + Math.Floor((double)(level * 3 / 10)) + Math.Floor((double)(levelUpCounter * 3 + (Stats.Magic - BaseStats.Magic)) / 32) + magicBonus) - Stats.Magic);
+        statIncrease.Spirit = (byte)((BaseStats.Spirit + Math.Floor((double)(level * 3 / 20)) + Math.Floor((double)(levelUpCounter * 1 + (Stats.Spirit - BaseStats.Spirit)) / 32) + spiritBonus) - Stats.Spirit);
 
         return statIncrease;
     }
 
     private uint CalculateHP()
     {
-        return (uint)Math.Floor(stats.Strength * (decimal)(hpMap[level] / 50));
+        return (uint)Math.Floor(stats.Strength * (decimal)(hpMap[level - 1] / 50));
     }
 
     private uint CalculateMP()
     {
-        return (uint)Math.Floor(stats.Magic * (decimal)(mpMap[level] / 100));
+        return (uint)Math.Floor(stats.Magic * (decimal)(mpMap[level - 1] / 100));
     }
 
     #region experienceMap
@@ -197,6 +196,7 @@ public abstract class BaseCharacter
         { 837202 },
         { 893947 },
         { 853529 },
+        { 953529 },
         { 1016040 },
         { 1081576 },
         { 1150232 },

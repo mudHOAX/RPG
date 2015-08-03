@@ -49,6 +49,9 @@
 
     public static bool operator ==(GearSet lhs, GearSet rhs)
     {
+        if (ReferenceEquals(lhs, null) && ReferenceEquals(rhs, null))
+            return true;
+
         return lhs.Weapon == rhs.Weapon
             && lhs.Head == rhs.Head
             && lhs.Arm == rhs.Arm
@@ -58,6 +61,9 @@
 
     public static bool operator !=(GearSet lhs, GearSet rhs)
     {
+        if (ReferenceEquals(lhs, null) && ReferenceEquals(rhs, null))
+            return false;
+
         return lhs.Weapon != rhs.Weapon
             && lhs.Head != rhs.Head
             && lhs.Arm != rhs.Arm

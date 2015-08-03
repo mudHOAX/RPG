@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class ItemCollection<T> : List<T> where T : Item
 {
-    public T FindById(int id)
+    public T GetById(int id)
     {
         T item = Find(i => i.Id == id);
 
@@ -19,7 +19,7 @@ public class ItemCollection<T> : List<T> where T : Item
     {
         try
         {
-            item = FindById(id);
+            item = GetById(id);
             return true;
         }
         catch
