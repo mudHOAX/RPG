@@ -6,5 +6,6 @@
     Gauntlet,
     LightArmour,
     HeavyArmour,
-    Robe
+    Robe,
+    AddOn
 }

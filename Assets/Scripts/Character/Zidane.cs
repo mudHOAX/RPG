@@ -4,6 +4,8 @@ public class Zidane : BaseCharacter
 {
     public Zidane()
     {
+        Name = "Zidane";
+
         BaseStats = new StatSet
         {
             Speed = 23,
@@ -12,10 +14,11 @@ public class Zidane : BaseCharacter
             Spirit = 23
         };
 
+
         Gear = new GearSet
         {
             Weapon = ItemManager.Weapons.GetById(1),
-            Head = ItemManager.Armours.GetById(14)
+            Head = ItemManager.Armours.GetById(3)
         };
 
         Debug.Log("------------------------------");

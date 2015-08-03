@@ -36,6 +36,9 @@
       "Evasion": 0,
       "MagicDefence": 6
     },
+    "ElementDefence": {
+      "Water": "Half"
+    },
     "Abilities": [ ]
   },
   {
@@ -50,6 +53,7 @@
       "MagicDefence": 7,
       "Spirit": 1
     },
+    "ElementAttack": [ "Wind" ],
     "Abilities": [ ]
   },
   {
@@ -77,6 +81,7 @@
       "Evasion": 0,
       "MagicDefence": 10
     },
+    "ElementAttack": [ "Ice" ],
     "Abilities": [ ]
   },
   {
@@ -104,8 +109,9 @@
       "Defence": 0,
       "Evasion": 0,
       "MagicDefence": 14,
-      "Strength": 1
+      "Magic": 1
     },
+    "ElementAttack": [ "Holy", "Shadow" ],
     "Abilities": [ ]
   },
   {
@@ -117,7 +123,8 @@
     "Stats": {
       "Defence": 0,
       "Evasion": 0,
-      "MagicDefence": 16
+      "MagicDefence": 16,
+      "Strength": 1
     },
     "Abilities": [ ]
   },
@@ -133,6 +140,7 @@
       "MagicDefence": 17,
       "Strength": 1
     },
+    "ElementAttack": [ "Earth" ],
     "Abilities": [ ]
   },
   {
@@ -147,6 +155,9 @@
       "MagicDefence": 17,
       "Magic": 1,
       "Spirit": 1
+    },
+    "ElementDefence": {
+      "Wind": "Half"
     },
     "Abilities": [ ]
   },
@@ -176,6 +187,9 @@
       "Evasion": 0,
       "MagicDefence": 21
     },
+    "ElementDefence": {
+      "Ice": "Neutral"
+    },
     "Abilities": [ ]
   },
   {
@@ -204,6 +218,7 @@
       "Evasion": 0,
       "MagicDefence": 26
     },
+    "ElementAttack": [ "Fire" ],
     "Abilities": [ ]
   },
   {
@@ -216,6 +231,11 @@
       "Defence": 0,
       "Evasion": 0,
       "MagicDefence": 27
+    },
+    "ElementDefence": {
+      "Fire": "Half",
+      "Thunder": "Half",
+      "Water": "Half"
     },
     "Abilities": [ ]
   },
@@ -232,6 +252,7 @@
       "Magic": 1,
       "MagicEvade": 2
     },
+    "ElementAttack": [ "Water" ],
     "Abilities": [ ]
   },
   {
@@ -245,6 +266,9 @@
       "Evasion": 0,
       "MagicDefence": 33
     },
+    "ElementDefence": {
+      "Thunder": "Neutral"
+    },
     "Abilities": [ ]
   },
   {
@@ -257,6 +281,9 @@
       "Defence": 1,
       "Evasion": 0,
       "MagicDefence": 35
+    },
+    "ElementDefence": {
+      "Wind": "Neutral"
     },
     "Abilities": [ ]
   },
@@ -272,6 +299,7 @@
       "MagicDefence": 37,
       "Speed": 1
     },
+    "ElementAttack": [ "Thunder", "Holy" ],
     "Abilities": [ ]
   },
   {
@@ -306,13 +334,17 @@
   {
     "Id": 23,
     "Name": "Golden Skullcap",
-    "Description": "Known for providing great defense.",
+    "Description": "Known for providing great defence.",
     "Cost": 15000,
     "Type": "Hat",
     "Stats": {
       "Defence": 2,
       "Evasion": 0,
       "MagicDefence": 47
+    },
+    "ElementAttack": [ "Water" ],
+    "ElementDefence": {
+      "Earth": "Half"
     },
     "Abilities": [ ]
   },
@@ -327,6 +359,9 @@
       "Evasion": 0,
       "MagicDefence": 51
     },
+    "ElementDefence": {
+      "Earth": "Neutral"
+    },
     "Abilities": [ ]
   },
   {
@@ -338,6 +373,9 @@
     "Stats": {
       "MagicDefence": 5
     },
+    "ElementDefence": {
+      "Thunder": "Half"
+    },
     "Abilities": [ ]
   },
   {
@@ -348,6 +386,9 @@
     "Type": "Helmet",
     "Stats": {
       "MagicDefence": 6
+    },
+    "ElementDefence": {
+      "Water": "Half"
     },
     "Abilities": [ ]
   },
@@ -385,6 +426,7 @@
       "MagicDefence": 11,
       "Spirit": 1
     },
+    "ElementAttack": [ "Holy" ],
     "Abilities": [ ]
   },
   {
@@ -431,6 +473,9 @@
     "Type": "Helmet",
     "Stats": {
       "MagicDefence": 23
+    },
+    "ElementDefence": {
+      "Ice": "Half"
     },
     "Abilities": [ ]
   },
@@ -531,6 +576,9 @@
       "Evade": 10,
       "MagicEvade": 7
     },
+    "ElementDefence": {
+      "Water": "Half"
+    },
     "Abilities": [ ]
   },
   {
@@ -544,6 +592,7 @@
       "MagicEvade": 9,
       "Strength": 1
     },
+    "ElementAttack": [ "Earth" ],
     "Abilities": [ ]
   },
   {
@@ -582,6 +631,9 @@
       "Evade": 20,
       "MagicEvade": 20
     },
+    "ElementDefence": {
+      "Shadow": "Neutral"
+    },
     "Abilities": [ ]
   },
   {
@@ -593,6 +645,9 @@
     "Stats": {
       "Evade": 22,
       "MagicEvade": 14
+    },
+    "ElementDefence": {
+      "Holy": "Neutral"
     },
     "Abilities": [ ]
   },
@@ -634,6 +689,9 @@
       "MagicEvade": 12,
       "Spirit": 1
     },
+    "ElementDefence": {
+      "Shadow": "Half"
+    },
     "Abilities": [ ]
   },
   {
@@ -660,6 +718,7 @@
       "MagicEvade": 18,
       "Strength": 1
     },
+    "ElementAttack": [ "Wind" ],
     "Abilities": [ ]
   },
   {
@@ -684,6 +743,9 @@
     "Stats": {
       "Evade": 10,
       "MagicEvade": 5
+    },
+    "ElementDefence": {
+      "Ice": "Half"
     },
     "Abilities": [ ]
   },
@@ -710,6 +772,10 @@
       "Evade": 16,
       "MagicEvade": 10
     },
+    "ElementAttack": [ "Thunder" ],
+    "ElementDefence": {
+      "Thunder": "Half"
+    },
     "Abilities": [ ]
   },
   {
@@ -721,6 +787,9 @@
     "Stats": {
       "Evade": 19,
       "MagicEvade": 13
+    },
+    "ElementDefence": {
+      "Water": "Neutral"
     },
     "Abilities": [ ]
   },
@@ -734,6 +803,9 @@
       "Evade": 30,
       "MagicEvade": 10,
       "Defence": 1
+    },
+    "ElementDefence": {
+      "Fire": "Neutral"
     },
     "Abilities": [ ]
   },
@@ -761,11 +833,16 @@
       "MagicEvade": 7,
       "Speed": 1
     },
+    "ElementDefence": {
+      "Fire": "Half",
+      "Ice": "Half",
+      "Thunder": "Half"
+    },
     "Abilities": [ ]
   },
   {
     "Id": 50,
-    "Name": "Defense Gloves",
+    "Name": "Defence Gloves",
     "Description": "Protects you from various attacks.",
     "Cost": 6000,
     "Type": "Gauntlet",
@@ -826,6 +903,9 @@
       "Defence": 7,
       "MagicDefence": 0
     },
+    "ElementDefence": {
+      "Thunder": "Half"
+    },
     "Abilities": [ ]
   },
   {
@@ -837,6 +917,9 @@
     "Stats": {
       "Defence": 8,
       "MagicDefence": 0
+    },
+    "ElementDefence": {
+      "Ice": "Half"
     },
     "Abilities": [ ]
   },
@@ -876,6 +959,9 @@
       "Defence": 12,
       "MagicDefence": 0
     },
+    "ElementDefence": {
+      "Water": "Half"
+    },
     "Abilities": [ ]
   },
   {
@@ -887,6 +973,9 @@
     "Stats": {
       "Defence": 14,
       "MagicDefence": 1
+    },
+    "ElementDefence": {
+      "Fire": "Half"
     },
     "Abilities": [ ]
   },
@@ -901,6 +990,7 @@
       "MagicDefence": 2,
       "Magic": 1
     },
+    "ElementAttack": [ "Ice" ],
     "Abilities": [ ]
   },
   {
@@ -953,6 +1043,10 @@
       "Defence": 25,
       "MagicDefence": 2
     },
+    "ElementAttack": [ "Earth" ],
+    "ElementDefence": {
+      "Earth": "Absorb"
+    },
     "Abilities": [ ]
   },
   {
@@ -978,6 +1072,9 @@
       "Defence": 31,
       "MagicDefence": 0,
       "Magic": 1
+    },
+    "ElementDefence": {
+      "Shadow": "Half"
     },
     "Abilities": [ ]
   },
@@ -1006,6 +1103,9 @@
       "MagicDefence": 0,
       "Speed": 1
     },
+    "ElementDefence": {
+      "Shadow": "Absorb"
+    },
     "Abilities": [ ]
   },
   {
@@ -1033,6 +1133,9 @@
       "Evade": 2,
       "MagicEvade": 3
     },
+    "ElementDefence": {
+      "Thunder": "Neutral"
+    },
     "Abilities": [ ]
   },
   {
@@ -1046,6 +1149,7 @@
       "MagicDefence": 0,
       "Spirit": 1
     },
+    "ElementAttack": [ "Fire" ],
     "Abilities": [ ]
   },
   {
@@ -1057,6 +1161,9 @@
     "Stats": {
       "Defence": 9,
       "MagicDefence": 0
+    },
+    "ElementDefence": {
+      "Wind": "Half"
     },
     "Abilities": [ ]
   },
@@ -1083,6 +1190,9 @@
       "Defence": 12,
       "MagicDefence": 0
     },
+    "ElementDefence": {
+      "Earth": "Half"
+    },
     "Abilities": [ ]
   },
   {
@@ -1094,6 +1204,9 @@
     "Stats": {
       "Defence": 15,
       "MagicDefence": 0
+    },
+    "ElementDefence": {
+      "Water": "Half"
     },
     "Abilities": [ ]
   },
@@ -1133,6 +1246,11 @@
       "Defence": 23,
       "MagicDefence": 5
     },
+    "ElementDefence": {
+      "Fire": "Half",
+      "Ice": "Half",
+      "Thunder": "Half"
+    },
     "Abilities": [ ]
   },
   {
@@ -1144,6 +1262,10 @@
     "Stats": {
       "Defence": 27,
       "MagicDefence": 0
+    },
+    "ElementAttack": [ "Shadow" ],
+    "ElementDefence": {
+      "Shadow": "Absorb"
     },
     "Abilities": [ ]
   },
@@ -1170,6 +1292,9 @@
     "Stats": {
       "Defence": 36,
       "MagicDefence": 0
+    },
+    "ElementDefence": {
+      "Ice": "Neutral"
     },
     "Abilities": [ ]
   },
@@ -1237,6 +1362,9 @@
       "MagicDefence": 0,
       "Strength": 1
     },
+    "ElementDefence": {
+      "Shadow": "Half"
+    },
     "Abilities": [ ]
   },
   {
@@ -1263,8 +1391,7 @@
       "Defence": 10,
       "MagicDefence": 2,
       "Strength": 1,
-      "Magic": 1,
-      "MagicDefense": 2
+      "Magic": 1
     },
     "Abilities": [ ]
   },
@@ -1322,6 +1449,7 @@
       "Magic": 1,
       "Spirit": 1
     },
+    "ElementAttack": [ "Holy", "Shadow" ],
     "Abilities": [ ]
   },
   {
@@ -1335,6 +1463,7 @@
       "MagicDefence": 4,
       "Magic": 2
     },
+    "ElementAttack": [ "Holy" ],
     "Abilities": [ ]
   },
   {
@@ -1348,6 +1477,7 @@
       "MagicDefence": 4,
       "Magic": 2
     },
+    "ElementAttack": [ "Shadow" ],
     "Abilities": [ ]
   },
   {
@@ -1363,6 +1493,473 @@
       "Strength": 1,
       "Magic": 1,
       "Spirit": 1
+    },
+    "ElementDefence": {
+      "Wind": "Neutral"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 96,
+    "Name": "Ancient Aroma",
+    "Description": "Item that radiates a mysterious light.",
+    "Cost": 0,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 2,
+      "Evade": 4
+    },
+    "ElementAttack": [ "Shadow" ],
+    "Abilities": [ ]
+  },
+  {
+    "Id": 97,
+    "Name": "Angel Earrings",
+    "Description": "Holy earrings worn by women.",
+    "Cost": 8000,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 2,
+      "Defence": 2
+    },
+    "ElementAttack": [ "Holy" ],
+    "Abilities": [ ]
+  },
+  {
+    "Id": 98,
+    "Name": "Anklet",
+    "Description": "Anklet adorned with a four-leaf clover that raises spirit.",
+    "Cost": 4000,
+    "Type": "AddOn",
+    "Stats": {
+      "Magic": 3,
+      "Spirit": 1,
+      "Evade": 5
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 99,
+    "Name": "Barette",
+    "Description": "Hair ornament enchanted with various powers, worn by women.",
+    "Cost": 1800,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 3,
+      "Magic": 1,
+      "Spirit": 1,
+      "MagicDefence": 1
+    },
+    "ElementAttack": [ "Ice" ],
+    "Abilities": [ ]
+  },
+  {
+    "Id": 100,
+    "Name": "Battle Boots",
+    "Description": "Combat Boots.",
+    "Cost": 6500,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 2,
+      "Defence": 2,
+      "MagicDefence": 1
+    },
+    "ElementAttack": [ "Ice" ],
+    "Abilities": [ ]
+  },
+  {
+    "Id": 101,
+    "Name": "Black Belt",
+    "Description": "Belt that raises Strength.",
+    "Cost": 4000,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 2,
+      "Spirit": 2,
+      "Defence": 1
+    },
+    "ElementAttack": [ "Wind" ],
+    "Abilities": [ ]
+  },
+  {
+    "Id": 102,
+    "Name": "Cachusha",
+    "Description": "Hair ornament enchanted with various powers, worn by women.",
+    "Cost": 1000,
+    "Type": "AddOn",
+    "Stats": {
+      "Speed": 1,
+      "Magic": 2,
+      "Spirit": 1,
+      "MagicDefence": 1
+    },
+    "ElementAttack": [ "Fire" ],
+    "Abilities": [ ]
+  },
+  {
+    "Id": 103,
+    "Name": "Coral Ring",
+    "Description": "Ring adorned by corals.",
+    "Cost": 1000,
+    "Type": "AddOn",
+    "Stats": {
+      "Spirit": 2,
+      "MagicEvade": 3
+    },
+    "ElementDefence": {
+      "Thunder": "Absorb"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 104,
+    "Name": "Dark Matter",
+    "Description": "Deals damage to the target. Equip as an Add-on.",
+    "Cost": 0,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 3,
+      "Magic": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 105,
+    "Name": "Desert Boots",
+    "Description": "Boots with good traction.",
+    "Cost": 300,
+    "Type": "AddOn",
+    "Stats": {
+      "Magic": 1,
+      "Spirit": 1,
+      "Evade": 2
+    },
+    "ElementDefence": {
+      "Earth": "Half"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 106,
+    "Name": "Extension",
+    "Description": "Hair ornament enchanted with various powers, worn by women.",
+    "Cost": 3500,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 1,
+      "Magic": 2,
+      "Spirit": 1,
+      "Defence": 1,
+      "MagicDefence": 1
+    },
+    "ElementAttack": [ "Thunder" ],
+    "Abilities": [ ]
+  },
+  {
+    "Id": 107,
+    "Name": "Fairy Earrings",
+    "Description": "Earrings that raise Spirit.",
+    "Cost": 3200,
+    "Type": "AddOn",
+    "Stats": {
+      "Spirit": 2,
+      "Evade": 4,
+      "MagicEvade": 2
+    },
+    "ElementAttack": [ "Wind" ],
+    "Abilities": [ ]
+  },
+  {
+    "Id": 108,
+    "Name": "Feather Boots",
+    "Description": "Boots that are light as a feather.",
+    "Cost": 4000,
+    "Type": "AddOn",
+    "Stats": {
+      "Evade": 3
+    },
+    "ElementDefence": {
+      "Earth": "Absorb"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 109,
+    "Name": "Germinas Boots",
+    "Description": "Boots that raises Strength.",
+    "Cost": 900,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 1,
+      "Evade": 2
+    },
+    "ElementAttack": [ "Earth" ],
+    "Abilities": [ ]
+  },
+  {
+    "Id": 110,
+    "Name": "Glass Buckle",
+    "Description": "Buckle protected by mysterious powers.",
+    "Cost": 500,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 1,
+      "Magic": 1,
+      "Spirit": 2,
+      "MagicEvade": 5
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 111,
+    "Name": "Gold Choker",
+    "Description": "Magic choker.",
+    "Cost": 1300,
+    "Type": "AddOn",
+    "Stats": {
+      "Magic": 2,
+      "Evade": 2,
+      "MagicDefence": 1
+    },
+    "ElementAttack": [ "Shadow" ],
+    "ElementDefence": {
+      "Wind": "Half"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 112,
+    "Name": "Madain's Ring",
+    "Description": "Ring used as a charm since ancient times.",
+    "Cost": 3000,
+    "Type": "AddOn",
+    "Stats": {
+      "Spirit": 2,
+      "MagicDefence": 2
+    },
+    "ElementDefence": {
+      "Ice": "Absorb"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 113,
+    "Name": "Magician Shoes",
+    "Description": "Shoes packed with magic.",
+    "Cost": 1500,
+    "Type": "AddOn",
+    "Stats": {
+      "Magic": 2,
+      "MagicEvade": 6
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 114,
+    "Name": "Maiden Prayer",
+    "Description": "Item that has a nice fragrance.",
+    "Cost": 1300,
+    "Type": "AddOn",
+    "Stats": {
+      "Magic": 1,
+      "MagicDefence": 1,
+      "MagicEvade": 3
+    },
+    "ElementAttack": [ "Holy" ],
+    "Abilities": [ ]
+  },
+  {
+    "Id": 115,
+    "Name": "Pearl Rouge",
+    "Description": "Rouge used by women that draws out Holy power.",
+    "Cost": 5000,
+    "Type": "AddOn",
+    "Stats": {
+      "Magic": 2,
+      "Spirit": 4,
+      "MagicEvade": 4
+    },
+    "ElementAttack": [ "Water" ],
+    "ElementDefence": {
+      "Holy": "Half"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 116,
+    "Name": "Phoenix Pinion",
+    "Description": "Cures KO. It cannot be used in the field.",
+    "Cost": 2000,
+    "Type": "AddOn",
+    "Abilities": [ ]
+  },
+  {
+    "Id": 117,
+    "Name": "Power Belt",
+    "Description": "Belt that raises Strength.",
+    "Cost": 2000,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 3,
+      "Defence": 2
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 118,
+    "Name": "Promist Ring",
+    "Description": "Ring that raises Strength.",
+    "Cost": 6000,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 2,
+      "Evade": 3
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 119,
+    "Name": "Protect Ring",
+    "Description": "Protects you from various attacks.",
+    "Cost": 40000,
+    "Type": "AddOn",
+    "Stats": {
+      "Spirit": 1,
+      "Defence": 2,
+      "Evade": 4,
+      "MagicDefence": 3,
+      "MagicEvade": 6
+    },
+    "ElementDefence": {
+      "Fire": "Half",
+      "Ice": "Half",
+      "Thunder": "Half",
+      "Earth": "Half",
+      "Water": "Half",
+      "Wind": "Half",
+      "Holy": "Half",
+      "Shadow": "Half"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 120,
+    "Name": "Pumice",
+    "Description": "‘Summon the beast from the dark.’",
+    "Cost": 50000,
+    "Type": "AddOn",
+    "Stats": {
+      "Defence": 1,
+      "MagicDefence": 2,
+      "Speed": 1,
+      "Magic": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 121,
+    "Name": "Pumice Piece",
+    "Description": "‘Put it together with the other piece.’",
+    "Cost": 25000,
+    "Type": "AddOn",
+    "Stats": {
+      "Evade": 5,
+      "MagicDefence": 1,
+      "Strength": 2,
+      "Magic": 2
+    },
+    "ElementDefence": {
+      "Holy": "Absorb",
+      "Shadow": "Absorb"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 122,
+    "Name": "Reflect Ring",
+    "Description": "Ring enchanted with the spell ‘Reflect.’",
+    "Cost": 7000,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 1,
+      "Magic": 1,
+      "MagicDefence": 1
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 123,
+    "Name": "Ribbon",
+    "Description": "Item that always keeps Mog beside you.",
+    "Cost": 0,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 1,
+      "Magic": 3,
+      "Spirit": 1,
+      "Defence": 1,
+      "Evade": 5,
+      "MagicDefence": 1,
+      "MagicEvade": 4
+    },
+    "ElementDefence": {
+      "Water": "Absorb",
+      "Wind": "Absorb",
+      "Fire": "Half",
+      "Ice": "Half",
+      "Thunder": "Half",
+      "Holy": "Half"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 124,
+    "Name": "Rosetta Ring",
+    "Description": "Ring with a fire god's spirit dwelling inside.",
+    "Cost": 24000,
+    "Type": "AddOn",
+    "Stats": {
+      "Magic": 1,
+      "Defence": 1,
+      "Evade": 2,
+      "MagicDefence": 3,
+      "MagicEvade": 2
+    },
+    "ElementDefence": {
+      "Fire": "Absorb"
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 125,
+    "Name": "Running Shoes",
+    "Description": "Shoes that allow you to walk with light steps.",
+    "Cost": 12000,
+    "Type": "AddOn",
+    "Stats": {
+      "Speed": 2,
+      "Evade": 4,
+      "MagicEvade": 4
+    },
+    "Abilities": [ ]
+  },
+  {
+    "Id": 126,
+    "Name": "Sandals",
+    "Description": "Provides a southern, tropical feel.",
+    "Cost": 0,
+    "Type": "AddOn",
+    "Abilities": [ ]
+  },
+  {
+    "Id": 127,
+    "Name": "Yellow Scarf",
+    "Description": "Scarf that raises Strength.",
+    "Cost": 400,
+    "Type": "AddOn",
+    "Stats": {
+      "Strength": 2,
+      "MagicDefence": 1
     },
     "Abilities": [ ]
   }
