@@ -1,21 +1,31 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 public abstract class BaseCharacter
 {
     const byte MAX_CHARACTER_LEVEL = 99;
     private byte level;
+    private byte levelUpCounter;
     private uint exp;
+    private StatSet baseStats;
     private StatSet stats;
 
     public string Name
     {
         get;
-        set;
+        protected set;
     }
 
     public byte Level
     {
         get { return level; }
+        protected set
+        {
+            if (value > MAX_CHARACTER_LEVEL)
+                level = MAX_CHARACTER_LEVEL;
+            else
+                level = value;
+        }
     }
 
     public uint Experience
@@ -23,16 +33,41 @@ public abstract class BaseCharacter
         get { return exp; }
     }
 
+    public uint ExperienceRequiredToNextLevel
+    {
+        get
+        {
+            if (level >= MAX_CHARACTER_LEVEL)
+                return 0;
+            else
+                return experienceMap[level + 1] - exp;
+        }
+    }
+
     public uint MaxHP
     {
         get;
-        set;
+        private set;
     }
 
     public uint MaxMP
     {
         get;
-        set;
+        private set;
+    }
+
+    protected StatSet BaseStats
+    {
+        private get { return baseStats; }
+        set
+        {
+            if (baseStats != null)
+            {
+                throw new NotSupportedException("BaseStats already set.");
+            }
+            baseStats = value;
+            stats = value;
+        }
     }
 
     public StatSet Stats
@@ -43,7 +78,7 @@ public abstract class BaseCharacter
     public GearSet Gear
     {
         get;
-        set;
+        protected set;
     }
 
     public void AddExperience(uint experience)
@@ -58,16 +93,46 @@ public abstract class BaseCharacter
         }
     }
 
-    protected abstract StatSet OnLevelUpStatIncrease(byte level);
-
     private void LevelUp()
     {
         if (level < MAX_CHARACTER_LEVEL)
         {
             level++;
-            StatSet increasedStats = OnLevelUpStatIncrease(level);
-            stats += increasedStats;
+            levelUpCounter++;
+            stats += CalculateStatIncrease();
+            MaxHP = CalculateHP();
+            MaxMP = CalculateMP();
         }
+    }
+
+    private StatSet CalculateStatIncrease()
+    {
+        StatSet statIncrease = new StatSet();
+        double speedLevelBonus = Math.Floor((level * 1) * 0.1);
+        double speedBonus = Math.Floor((double)((Stats.Speed - BaseStats.Speed) / 32));
+        double strengthLevelBonus = Math.Floor((level * 3) * 0.3);
+        double strengthBonus = Math.Floor((double)(levelUpCounter * 3 + (Stats.Strength - BaseStats.Strength) / 32));
+        double magicLevelBonus = Math.Floor((level * 3) * 0.3);
+        double magicBonus = Math.Floor((double)(levelUpCounter * 3 + (Stats.Magic - BaseStats.Magic) / 32));
+        double spiritLevelBonus = Math.Floor((level * 3) * 0.15);
+        double spiritBonus = Math.Floor((double)(levelUpCounter * 1 + (Stats.Spirit - BaseStats.Spirit) / 32));
+
+        statIncrease.Speed = (byte)(Stats.Speed - (byte)(BaseStats.Speed + speedLevelBonus + speedBonus));
+        statIncrease.Strength = (byte)(Stats.Strength - (byte)(BaseStats.Strength + strengthLevelBonus + strengthBonus));
+        statIncrease.Magic = (byte)(Stats.Magic - (byte)(BaseStats.Magic + magicLevelBonus + magicBonus));
+        statIncrease.Spirit = (byte)(Stats.Spirit - (byte)(BaseStats.Spirit + spiritLevelBonus + spiritBonus));
+
+        return statIncrease;
+    }
+
+    private uint CalculateHP()
+    {
+        return (uint)Math.Floor(stats.Strength * (decimal)(hpMap[level] / 50));
+    }
+
+    private uint CalculateMP()
+    {
+        return (uint)Math.Floor(stats.Magic * (decimal)(mpMap[level] / 100));
     }
 
     #region experienceMap
@@ -172,5 +237,215 @@ public abstract class BaseCharacter
         { 6375592 },
         { 6633167 }
     };
+    #endregion
+
+    #region hpMap
+    private List<uint> hpMap = new List<uint>
+    {
+        { 250 },
+        { 314 },
+        { 382 },
+        { 454 },
+        { 530 },
+        { 610 },
+        { 694 },
+        { 782 },
+        { 874 },
+        { 970 },
+        { 1062 },
+        { 1150 },
+        { 1234 },
+        { 1314 },
+        { 1390 },
+        { 1462 },
+        { 1530 },
+        { 1594 },
+        { 1662 },
+        { 1734 },
+        { 1810 },
+        { 1890 },
+        { 1974 },
+        { 2062 },
+        { 2154 },
+        { 2250 },
+        { 2350 },
+        { 2454 },
+        { 2562 },
+        { 2674 },
+        { 2790 },
+        { 2910 },
+        { 3034 },
+        { 3162 },
+        { 3282 },
+        { 3394 },
+        { 3498 },
+        { 3594 },
+        { 3682 },
+        { 3762 },
+        { 3834 },
+        { 3898 },
+        { 3958 },
+        { 4014 },
+        { 4066 },
+        { 4114 },
+        { 4158 },
+        { 4198 },
+        { 4234 },
+        { 4266 },
+        { 4294 },
+        { 4317 },
+        { 4334 },
+        { 4344 },
+        { 4353 },
+        { 4361 },
+        { 4368 },
+        { 4374 },
+        { 4379 },
+        { 4383 },
+        { 4386 },
+        { 4388 },
+        { 4389 },
+        { 4390 },
+        { 4391 },
+        { 4391 },
+        { 4393 },
+        { 4394 },
+        { 4395 },
+        { 4396 },
+        { 4397 },
+        { 4398 },
+        { 4399 },
+        { 4400 },
+        { 4401 },
+        { 4402 },
+        { 4403 },
+        { 4404 },
+        { 4405 },
+        { 4406 },
+        { 4407 },
+        { 4408 },
+        { 4409 },
+        { 4410 },
+        { 4411 },
+        { 4412 },
+        { 4413 },
+        { 4414 },
+        { 4415 },
+        { 4416 },
+        { 4417 },
+        { 4418 },
+        { 4419 },
+        { 4420 },
+        { 4421 },
+        { 4422 },
+        { 4423 },
+        { 4424 },
+        { 4524 }
+    };
+    #endregion
+
+    #region mpMap
+    private List<uint> mpMap = new List<uint>
+    {
+        { 200 },
+        { 206 },
+        { 212 },
+        { 219 },
+        { 226 },
+        { 234 },
+        { 242 },
+        { 250 },
+        { 259 },
+        { 268 },
+        { 277 },
+        { 285 },
+        { 293 },
+        { 301 },
+        { 308 },
+        { 315 },
+        { 321 },
+        { 327 },
+        { 333 },
+        { 340 },
+        { 347 },
+        { 355 },
+        { 363 },
+        { 371 },
+        { 380 },
+        { 389 },
+        { 399 },
+        { 409 },
+        { 419 },
+        { 430 },
+        { 441 },
+        { 453 },
+        { 465 },
+        { 477 },
+        { 489 },
+        { 500 },
+        { 510 },
+        { 519 },
+        { 527 },
+        { 535 },
+        { 542 },
+        { 548 },
+        { 554 },
+        { 559 },
+        { 564 },
+        { 568 },
+        { 572 },
+        { 576 },
+        { 579 },
+        { 582 },
+        { 584 },
+        { 586 },
+        { 587 },
+        { 588 },
+        { 589 },
+        { 590 },
+        { 591 },
+        { 592 },
+        { 593 },
+        { 594 },
+        { 595 },
+        { 596 },
+        { 597 },
+        { 598 },
+        { 599 },
+        { 600 },
+        { 601 },
+        { 602 },
+        { 603 },
+        { 604 },
+        { 605 },
+        { 606 },
+        { 607 },
+        { 608 },
+        { 609 },
+        { 610 },
+        { 611 },
+        { 612 },
+        { 613 },
+        { 614 },
+        { 615 },
+        { 616 },
+        { 617 },
+        { 618 },
+        { 619 },
+        { 620 },
+        { 621 },
+        { 622 },
+        { 623 },
+        { 624 },
+        { 625 },
+        { 626 },
+        { 627 },
+        { 628 },
+        { 629 },
+        { 630 },
+        { 631 },
+        { 632 },
+        { 642 }
+    }
     #endregion
 }
