@@ -422,7 +422,7 @@
   {
     "Id": 61,
     "Name": "Armor Break",
-    "Description": "Reduces the enemy's Defense.",
+    "Description": "Reduces the enemy's Defence.",
     "AbilityPoints": 30,
     "MPCost": 4
   },
@@ -499,7 +499,7 @@
   {
     "Id": 70,
     "Name": "Lv3 Def-less",
-    "Description": "Reduces Defense of enemies whose levels are multiples of 3.",
+    "Description": "Reduces Defence of enemies whose levels are multiples of 3.",
     "AbilityPoints": 0,
     "MPCost": 12
   },
