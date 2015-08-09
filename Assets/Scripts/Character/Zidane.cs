@@ -13,8 +13,7 @@ public class Zidane : BaseCharacter
             Magic = 18,
             Spirit = 23
         };
-
-
+        
         Gear = new GearSet
         {
             Weapon = ItemManager.Weapons.GetById(1),

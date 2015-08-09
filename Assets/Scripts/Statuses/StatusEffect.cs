@@ -1,6 +1,7 @@
 ﻿public enum StatusEffect
 {
     KO,
+    Death,
     Heat,
     Mini,
     Slow,

@@ -182,6 +182,9 @@
     "Stats": {
       "Attack": 14,
       "Spirit": 2
+    },
+    "ElementDefence": {
+      "Shadow": "Half"
     }
   },
   {
@@ -202,7 +205,8 @@
     "Type": "Rod",
     "Stats": {
       "Attack": 27
-    }
+    },
+    "ElementAttack": [ "Holy" ]
   },
   {
 
@@ -235,7 +239,8 @@
     "Type": "Racket",
     "Stats": {
       "Attack": 13
-    }
+    },
+    "ElementAttack": [ "Wind" ]
   },
   {
     "Id": 24,
@@ -245,7 +250,8 @@
     "Type": "Racket",
     "Stats": {
       "Attack": 17
-    }
+    },
+    "ElementAttack": [ "Wind" ]
   },
   {
     "Id": 25,
@@ -256,7 +262,8 @@
     "Stats": {
       "Attack": 23,
       "Magic": 2
-    }
+    },
+    "ElementAttack": [ "Wind", "Holy" ]
   },
   {
     "Id": 26,
@@ -266,7 +273,8 @@
     "Type": "Racket",
     "Stats": {
       "Attack": 27
-    }
+    },
+    "ElementAttack": [ "Wind" ]
   },
   {
     "Id": 27,
@@ -276,7 +284,8 @@
     "Type": "Racket",
     "Stats": {
       "Attack": 35
-    }
+    },
+    "ElementAttack": [ "Wind" ]
   },
   {
     "Id": 28,
@@ -286,7 +295,8 @@
     "Type": "Racket",
     "Stats": {
       "Attack": 45
-    }
+    },
+    "ElementAttack": [ "Wind" ]
   },
   {
     "Id": 29,
@@ -396,7 +406,8 @@
     "Type": "Sword",
     "Stats": {
       "Attack": 35
-    }
+    },
+    "ElementAttack": [ "Ice" ]
   },
   {
     "Id": 40,
@@ -406,7 +417,8 @@
     "Type": "Sword",
     "Stats": {
       "Attack": 38
-    }
+    },
+    "ElementAttack": [ "Thunder" ]
   },
   {
     "Id": 41,
@@ -426,7 +438,8 @@
     "Type": "Sword",
     "Stats": {
       "Attack": 46
-    }
+    },
+    "ElementAttack": [ "Fire" ]
   },
   {
     "Id": 43,
@@ -447,6 +460,10 @@
     "Stats": {
       "Attack": 65,
       "Spirit": 3
+    },
+    "ElementDefence": {
+      "Thunder": "Half",
+      "Ice": "Half"
     }
   },
   {
@@ -461,6 +478,9 @@
       "Speed": 1,
       "Magic": 2,
       "Spirit": 5
+    },
+    "ElementDefence": {
+      "Fire": "Half"
     }
   },
   {
@@ -481,7 +501,8 @@
     "Type": "KnightSword",
     "Stats": {
       "Attack": 77
-    }
+    },
+    "ElementAttack": [ "Holy" ]
   },
   {
     "Id": 48,
@@ -501,7 +522,8 @@
     "Type": "KnightSword",
     "Stats": {
       "Attack": 108
-    }
+    },
+    "ElementAttack": [ "Holy" ]
   },
   {
     "Id": 50,
@@ -519,7 +541,10 @@
     "Description": "Staff with a divine fire power dwelling inside.",
     "Cost": 1100,
     "Type": "Staff",
-    "Attack": 16
+    "Stats": {
+      "Attack": 16
+    },
+    "ElementAttack": [ "Fire" ]
   },
   {
     "Id": 52,
@@ -529,7 +554,8 @@
     "Type": "Staff",
     "Stats": {
       "Attack": 16
-    }
+    },
+    "ElementAttack": [ "Ice" ]
   },
   {
     "Id": 53,
@@ -539,7 +565,8 @@
     "Type": "Staff",
     "Stats": {
       "Attack": 16
-    }
+    },
+    "ElementAttack": [ "Thunder" ]
   },
   {
     "Id": 54,
@@ -569,6 +596,10 @@
     "Type": "Staff",
     "Stats": {
       "Attack": 29
+    },
+    "ElementAttack": [ "Water" ],
+    "ElementDefence": {
+      "Wind": "Absorb"
     }
   },
   {
@@ -629,7 +660,8 @@
     "Type": "Spear",
     "Stats": {
       "Attack": 32
-    }
+    },
+    "ElementAttack": [ "Ice" ]
   },
   {
     "Id": 63,
@@ -669,7 +701,8 @@
     "Type": "Spear",
     "Stats": {
       "Attack": 62
-    }
+    },
+    "ElementAttack": [ "Holy" ]
   },
   {
     "Id": 67,
@@ -799,7 +832,8 @@
     "Type": "Claw",
     "Stats": {
       "Attack": 53
-    }
+    },
+    "ElementAttack": [ "Water" ]
   },
   {
     "Id": 80,
@@ -829,7 +863,8 @@
     "Type": "Claw",
     "Stats": {
       "Attack": 75
-    }
+    },
+    "ElementAttack": [ "Wind" ]
   },
   {
     "Id": 83,

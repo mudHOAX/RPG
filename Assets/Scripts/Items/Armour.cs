@@ -2,27 +2,11 @@
 
 public class Armour : Item
 {
-    public ArmourType Type
-    {
-        get;
-        set;
-    }
+    public ArmourType Type { get; set; }
 
-    public StatSet Stats
-    {
-        get;
-        set;
-    }
+    public StatSet Stats { get; set; }
 
-    public Element[] ElementAttack
-    {
-        get;
-        set;
-    }
+    public List<Element> ElementAttack { get; set; }
 
-    public Dictionary<Element, ElementModifier> ElementDefence
-    {
-        get;
-        set;
-    }
+    public Dictionary<Element, ElementModifier> ElementDefence { get; set; }
 }

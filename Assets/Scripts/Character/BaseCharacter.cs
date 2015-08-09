@@ -4,19 +4,16 @@ using UnityEngine;
 
 public abstract class BaseCharacter : MonoBehaviour
 {
-    const byte MAX_CHARACTER_LEVEL = 99;
+    private const byte MAX_CHARACTER_LEVEL = 99;
     private byte level = 1;
     private byte levelUpCounter = 0;
     private uint exp = 0;
     private StatSet baseStats;
     private StatSet stats;
     private GearSet gear;
+    private List<StatusEffect> activeStatusEffects = new List<StatusEffect>();
 
-    public string Name
-    {
-        get;
-        protected set;
-    }
+    public string Name { get; protected set; }
 
     public byte Level
     {
@@ -30,10 +27,7 @@ public abstract class BaseCharacter : MonoBehaviour
         }
     }
 
-    public uint Experience
-    {
-        get { return exp; }
-    }
+    public uint Experience { get { return exp; } }
 
     public uint ExperienceRequiredToNextLevel
     {
@@ -46,17 +40,9 @@ public abstract class BaseCharacter : MonoBehaviour
         }
     }
 
-    public uint MaxHP
-    {
-        get;
-        private set;
-    }
+    public uint MaxHP { get; private set; }
 
-    public uint MaxMP
-    {
-        get;
-        private set;
-    }
+    public uint MaxMP { get; private set; }
 
     protected StatSet BaseStats
     {
@@ -64,18 +50,13 @@ public abstract class BaseCharacter : MonoBehaviour
         set
         {
             if (baseStats != null)
-            {
                 throw new NotSupportedException("BaseStats already set.");
-            }
             baseStats = value;
             stats = value;
         }
     }
 
-    public StatSet Stats
-    {
-        get { return stats; }
-    }
+    public StatSet Stats { get { return stats; } }
 
     public GearSet Gear
     {
@@ -94,6 +75,11 @@ public abstract class BaseCharacter : MonoBehaviour
             if (gear.AddOn != null)
                 stats += gear.AddOn.Stats;
         }
+    }
+
+    public List<StatusEffect> ActiveStatusEffects
+    {
+        get { return activeStatusEffects; }
     }
 
     public void AddExperience(uint experience)

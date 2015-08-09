@@ -1,26 +1,10 @@
 ﻿public class Ability
 {
-    public int Id
-    {
-        get;
-        set;
-    }
+    public int Id { get; protected set; }
 
-    public string Name
-    {
-        get;
-        set;
-    }
+    public string Name { get; protected set; }
 
-    public string Description
-    {
-        get;
-        set;
-    }
+    public string Description { get; protected set; }
 
-    public int AbilityPoints
-    {
-        get;
-        set;
-    }
+    public int AbilityPoints { get; protected set; }
 }

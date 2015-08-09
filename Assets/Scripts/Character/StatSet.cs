@@ -71,46 +71,20 @@
         }
     }
 
-    public int Attack
-    {
-        get;
-        set;
-    }
+    public int Attack { get; set; }
 
-    public int Defence
-    {
-        get;
-        set;
-    }
+    public int Defence { get; set; }
 
-    public int Evade
-    {
-        get;
-        set;
-    }
+    public int Evade { get; set; }
 
-    public int MagicDefence
-    {
-        get;
-        set;
-    }
+    public int MagicDefence { get; set; }
 
-    public int MagicEvade
-    {
-        get;
-        set;
-    }
+    public int MagicEvade { get; set; }
 
     public override bool Equals(object obj)
     {
-        try
-        {
-            return this == (StatSet)obj;
-        }
-        catch
-        {
-            return false;
-        }
+        try { return this == (StatSet)obj; }
+        catch { return false; }
     }
 
     public override int GetHashCode()
@@ -164,11 +138,8 @@
 
     public static StatSet operator *(StatSet lhs, StatSet rhs)
     {
-        if (ReferenceEquals(lhs, null))
-            lhs = new StatSet();
-
-        if (ReferenceEquals(rhs, null))
-            rhs = new StatSet();
+        if (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null))
+            return new StatSet();
 
         return new StatSet()
         {
@@ -186,12 +157,9 @@
 
     public static StatSet operator /(StatSet lhs, StatSet rhs)
     {
-        if (lhs == null)
-            lhs = new StatSet();
-
-        if (rhs == null)
-            rhs = new StatSet();
-
+        if (ReferenceEquals(lhs, null) || ReferenceEquals(rhs, null))
+            return new StatSet();
+        
         return new StatSet()
         {
             Speed = lhs.Speed / rhs.Speed,
