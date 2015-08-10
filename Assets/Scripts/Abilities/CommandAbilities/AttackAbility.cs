@@ -12,12 +12,12 @@ public sealed class AttackAbility : CommandAbility
         AvailableInField = false;
     }
 
-    protected override void InvokeInBattle(BaseCharacter invoker, BaseEnemy target)
+    protected override void InvokeInBattle(Entity invoker, Entity target)
     {
         BattleManager.CurrentBattle.CalculateAttackDamage(invoker, target);
     }
 
-    protected override void InvokeInField(BaseCharacter invoker, BaseEnemy target)
+    protected override void InvokeInField(Entity invoker, Entity target)
     {
         throw new NotImplementedException();
     }

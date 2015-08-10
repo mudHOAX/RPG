@@ -1,137 +1,159 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
 
-public abstract class BaseCharacter : MonoBehaviour
+public class BaseCharacter : Entity
 {
-    private const byte MAX_CHARACTER_LEVEL = 99;
-    private byte level = 1;
     private byte levelUpCounter = 0;
-    private uint exp = 0;
-    private StatSet baseStats;
-    private StatSet stats;
-    private GearSet gear;
-    private List<StatusEffect> activeStatusEffects = new List<StatusEffect>();
+    private StatSet baseStats = new StatSet();
 
-    public string Name { get; protected set; }
-
-    public byte Level
+    public override byte Level
     {
-        get { return level; }
+        get { return base.Level; }
         protected set
         {
-            if (value > MAX_CHARACTER_LEVEL)
-                level = MAX_CHARACTER_LEVEL;
-            else
-                level = value;
+            base.Level = (value > MAX_LEVEL) ? MAX_LEVEL : value;
+            base.Experience = experienceMap[base.Level];
         }
     }
 
-    public uint Experience { get { return exp; } }
+    public override uint Experience { get { return base.Experience; } }
 
-    public uint ExperienceRequiredToNextLevel
-    {
-        get
-        {
-            if (level >= MAX_CHARACTER_LEVEL)
-                return 0;
-            else
-                return experienceMap[level + 1] - exp;
-        }
-    }
+    public uint ExperienceRequiredToNextLevel { get { return (Level >= MAX_LEVEL) ? 0 : experienceMap[Level + 1] - Experience; } }
+    
+    public override uint MaxHP { get { return base.MaxHP; } }
 
-    public uint MaxHP { get; private set; }
+    public override uint MaxMP { get { return base.MaxMP; } }
 
-    public uint MaxMP { get; private set; }
+    public override uint CurrentHP { get { return base.CurrentHP; } }
+
+    public override uint CurrentMP { get { return base.CurrentMP; } }
 
     protected StatSet BaseStats
     {
         private get { return baseStats; }
         set
         {
-            if (baseStats != null)
-                throw new NotSupportedException("BaseStats already set.");
             baseStats = value;
-            stats = value;
+            base.Stats = value + Gear.Stats;
         }
     }
 
-    public StatSet Stats { get { return stats; } }
+    public override StatSet Stats { get { return base.Stats; } }
 
-    public GearSet Gear
+    public override GearSet Gear
     {
-        get { return gear; }
+        get { return base.Gear; }
         protected set
         {
-            gear = value;
-            if (gear.Weapon != null)
-                stats += gear.Weapon.Stats;
-            if (gear.Head != null)
-                stats += gear.Head.Stats;
-            if (gear.Arm != null)
-                stats += gear.Arm.Stats;
-            if (gear.Body != null)
-                stats += gear.Body.Stats;
-            if (gear.AddOn != null)
-                stats += gear.AddOn.Stats;
+            base.Gear = value;
+            base.Stats += Gear.Stats;
         }
     }
 
-    public List<StatusEffect> ActiveStatusEffects
+    public override List<StatusEffect> ActiveStatusEffects { get { return base.ActiveStatusEffects; } }
+
+    public void Equip(Weapon weapon)
     {
-        get { return activeStatusEffects; }
+        if (Gear.Weapon != null)
+            base.Stats -= Gear.Weapon.Stats;
+
+        Gear.Weapon = weapon;
+        base.Stats += Gear.Weapon.Stats;
+    }
+
+    public void Equip(Armour armour)
+    {
+        switch (armour.Type)
+        {
+            case ArmourType.Hat:
+            case ArmourType.Helmet:
+                if (Gear.Head != null)
+                    base.Stats -= Gear.Head.Stats;
+
+                Gear.Head = armour;
+                base.Stats += Gear.Head.Stats;
+                break;
+            case ArmourType.Armlet:
+            case ArmourType.Gauntlet:
+                if (Gear.Arm != null)
+                    base.Stats -= Gear.Arm.Stats;
+
+                Gear.Arm = armour;
+                base.Stats += Gear.Arm.Stats;
+                break;
+            case ArmourType.LightArmour:
+            case ArmourType.HeavyArmour:
+            case ArmourType.Robe:
+                if (Gear.Body != null)
+                    base.Stats -= Gear.Body.Stats;
+
+                Gear.Body = armour;
+                base.Stats += Gear.Body.Stats;
+                break;
+            case ArmourType.AddOn:
+                if (Gear.AddOn != null)
+                    base.Stats -= Gear.AddOn.Stats;
+
+                Gear.AddOn = armour;
+                base.Stats += Gear.AddOn.Stats;
+                break;
+        }
     }
 
     public void AddExperience(uint experience)
     {
-        while (level < MAX_CHARACTER_LEVEL && exp + experience > experienceMap[level])
+        while (Level < MAX_LEVEL && Experience + experience > experienceMap[Level])
         {
-            uint difference = experienceMap[level] - exp;
-            exp = experienceMap[level];
+            uint difference = experienceMap[Level] - Experience;
             experience -= difference;
             LevelUp();
         }
-        exp += experience;
+        base.Experience += experience;
     }
-    
+
     private void LevelUp()
     {
-        if (level < MAX_CHARACTER_LEVEL)
-        {
-            level++;
-            levelUpCounter++;
-            stats += CalculateStatIncrease();
-            MaxHP = CalculateHP();
-            MaxMP = CalculateMP();
-        }
+        if (Level > MAX_LEVEL)
+            return;
+
+        Level++;
+        levelUpCounter++;
+        base.Stats += CalculateStatIncrease();
+        base.MaxHP = CalculateHP();
+        base.MaxMP = CalculateMP();
     }
 
     private StatSet CalculateStatIncrease()
     {
         StatSet statIncrease = new StatSet();
         StatSet gearBonus = Gear.Weapon.Stats + Gear.Head.Stats + Gear.Arm.Stats + Gear.Body.Stats + Gear.AddOn.Stats;
-        
+
         int speedBonus = gearBonus.Speed;
         int strengthBonus = gearBonus.Strength;
         int magicBonus = gearBonus.Magic;
         int spiritBonus = gearBonus.Spirit;
 
-        statIncrease.Speed = (byte)((BaseStats.Speed + Math.Floor((double)(level * 1 / 10)) + Math.Floor((double)((Stats.Speed - BaseStats.Speed) / 32)) + speedBonus) - Stats.Speed);
-        statIncrease.Strength = (byte)((BaseStats.Strength + Math.Floor((double)(level * 3 / 10)) + Math.Floor((double)(levelUpCounter * 3 + (Stats.Strength - BaseStats.Strength)) / 32) + strengthBonus) - Stats.Strength);
-        statIncrease.Magic = (byte)((BaseStats.Magic + Math.Floor((double)(level * 3 / 10)) + Math.Floor((double)(levelUpCounter * 3 + (Stats.Magic - BaseStats.Magic)) / 32) + magicBonus) - Stats.Magic);
-        statIncrease.Spirit = (byte)((BaseStats.Spirit + Math.Floor((double)(level * 3 / 20)) + Math.Floor((double)(levelUpCounter * 1 + (Stats.Spirit - BaseStats.Spirit)) / 32) + spiritBonus) - Stats.Spirit);
+        statIncrease.Speed = (byte)((BaseStats.Speed + Math.Floor((double)(Level * 1 / 10)) + Math.Floor((double)((Stats.Speed - BaseStats.Speed) / 32)) + speedBonus) - Stats.Speed);
+        statIncrease.Strength = (byte)((BaseStats.Strength + Math.Floor((double)(Level * 3 / 10)) + Math.Floor((double)(levelUpCounter * 3 + (Stats.Strength - BaseStats.Strength)) / 32) + strengthBonus) - Stats.Strength);
+        statIncrease.Magic = (byte)((BaseStats.Magic + Math.Floor((double)(Level * 3 / 10)) + Math.Floor((double)(levelUpCounter * 3 + (Stats.Magic - BaseStats.Magic)) / 32) + magicBonus) - Stats.Magic);
+        statIncrease.Spirit = (byte)((BaseStats.Spirit + Math.Floor((double)(Level * 3 / 20)) + Math.Floor((double)(levelUpCounter * 1 + (Stats.Spirit - BaseStats.Spirit)) / 32) + spiritBonus) - Stats.Spirit);
 
         return statIncrease;
     }
 
     private uint CalculateHP()
     {
-        return (uint)Math.Floor(stats.Strength * (decimal)(hpMap[level - 1] / 50));
+        return (uint)Math.Floor(Stats.Strength * (decimal)(hpMap[Level - 1] / 50));
     }
 
     private uint CalculateMP()
     {
-        return (uint)Math.Floor(stats.Magic * (decimal)(mpMap[level - 1] / 100));
+        return (uint)Math.Floor(Stats.Magic * (decimal)(mpMap[Level - 1] / 100));
+    }
+
+    public override CommandAbility GetMove()
+    {
+        throw new NotImplementedException();
     }
 
     #region experienceMap

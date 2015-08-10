@@ -28,10 +28,10 @@ public abstract class CommandAbility : Ability
         }
     }
 
-    protected abstract void InvokeInField(BaseCharacter invoker, BaseEnemy target);
-    protected abstract void InvokeInBattle(BaseCharacter invoker, BaseEnemy target);
+    protected abstract void InvokeInField(Entity invoker, Entity target);
+    protected abstract void InvokeInBattle(Entity invoker, Entity target);
 
-    private float CalculateAccuracy(BaseCharacter invoker, BaseEnemy target)
+    private float CalculateAccuracy(Entity invoker, Entity target)
     {
         float accuracy = 100;
 

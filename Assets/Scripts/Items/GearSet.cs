@@ -13,6 +13,19 @@ public class GearSet
 
     public Armour AddOn { get; set; }
 
+    public StatSet Stats {
+        get
+        {
+            StatSet stats = new StatSet();
+            if (Weapon != null) stats += Weapon.Stats;
+            if (Head != null) stats += Head.Stats;
+            if (Arm != null) stats += Arm.Stats;
+            if (Body != null) stats += Body.Stats;
+            if (AddOn != null) stats += AddOn.Stats;
+            return stats;
+        }
+    }
+
     public List<Element> ElementAttack
     {
         get
@@ -27,6 +40,20 @@ public class GearSet
         }
     }
 
+    public Dictionary<Element, ElementModifier> ElementDefence
+    {
+        get
+        {
+            Dictionary<Element, ElementModifier> elementDefence = new Dictionary<Element, ElementModifier>();
+            return elementDefence
+                .Union(Weapon.ElementDefence)
+                .Union(Head.ElementDefence)
+                .Union(Arm.ElementDefence)
+                .Union(Body.ElementDefence)
+                .Union(AddOn.ElementDefence).ToDictionary(i => i.Key, i => i.Value);
+        }
+    }
+    
     public override bool Equals(object obj)
     {
         try { return this == (GearSet)obj; }

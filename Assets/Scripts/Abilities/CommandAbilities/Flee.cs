@@ -14,7 +14,7 @@ public sealed class Flee : CommandAbility
         AvailableInField = false;
     }
 
-    protected override void InvokeInBattle(BaseCharacter invoker, BaseEnemy target)
+    protected override void InvokeInBattle(Entity invoker, Entity target)
     {
         if (BattleManager.CurrentBattle.CanFlee)
         {
@@ -27,7 +27,7 @@ public sealed class Flee : CommandAbility
             BattleManager.ShowMessage("Cannot Escape!");
     }
 
-    protected override void InvokeInField(BaseCharacter invoker, BaseEnemy target)
+    protected override void InvokeInField(Entity invoker, Entity target)
     {
         throw new NotImplementedException();
     }
