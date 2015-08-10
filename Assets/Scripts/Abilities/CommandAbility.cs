@@ -7,7 +7,7 @@ public abstract class CommandAbility : Ability
     public bool AvailableInBattle { get; protected set; }
     public int MPCost { get; protected set; }
 
-    public void Invoke(BaseCharacter invoker, BaseEnemy target) {
+    public void Invoke(Entity invoker, Entity target) {
         if (BattleManager.BattleInProgress == true && AvailableInBattle == false)
             throw new Exception(string.Format("Ability `{0}` cannot be invoked whilst in battle", Name));
 

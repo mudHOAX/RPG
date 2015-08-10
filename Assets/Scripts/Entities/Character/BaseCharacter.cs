@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class BaseCharacter : Entity
+public abstract class BaseCharacter : Entity
 {
     private byte levelUpCounter = 0;
     private StatSet baseStats = new StatSet();
