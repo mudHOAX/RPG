@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public abstract class BaseCharacter : Entity
 {
     private byte levelUpCounter = 0;
     private StatSet baseStats = new StatSet();
+
+    public byte[] Portrait { get; protected set; }
 
     public override byte Level
     {
@@ -12,7 +15,7 @@ public abstract class BaseCharacter : Entity
         protected set
         {
             base.Level = (value > MAX_LEVEL) ? MAX_LEVEL : value;
-            base.Experience = experienceMap[base.Level];
+            base.Experience = experienceMap[base.Level - 1];
         }
     }
 
@@ -35,6 +38,12 @@ public abstract class BaseCharacter : Entity
         {
             baseStats = value;
             base.Stats = value + Gear.Stats;
+
+            base.MaxHP = CalculateHP();
+            base.MaxMP = CalculateMP();
+
+            base.CurrentHP = CalculateHP();
+            base.CurrentMP = CalculateMP();
         }
     }
 
@@ -47,6 +56,9 @@ public abstract class BaseCharacter : Entity
         {
             base.Gear = value;
             base.Stats += Gear.Stats;
+
+            base.MaxHP = CalculateHP();
+            base.MaxMP = CalculateMP();
         }
     }
 
@@ -126,12 +138,11 @@ public abstract class BaseCharacter : Entity
     private StatSet CalculateStatIncrease()
     {
         StatSet statIncrease = new StatSet();
-        StatSet gearBonus = Gear.Weapon.Stats + Gear.Head.Stats + Gear.Arm.Stats + Gear.Body.Stats + Gear.AddOn.Stats;
 
-        int speedBonus = gearBonus.Speed;
-        int strengthBonus = gearBonus.Strength;
-        int magicBonus = gearBonus.Magic;
-        int spiritBonus = gearBonus.Spirit;
+        int speedBonus = Gear.Stats.Speed;
+        int strengthBonus = Gear.Stats.Strength;
+        int magicBonus = Gear.Stats.Magic;
+        int spiritBonus = Gear.Stats.Spirit;
 
         statIncrease.Speed = (byte)((BaseStats.Speed + Math.Floor((double)(Level * 1 / 10)) + Math.Floor((double)((Stats.Speed - BaseStats.Speed) / 32)) + speedBonus) - Stats.Speed);
         statIncrease.Strength = (byte)((BaseStats.Strength + Math.Floor((double)(Level * 3 / 10)) + Math.Floor((double)(levelUpCounter * 3 + (Stats.Strength - BaseStats.Strength)) / 32) + strengthBonus) - Stats.Strength);

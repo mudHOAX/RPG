@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using System.IO;
 
 public class Zidane : BaseCharacter
 {
     public Zidane()
     {
         Name = "Zidane";
+        Portrait = File.ReadAllBytes("Assets/Textures/Characters/Zidane/Zidane-Portrait.png");
 
         BaseStats = new StatSet
         {
@@ -19,18 +20,5 @@ public class Zidane : BaseCharacter
             Weapon = ItemManager.Weapons.GetById(1),
             Head = ItemManager.Armours.GetById(3)
         };
-
-        Debug.Log("------------------------------");
-        Debug.Log("Level: " + Level);
-        Debug.Log("Speed: " + Stats.Speed);
-        Debug.Log("Strength: " + Stats.Strength);
-        Debug.Log("Magic: " + Stats.Magic);
-        Debug.Log("Spirit: " + Stats.Spirit);
-        Debug.Log("Attack: " + Stats.Attack);
-        Debug.Log("Defence: " + Stats.Defence);
-        Debug.Log("Evade: " + Stats.Evade);
-        Debug.Log("MagicDefence: " + Stats.MagicDefence);
-        Debug.Log("MagicEvade: " + Stats.MagicEvade);
-        Debug.Log("------------------------------");
     }
 }

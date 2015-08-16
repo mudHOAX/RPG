@@ -19,7 +19,7 @@ public sealed class Flee : CommandAbility
         if (BattleManager.CurrentBattle.CanFlee)
         {
             uint droppedGil = (uint)Math.Round((BattleManager.CurrentBattle.EnemySet.Gil / (1 + GIL_LOSS_RATE)));
-            PlayerManager.TryReduceGil(droppedGil, out droppedGil);
+            PlayerManager.Instance.TryReduceGil(droppedGil, out droppedGil);
             BattleManager.ShowMessage("Dropped {0} Gil!", droppedGil);
             BattleManager.CurrentBattle.Flee();
         }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Entity : MonoBehaviour
+public abstract class Entity
 {
     protected const byte MAX_LEVEL = 99;
     private byte level = 1;
@@ -10,6 +10,7 @@ public abstract class Entity : MonoBehaviour
     private uint maxMP = 0;
     private uint currentHP = 0;
     private uint currentMP = 0;
+    private BattleRow battleRow = BattleRow.Front;
     private StatSet stats = new StatSet();
     private GearSet gear = new GearSet();
     private List<StatusEffect> activeStatusEffects = new List<StatusEffect>();
@@ -62,6 +63,12 @@ public abstract class Entity : MonoBehaviour
     public virtual uint CurrentMP {
         get { return currentMP; }
         protected set { currentMP = (value > MaxMP) ? MaxMP : value; }
+    }
+    
+    public virtual BattleRow BattleRow
+    {
+        get { return battleRow; }
+        set { battleRow = value; }
     }
 
     public virtual StatSet Stats

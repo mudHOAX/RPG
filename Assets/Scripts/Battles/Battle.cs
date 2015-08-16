@@ -85,7 +85,10 @@ public class Battle
             bonusDamage = (int)Math.Floor(bonusDamage * 1.5f);
 
         // if critical hit                          bonusDamage = Math.Floor(bonusDamage * 2);
+
         // if attacker is in the Back Row           bonusDamage = Math.Floor(bonusDamage * 0.5f);
+        if (attacker.BattleRow == BattleRow.Back)
+            bonusDamage = (int)Math.Floor(bonusDamage * 0.5f);
 
         // if target has Protect status effect      bonusDamage = Math.Floor(bonusDamage * 0.5f);
         if (target.ActiveStatusEffects.Contains(StatusEffect.Protect))
