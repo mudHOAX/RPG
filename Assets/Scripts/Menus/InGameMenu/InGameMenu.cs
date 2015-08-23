@@ -5,29 +5,28 @@ using UnityEngine;
 
 public class InGameMenu : Menu
 {
-    public Texture2D cursor = new Texture2D(20, 20);
-    private Vector2 cursorPosition;
     private Stopwatch stopwatch = new Stopwatch();
 
     private Dictionary<string, Texture2D> characterPortraits = new Dictionary<string, Texture2D> { };
     Texture2D menuBackgroundTexture;
     Texture2D menuBoxTexture;
-    int currentButton = 0;
 
-    GUIButton[] menuButtons = new GUIButton[] {
-        new GUIButton { controlName = "Items", text = "Items", action = () => { UnityEngine.Debug.Log("Items"); MenuManager.LoadMenu<ItemMenu>(); } },
-        new GUIButton { controlName = "Abilities", text = "Abilities", action = () => { UnityEngine.Debug.Log("Abilities"); } },
-        new GUIButton { controlName = "Equipment", text = "Equipment", action = () => { UnityEngine.Debug.Log("Equipment"); } },
-        new GUIButton { controlName = "Status", text = "Status", action = () => { UnityEngine.Debug.Log("Status"); } },
-        new GUIButton { controlName = "Order", text = "Order", action = () => { UnityEngine.Debug.Log("Order"); } },
-        new GUIButton { controlName = "Cards", text = "Cards", action = () => { UnityEngine.Debug.Log("Cards"); } },
-        new GUIButton { controlName = "Config", text = "Config", action = () => { UnityEngine.Debug.Log("Config"); } }
+    private GUIControl[] controls = new GUIControl[] 
+    {
+        new GUIControl { name = "menu-items", label = "Items", action = () => { MenuManager.LoadMenu<ItemMenu>(); } },
+        new GUIControl { name = "menu-abilities", label = "Abilities", action = () => { /*MenuManager.LoadMenu<AbilitiesMenu>();*/ } },
+        new GUIControl { name = "menu-equipment", label = "Equipment", action = () => { /*MenuManager.LoadMenu<EquipmentMenu>();*/ } },
+        new GUIControl { name = "menu-status", label = "Status", action = () => { /*MenuManager.LoadMenu<StatusMenu>();*/ } },
+        new GUIControl { name = "menu-order", label = "Order", action = () => { /*MenuManager.LoadMenu<OrderMenu>();*/ } },
+        new GUIControl { name = "menu-cards", label = "Cards", action = () => { /*MenuManager.LoadMenu<CardsMenu>();*/ } },
+        new GUIControl { name = "menu-config", label = "Config", action = () => { /*MenuManager.LoadMenu<ConfigMenu>();*/ } }
     };
+    private GUINavigableControlGroup mainMenu;
 
     public void Update()
     {
-        if (Input.GetButtonDown("PS4_Cross"))
-            menuButtons[currentButton].action.Invoke();
+        if (mainMenu != null && Input.GetButtonDown("PS4_Cross"))
+            mainMenu.CurrentControl.action.Invoke();
     }
 
     public void OnGUI()
@@ -52,6 +51,7 @@ public class InGameMenu : Menu
 
             BaseCharacter character = PlayerManager.Instance.Party[i];
 
+            GUI.SetNextControlName(character.Name);
             GUI.Box(new Rect(menuBoxLeft, characterBoxTop, characterBoxWidth, characterBoxHeight), menuBoxTexture);
             GUI.Box(new Rect(menuBoxLeft + 20.0f, characterBoxTop, characterBoxHeight + 20.0f, characterBoxHeight), menuBoxTexture);
 
@@ -114,39 +114,10 @@ public class InGameMenu : Menu
         float mainMenuTop = (Screen.height / 2 - ((characterBoxHeight * 4) / 2)) - 20;
         float mainMenuWidth = menuResolution.x / 6.0f;
         float mainMenuHeight = 195.0f;
-        GUI.Box(new Rect(mainMenuLeft, mainMenuTop, mainMenuWidth, mainMenuHeight), menuBoxTexture);
 
-        float axis = Input.GetAxis("Vertical");
-
-        if (!stopwatch.IsRunning || stopwatch.ElapsedMilliseconds > 300)
-        {
-            stopwatch.Reset();
-            stopwatch.Start();
-
-            if (axis > 0)
-                currentButton--;
-            else if (axis < 0)
-                currentButton++;
-            else if (axis == 0)
-                stopwatch.Stop();
-
-            currentButton = Mathf.Clamp(currentButton, 0, menuButtons.Length - 1);
-        }
-
-
-        float buttonLeft = mainMenuLeft + 10.0f;
-        float buttonTop = mainMenuTop + 10.0f;
-        foreach (GUIButton button in menuButtons)
-        {
-            GUI.SetNextControlName(button.controlName);
-            if (GUI.Button(new Rect(buttonLeft, buttonTop, mainMenuWidth - 20.0f, 25), button.text))
-                button.action.Invoke();
-
-            buttonTop += 25.0f;
-        }
-
-
-        GUI.FocusControl(menuButtons[currentButton].controlName);
+        if (mainMenu == null) 
+            mainMenu = new GUINavigableControlGroup(controls, new Rect(mainMenuLeft, mainMenuTop, mainMenuWidth, mainMenuHeight), new Vector2(10, 10));
+        mainMenu.Render();
 
         // Time & Gil
         float subMenuLeft = mainMenuLeft;

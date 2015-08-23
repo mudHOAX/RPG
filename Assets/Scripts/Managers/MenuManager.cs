@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour
@@ -27,10 +26,7 @@ public class MenuManager : MonoBehaviour
     public static void LoadMenu<T>() where T : Menu
     {
         if (menuHistory.Count > 0)
-        {
-            Type previousMenu = menuHistory.Peek();
-            DestroyImmediate(GameObject.Find(previousMenu.FullName));
-        }
+            DestroyImmediate(GameObject.Find(menuHistory.Peek().FullName));
 
         menuHistory.Push(typeof(T));
         new GameObject(typeof(T).FullName).AddComponent<T>();
