@@ -14,8 +14,6 @@ public class PlayerManager : MonoBehaviour
     private uint availableGil = 0;
     private Stopwatch gameTime = new Stopwatch();
     
-    private bool inGameMenuOpen = false;
-    
     public static PlayerManager Instance { get { return (instance == null) ? instance = GameObject.Find("PlayerManager").GetComponent<PlayerManager>() : instance; } }
     public PlayerManager()
     {
@@ -92,19 +90,5 @@ public class PlayerManager : MonoBehaviour
     private void ReduceGil(uint amount)
     {
         availableGil -= amount;
-    }
-
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) && !inGameMenuOpen)
-        {
-            inGameMenuOpen = true;
-            new GameObject("InGameMenu").AddComponent<InGameMenu>();
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && inGameMenuOpen)
-        {
-            inGameMenuOpen = false;
-            DestroyImmediate(GameObject.Find("InGameMenu"));
-        }
     }
 }

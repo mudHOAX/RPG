@@ -1,17 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
-public class InGameMenu : MonoBehaviour
+public class InGameMenu : Menu
 {
+    public Texture2D cursor = new Texture2D(20, 20);
+    private Vector2 cursorPosition;
+    private Stopwatch stopwatch = new Stopwatch();
+
     private Dictionary<string, Texture2D> characterPortraits = new Dictionary<string, Texture2D> { };
     Texture2D menuBackgroundTexture;
     Texture2D menuBoxTexture;
+    int currentButton = 0;
+
+    GUIButton[] menuButtons = new GUIButton[] {
+        new GUIButton { controlName = "Items", text = "Items", action = () => { UnityEngine.Debug.Log("Items"); MenuManager.LoadMenu<ItemMenu>(); } },
+        new GUIButton { controlName = "Abilities", text = "Abilities", action = () => { UnityEngine.Debug.Log("Abilities"); } },
+        new GUIButton { controlName = "Equipment", text = "Equipment", action = () => { UnityEngine.Debug.Log("Equipment"); } },
+        new GUIButton { controlName = "Status", text = "Status", action = () => { UnityEngine.Debug.Log("Status"); } },
+        new GUIButton { controlName = "Order", text = "Order", action = () => { UnityEngine.Debug.Log("Order"); } },
+        new GUIButton { controlName = "Cards", text = "Cards", action = () => { UnityEngine.Debug.Log("Cards"); } },
+        new GUIButton { controlName = "Config", text = "Config", action = () => { UnityEngine.Debug.Log("Config"); } }
+    };
+
+    public void Update()
+    {
+        if (Input.GetButtonDown("PS4_Cross"))
+            menuButtons[currentButton].action.Invoke();
+    }
 
     public void OnGUI()
     {
         Vector2 menuResolution = new Vector2(1024, 768);
-        
+
         GUI.Box(new Rect(0, 0, Screen.width, Screen.height), menuBackgroundTexture);
 
         // Characters
@@ -42,12 +64,12 @@ public class InGameMenu : MonoBehaviour
                 characterPortrait.LoadImage(character.Portrait);
                 characterPortraits.Add(character.Name, characterPortrait);
             }
-            
+
             if (character.BattleRow == BattleRow.Front)
                 GUI.Box(new Rect(menuBoxLeft + 20.0f, characterBoxTop, characterBoxHeight, characterBoxHeight), characterPortrait);
             else
                 GUI.Box(new Rect(menuBoxLeft + 40.0f, characterBoxTop, characterBoxHeight, characterBoxHeight), characterPortrait);
-            
+
             float keyLabelLeft = menuBoxLeft + characterBoxHeight + 50;
             float valueLabelLeft = keyLabelLeft + 50;
 
@@ -73,13 +95,13 @@ public class InGameMenu : MonoBehaviour
 
             GUI.Label(new Rect(statsBoxLeft + 10.0f, statsBoxTop + 50.0f, 75, 25), "Magic:");
             GUI.Label(new Rect(statsBoxLeft + 85.0f, statsBoxTop + 50.0f, 75, 25), string.Format("{0}", character.Stats.Magic));
-            
+
             GUI.Label(new Rect(statsBoxLeft + 10.0f, statsBoxTop + 70.0f, 75, 25), "Spirit:");
             GUI.Label(new Rect(statsBoxLeft + 85.0f, statsBoxTop + 70.0f, 75, 25), string.Format("{0}", character.Stats.Spirit));
 
             GUI.Label(new Rect(statsBoxLeft + 170.0f, statsBoxTop + 30.0f, 75, 25), "Attack:");
             GUI.Label(new Rect(statsBoxLeft + 245.0f, statsBoxTop + 30.0f, 75, 25), string.Format("{0}", character.Stats.Attack));
-            
+
             GUI.Label(new Rect(statsBoxLeft + 170.0f, statsBoxTop + 50.0f, 75, 25), "Defence:");
             GUI.Label(new Rect(statsBoxLeft + 245.0f, statsBoxTop + 50.0f, 75, 25), string.Format("{0}", character.Stats.Defence));
 
@@ -91,16 +113,40 @@ public class InGameMenu : MonoBehaviour
         float mainMenuLeft = menuBoxLeft + characterBoxWidth - 20;
         float mainMenuTop = (Screen.height / 2 - ((characterBoxHeight * 4) / 2)) - 20;
         float mainMenuWidth = menuResolution.x / 6.0f;
-        float mainMenuHeight = 190.0f;
+        float mainMenuHeight = 195.0f;
         GUI.Box(new Rect(mainMenuLeft, mainMenuTop, mainMenuWidth, mainMenuHeight), menuBoxTexture);
 
-        GUI.Label(new Rect(mainMenuLeft + 10.0f, mainMenuTop + 10.0f, mainMenuWidth - 20.0f, 25), "Items");
-        GUI.Label(new Rect(mainMenuLeft + 10.0f, mainMenuTop + 35.0f, mainMenuWidth - 20.0f, 25), "Abilities");
-        GUI.Label(new Rect(mainMenuLeft + 10.0f, mainMenuTop + 60.0f, mainMenuWidth - 20.0f, 25), "Equipment");
-        GUI.Label(new Rect(mainMenuLeft + 10.0f, mainMenuTop + 85.0f, mainMenuWidth - 20.0f, 25), "Status");
-        GUI.Label(new Rect(mainMenuLeft + 10.0f, mainMenuTop + 110.0f, mainMenuWidth - 20.0f, 25), "Order");
-        GUI.Label(new Rect(mainMenuLeft + 10.0f, mainMenuTop + 135.0f, mainMenuWidth - 20.0f, 25), "Cards");
-        GUI.Label(new Rect(mainMenuLeft + 10.0f, mainMenuTop + 160.0f, mainMenuWidth - 20.0f, 25), "Config");
+        float axis = Input.GetAxis("Vertical");
+
+        if (!stopwatch.IsRunning || stopwatch.ElapsedMilliseconds > 300)
+        {
+            stopwatch.Reset();
+            stopwatch.Start();
+
+            if (axis > 0)
+                currentButton--;
+            else if (axis < 0)
+                currentButton++;
+            else if (axis == 0)
+                stopwatch.Stop();
+
+            currentButton = Mathf.Clamp(currentButton, 0, menuButtons.Length - 1);
+        }
+
+
+        float buttonLeft = mainMenuLeft + 10.0f;
+        float buttonTop = mainMenuTop + 10.0f;
+        foreach (GUIButton button in menuButtons)
+        {
+            GUI.SetNextControlName(button.controlName);
+            if (GUI.Button(new Rect(buttonLeft, buttonTop, mainMenuWidth - 20.0f, 25), button.text))
+                button.action.Invoke();
+
+            buttonTop += 25.0f;
+        }
+
+
+        GUI.FocusControl(menuButtons[currentButton].controlName);
 
         // Time & Gil
         float subMenuLeft = mainMenuLeft;
@@ -108,7 +154,7 @@ public class InGameMenu : MonoBehaviour
         float subMenuWidth = mainMenuWidth;
         float subMenuHeight = 70.0f;
         GUI.Box(new Rect(subMenuLeft, subMenuTop, subMenuWidth, subMenuHeight), menuBoxTexture);
-        
+
         GUIStyle subMenuStyle = new GUIStyle();
         subMenuStyle.alignment = TextAnchor.MiddleRight;
         subMenuStyle.normal.textColor = Color.white;
@@ -122,8 +168,8 @@ public class InGameMenu : MonoBehaviour
         float infoBoxTop = subMenuTop + subMenuHeight + 20.0f;
         float infoBoxWidth = subMenuWidth;
         float infoBoxHeight = 45.0f;
-        GUI.Box(new Rect(infoBoxLeft, infoBoxTop, infoBoxWidth,  infoBoxHeight), menuBoxTexture);
-        
+        GUI.Box(new Rect(infoBoxLeft, infoBoxTop, infoBoxWidth, infoBoxHeight), menuBoxTexture);
+
         GUIStyle infoStyle = new GUIStyle();
         infoStyle.alignment = TextAnchor.MiddleCenter;
         infoStyle.normal.textColor = Color.white;
