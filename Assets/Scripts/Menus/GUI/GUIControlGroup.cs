@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GUIControlGroup
 {
@@ -77,8 +76,8 @@ public class GUIControlGroup
             float controlWidth = (orientation == Orientation.Vertical) ? size.x - (padding.x * 2) : (size.x - (padding.x * 2)) / controls.Length;
             float controlHeight = (orientation == Orientation.Vertical) ? (size.y - (padding.y * 2)) / controls.Length : size.y - (padding.y * 2);
 
-            GUI.SetNextControlName(control.name);
-            GUI.Button(new Rect(controlLeft, controlTop, controlWidth, controlHeight), control.label);
+            GUI.SetNextControlName(control.Name);
+            GUI.Button(new Rect(controlLeft, controlTop, controlWidth, controlHeight), control.Label);
 
             if (orientation == Orientation.Vertical)
                 controlTop += controlHeight;

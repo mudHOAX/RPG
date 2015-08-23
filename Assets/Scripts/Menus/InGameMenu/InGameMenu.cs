@@ -10,27 +10,38 @@ public class InGameMenu : Menu
     private Dictionary<string, Texture2D> characterPortraits = new Dictionary<string, Texture2D> { };
     Texture2D menuBackgroundTexture;
     Texture2D menuBoxTexture;
+    
+    private List<GUIControl> controls;
 
-    private GUIControl[] controls = new GUIControl[] 
-    {
-        new GUIControl { name = "menu-items", label = "Items", action = () => { MenuManager.LoadMenu<ItemMenu>(); } },
-        new GUIControl { name = "menu-abilities", label = "Abilities", action = () => { /*MenuManager.LoadMenu<AbilitiesMenu>();*/ } },
-        new GUIControl { name = "menu-equipment", label = "Equipment", action = () => { /*MenuManager.LoadMenu<EquipmentMenu>();*/ } },
-        new GUIControl { name = "menu-status", label = "Status", action = () => { /*MenuManager.LoadMenu<StatusMenu>();*/ } },
-        new GUIControl { name = "menu-order", label = "Order", action = () => { /*MenuManager.LoadMenu<OrderMenu>();*/ } },
-        new GUIControl { name = "menu-cards", label = "Cards", action = () => { /*MenuManager.LoadMenu<CardsMenu>();*/ } },
-        new GUIControl { name = "menu-config", label = "Config", action = () => { /*MenuManager.LoadMenu<ConfigMenu>();*/ } }
-    };
-    private GUINavigableControlGroup mainMenu;
-
-    public void Update()
-    {
-        if (mainMenu != null && Input.GetButtonDown("PS4_Cross"))
-            mainMenu.CurrentControl.action.Invoke();
-    }
+    private GUINavigableControlGroup characterMenu;
+    private List<GUIControl> characters;
 
     public void OnGUI()
     {
+        if (controls == null)
+            controls = new List<GUIControl>
+            {
+                new GUIControl { Name = "menu-items", Label = "Items", Action = () => { MenuManager.LoadMenu<ItemMenu>(); } },
+                new GUIControl { Name = "menu-abilities", Label = "Abilities", Action = () => 
+                {
+                    ChangeNavigation(characterMenu);
+                }},
+                new GUIControl { Name = "menu-equipment", Label = "Equipment", Action = () => 
+                {
+                    ChangeNavigation(characterMenu);
+                }},
+                new GUIControl { Name = "menu-status", Label = "Status", Action = () => 
+                {
+                    ChangeNavigation(characterMenu);
+                }},
+                new GUIControl { Name = "menu-order", Label = "Order", Action = () => 
+                {
+                    ChangeNavigation(characterMenu);
+                }},
+                new GUIControl { Name = "menu-cards", Label = "Cards", Action = () => { /*MenuManager.LoadMenu<CardsMenu>();*/ } },
+                new GUIControl { Name = "menu-config", Label = "Config", Action = () => { /*MenuManager.LoadMenu<ConfigMenu>();*/ } }
+            };
+
         Vector2 menuResolution = new Vector2(1024, 768);
 
         GUI.Box(new Rect(0, 0, Screen.width, Screen.height), menuBackgroundTexture);
@@ -44,6 +55,41 @@ public class InGameMenu : Menu
         GUIStyle nameStyle = new GUIStyle();
         nameStyle.fontSize = 25;
         nameStyle.normal.textColor = Color.white;
+
+        if (characters == null)
+        {
+            characters = new List<GUIControl>();
+            for (int i = 0; i < PlayerManager.Instance.Party.Length; i++)
+            {
+                BaseCharacter character = PlayerManager.Instance.Party[i];
+                characters.Add(
+                    new GUIControl {
+                        Name = string.Format("char-{0}", character.Name),
+                        Label = character.Name,
+                        Action = () => {
+                            switch (primaryNavigation.CurrentControl.Name)
+                            {
+                                case "menu-abilities":
+                                    MenuManager.LoadMenu<AbilitiesMenu>(character);
+                                    break;
+                                case "menu-equipment":
+                                    MenuManager.LoadMenu<EquipmentMenu>(character);
+                                    break;
+                                case "menu-status":
+                                    MenuManager.LoadMenu<StatusMenu>(character);
+                                    break;
+                                case "menu-order":
+                                    character.BattleRow = (character.BattleRow == BattleRow.Front) ? BattleRow.Back : BattleRow.Front;
+                                    break;
+                            }
+                        }
+                });
+            }
+        }
+
+        if (characterMenu == null)
+            characterMenu = new GUINavigableControlGroup(characters.ToArray());
+        characterMenu.Render();
 
         for (int i = 0; i < PlayerManager.Instance.Party.Length; i++)
         {
@@ -115,9 +161,9 @@ public class InGameMenu : Menu
         float mainMenuWidth = menuResolution.x / 6.0f;
         float mainMenuHeight = 195.0f;
 
-        if (mainMenu == null) 
-            mainMenu = new GUINavigableControlGroup(controls, new Rect(mainMenuLeft, mainMenuTop, mainMenuWidth, mainMenuHeight), new Vector2(10, 10));
-        mainMenu.Render();
+        if (PrimaryNavigation == null)
+            PrimaryNavigation = new GUINavigableControlGroup(controls.ToArray(), new Rect(mainMenuLeft, mainMenuTop, mainMenuWidth, mainMenuHeight), new Vector2(10, 10));
+        PrimaryNavigation.Render();
 
         // Time & Gil
         float subMenuLeft = mainMenuLeft;

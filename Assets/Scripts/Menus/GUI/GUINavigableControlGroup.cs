@@ -5,6 +5,7 @@ public class GUINavigableControlGroup : GUIControlGroup
 {
     private Stopwatch stopwatch = new Stopwatch();
     private int currentControlIdx = 0;
+    private bool isActive = false;
 
     public GUINavigableControlGroup(GUIControl[] controls) : base(controls)
     {
@@ -45,25 +46,39 @@ public class GUINavigableControlGroup : GUIControlGroup
 
     public GUIControl CurrentControl { get { return controls[currentControlIdx]; } }
 
+    public void Activate()
+    {
+        isActive = true;
+        GUI.FocusControl(controls[0].Name);
+    }
+
+    public void Deactivate()
+    {
+        isActive = false;
+    }
+
     public override void Render()
     {
-        float axis = (orientation == Orientation.Vertical) ? Input.GetAxis("Vertical") : -Input.GetAxis("Horizontal");
-            
-        if (!stopwatch.IsRunning || stopwatch.ElapsedMilliseconds > 300)
+        if (isActive)
         {
-            stopwatch.Reset();
-            stopwatch.Start();
+            float axis = (orientation == Orientation.Vertical) ? Input.GetAxis("Vertical") : -Input.GetAxis("Horizontal");
 
-            if (axis > 0)
-                currentControlIdx--;
-            else if (axis < 0)
-                currentControlIdx++;
-            else if (axis == 0)
-                stopwatch.Stop();
+            if (!stopwatch.IsRunning || stopwatch.ElapsedMilliseconds > 300)
+            {
+                stopwatch.Reset();
+                stopwatch.Start();
 
-            currentControlIdx = Mathf.Clamp(currentControlIdx, 0, controls.Length - 1);
+                if (axis > 0)
+                    currentControlIdx--;
+                else if (axis < 0)
+                    currentControlIdx++;
+                else if (axis == 0)
+                    stopwatch.Stop();
+
+                currentControlIdx = Mathf.Clamp(currentControlIdx, 0, controls.Length - 1);
+            }
+            GUI.FocusControl(CurrentControl.Name);
         }
-        GUI.FocusControl(CurrentControl.name);
 
         base.Render();
     }

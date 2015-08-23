@@ -2,7 +2,12 @@
 
 public class GUIControl
 {
-    public string name;
-    public string label;
-    public Action action;
+    public string Name;
+    public string Label;
+    public Action Action;
+
+    public void Invoke()
+    {
+        Action.Invoke();
+    }
 }
