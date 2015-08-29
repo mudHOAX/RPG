@@ -1,13 +1,4 @@
-﻿using System;
-
-public class GUIControl
+﻿public class GUIControl : GUIItem
 {
-    public string Name;
     public string Label;
-    public Action Action;
-
-    public void Invoke()
-    {
-        Action.Invoke();
-    }
 }

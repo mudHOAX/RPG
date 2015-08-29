@@ -13,8 +13,8 @@ public class InGameMenu : Menu
     
     private List<GUIControl> controls;
 
-    private GUINavigableControlGroup characterMenu;
-    private List<GUIControl> characters;
+    private GUINavigableContentGroup characterMenu;
+    private List<GUIContent> characters;
 
     public void OnGUI()
     {
@@ -45,29 +45,80 @@ public class InGameMenu : Menu
         Vector2 menuResolution = new Vector2(1024, 768);
 
         GUI.Box(new Rect(0, 0, Screen.width, Screen.height), menuBackgroundTexture);
-
-        // Characters
-        float menuBoxLeft = (float)(Screen.width / 2 - Math.Floor(menuResolution.x / 2)) + 25;
-        float characterBoxHeight = 150.0f;
-        float characterBoxPaddingRight = 200.0f;
-        float characterBoxWidth = menuResolution.x - characterBoxPaddingRight;
-
+        
         GUIStyle nameStyle = new GUIStyle();
         nameStyle.fontSize = 25;
         nameStyle.normal.textColor = Color.white;
 
         if (characters == null)
         {
-            characters = new List<GUIControl>();
+            characters = new List<GUIContent>();
             for (int i = 0; i < PlayerManager.Instance.Party.Length; i++)
             {
                 BaseCharacter character = PlayerManager.Instance.Party[i];
                 characters.Add(
-                    new GUIControl {
+                    new GUIContent {
                         Name = string.Format("char-{0}", character.Name),
-                        Label = character.Name,
+                        Content = (Rect position) =>
+                        {
+                            GUI.Box(new Rect(position.xMin, position.yMin, position.width, position.height), menuBoxTexture);
+                            GUI.Box(new Rect(position.xMin + 20.0f, position.yMin, position.height + 20.0f, position.height), menuBoxTexture);
+
+                            Texture2D characterPortrait;
+                            if (characterPortraits.ContainsKey(character.Name))
+                                characterPortrait = characterPortraits[character.Name];
+                            else
+                            {
+                                characterPortrait = new Texture2D((int)position.height, (int)position.height);
+                                characterPortrait.LoadImage(character.Portrait);
+                                characterPortraits.Add(character.Name, characterPortrait);
+                            }
+
+                            if (character.BattleRow == BattleRow.Front)
+                                GUI.Box(new Rect(position.xMin + 20.0f, position.yMin, position.height, position.height), characterPortrait);
+                            else
+                                GUI.Box(new Rect(position.xMin + 40.0f, position.yMin, position.height, position.height), characterPortrait);
+
+                            float keyLabelLeft = position.xMin + position.height + 50;
+                            float valueLabelLeft = keyLabelLeft + 50;
+
+                            GUI.Label(new Rect(keyLabelLeft, position.yMin + 10.0f, 100, 30), character.Name, nameStyle);
+                            GUI.Label(new Rect(keyLabelLeft, position.yMin + 40.0f, 100, 25), "Level:");
+                            GUI.Label(new Rect(valueLabelLeft, position.yMin + 40.0f, 100, 25), string.Format("{0}", character.Level));
+                            GUI.Label(new Rect(keyLabelLeft, position.yMin + 100.0f, 100, 25), "HP:");
+                            GUI.Label(new Rect(valueLabelLeft, position.yMin + 100.0f, 100, 25), string.Format("{0} / {1}", character.CurrentHP, character.MaxHP));
+                            GUI.Label(new Rect(keyLabelLeft, position.yMin + 125.0f, 100, 25), "MP:");
+                            GUI.Label(new Rect(valueLabelLeft, position.yMin + 125.0f, 100, 25), string.Format("{0} / {1}", character.CurrentMP, character.MaxMP));
+
+                            float statsBoxLeft = valueLabelLeft + 75.0f;
+                            float statsBoxTop = position.yMin + 40.0f;
+                            float statsBoxWidth = position.width - 350.0f;
+                            float statsBoxHeight = position.height - 50.0f;
+                            GUI.Box(new Rect(statsBoxLeft, statsBoxTop, statsBoxWidth, statsBoxHeight), menuBoxTexture);
+
+                            GUI.Label(new Rect(statsBoxLeft + 10.0f, statsBoxTop + 10.0f, 75, 25), "Speed:");
+                            GUI.Label(new Rect(statsBoxLeft + 85.0f, statsBoxTop + 10.0f, 75, 25), string.Format("{0}", character.Stats.Speed));
+
+                            GUI.Label(new Rect(statsBoxLeft + 10.0f, statsBoxTop + 30.0f, 75, 25), "Strength:");
+                            GUI.Label(new Rect(statsBoxLeft + 85.0f, statsBoxTop + 30.0f, 75, 25), string.Format("{0}", character.Stats.Strength));
+
+                            GUI.Label(new Rect(statsBoxLeft + 10.0f, statsBoxTop + 50.0f, 75, 25), "Magic:");
+                            GUI.Label(new Rect(statsBoxLeft + 85.0f, statsBoxTop + 50.0f, 75, 25), string.Format("{0}", character.Stats.Magic));
+
+                            GUI.Label(new Rect(statsBoxLeft + 10.0f, statsBoxTop + 70.0f, 75, 25), "Spirit:");
+                            GUI.Label(new Rect(statsBoxLeft + 85.0f, statsBoxTop + 70.0f, 75, 25), string.Format("{0}", character.Stats.Spirit));
+
+                            GUI.Label(new Rect(statsBoxLeft + 170.0f, statsBoxTop + 30.0f, 75, 25), "Attack:");
+                            GUI.Label(new Rect(statsBoxLeft + 245.0f, statsBoxTop + 30.0f, 75, 25), string.Format("{0}", character.Stats.Attack));
+
+                            GUI.Label(new Rect(statsBoxLeft + 170.0f, statsBoxTop + 50.0f, 75, 25), "Defence:");
+                            GUI.Label(new Rect(statsBoxLeft + 245.0f, statsBoxTop + 50.0f, 75, 25), string.Format("{0}", character.Stats.Defence));
+
+                            GUI.Label(new Rect(statsBoxLeft + 330.0f, statsBoxTop + 40.0f, 75, 25), "MSt:");
+                            GUI.Label(new Rect(statsBoxLeft + 405.0f, statsBoxTop + 40.0f, 75, 25), string.Format("{0}/{1}", 0, 12));
+                        },
                         Action = () => {
-                            switch (primaryNavigation.CurrentControl.Name)
+                            switch (primaryNavigation.CurrentItem.Name)
                             {
                                 case "menu-abilities":
                                     MenuManager.LoadMenu<AbilitiesMenu>(character);
@@ -86,74 +137,16 @@ public class InGameMenu : Menu
                 });
             }
         }
+        
+        // Characters
+        float menuBoxLeft = (float)(Screen.width / 2 - Math.Floor(menuResolution.x / 2)) + 25;
+        float characterBoxHeight = 150.0f;
+        float characterBoxPaddingRight = 200.0f;
+        float characterBoxWidth = menuResolution.x - characterBoxPaddingRight;
 
         if (characterMenu == null)
-            characterMenu = new GUINavigableControlGroup(characters.ToArray());
+            characterMenu = new GUINavigableContentGroup(characters.ToArray(), new Rect(menuBoxLeft, Screen.height / 2 - ((characterBoxHeight * 4) / 2), characterBoxWidth, characterBoxHeight * 4), GUIItemsGroup.Orientation.Vertical);
         characterMenu.Render();
-
-        for (int i = 0; i < PlayerManager.Instance.Party.Length; i++)
-        {
-            float characterBoxTop = (Screen.height / 2 - ((characterBoxHeight * 4) / 2)) + (characterBoxHeight * i);
-
-            BaseCharacter character = PlayerManager.Instance.Party[i];
-
-            GUI.SetNextControlName(character.Name);
-            GUI.Box(new Rect(menuBoxLeft, characterBoxTop, characterBoxWidth, characterBoxHeight), menuBoxTexture);
-            GUI.Box(new Rect(menuBoxLeft + 20.0f, characterBoxTop, characterBoxHeight + 20.0f, characterBoxHeight), menuBoxTexture);
-
-            Texture2D characterPortrait;
-            if (characterPortraits.ContainsKey(character.Name))
-                characterPortrait = characterPortraits[character.Name];
-            else
-            {
-                characterPortrait = new Texture2D((int)characterBoxHeight, (int)characterBoxHeight);
-                characterPortrait.LoadImage(character.Portrait);
-                characterPortraits.Add(character.Name, characterPortrait);
-            }
-
-            if (character.BattleRow == BattleRow.Front)
-                GUI.Box(new Rect(menuBoxLeft + 20.0f, characterBoxTop, characterBoxHeight, characterBoxHeight), characterPortrait);
-            else
-                GUI.Box(new Rect(menuBoxLeft + 40.0f, characterBoxTop, characterBoxHeight, characterBoxHeight), characterPortrait);
-
-            float keyLabelLeft = menuBoxLeft + characterBoxHeight + 50;
-            float valueLabelLeft = keyLabelLeft + 50;
-
-            GUI.Label(new Rect(keyLabelLeft, characterBoxTop + 10.0f, 100, 30), character.Name, nameStyle);
-            GUI.Label(new Rect(keyLabelLeft, characterBoxTop + 40.0f, 100, 25), "Level:");
-            GUI.Label(new Rect(valueLabelLeft, characterBoxTop + 40.0f, 100, 25), string.Format("{0}", character.Level));
-            GUI.Label(new Rect(keyLabelLeft, characterBoxTop + 100.0f, 100, 25), "HP:");
-            GUI.Label(new Rect(valueLabelLeft, characterBoxTop + 100.0f, 100, 25), string.Format("{0} / {1}", character.CurrentHP, character.MaxHP));
-            GUI.Label(new Rect(keyLabelLeft, characterBoxTop + 125.0f, 100, 25), "MP:");
-            GUI.Label(new Rect(valueLabelLeft, characterBoxTop + 125.0f, 100, 25), string.Format("{0} / {1}", character.CurrentMP, character.MaxMP));
-
-            float statsBoxLeft = valueLabelLeft + 75.0f;
-            float statsBoxTop = characterBoxTop + 40.0f;
-            float statsBoxWidth = characterBoxWidth - 350.0f;
-            float statsBoxHeight = characterBoxHeight - 50.0f;
-            GUI.Box(new Rect(statsBoxLeft, statsBoxTop, statsBoxWidth, statsBoxHeight), menuBoxTexture);
-
-            GUI.Label(new Rect(statsBoxLeft + 10.0f, statsBoxTop + 10.0f, 75, 25), "Speed:");
-            GUI.Label(new Rect(statsBoxLeft + 85.0f, statsBoxTop + 10.0f, 75, 25), string.Format("{0}", character.Stats.Speed));
-
-            GUI.Label(new Rect(statsBoxLeft + 10.0f, statsBoxTop + 30.0f, 75, 25), "Strength:");
-            GUI.Label(new Rect(statsBoxLeft + 85.0f, statsBoxTop + 30.0f, 75, 25), string.Format("{0}", character.Stats.Strength));
-
-            GUI.Label(new Rect(statsBoxLeft + 10.0f, statsBoxTop + 50.0f, 75, 25), "Magic:");
-            GUI.Label(new Rect(statsBoxLeft + 85.0f, statsBoxTop + 50.0f, 75, 25), string.Format("{0}", character.Stats.Magic));
-
-            GUI.Label(new Rect(statsBoxLeft + 10.0f, statsBoxTop + 70.0f, 75, 25), "Spirit:");
-            GUI.Label(new Rect(statsBoxLeft + 85.0f, statsBoxTop + 70.0f, 75, 25), string.Format("{0}", character.Stats.Spirit));
-
-            GUI.Label(new Rect(statsBoxLeft + 170.0f, statsBoxTop + 30.0f, 75, 25), "Attack:");
-            GUI.Label(new Rect(statsBoxLeft + 245.0f, statsBoxTop + 30.0f, 75, 25), string.Format("{0}", character.Stats.Attack));
-
-            GUI.Label(new Rect(statsBoxLeft + 170.0f, statsBoxTop + 50.0f, 75, 25), "Defence:");
-            GUI.Label(new Rect(statsBoxLeft + 245.0f, statsBoxTop + 50.0f, 75, 25), string.Format("{0}", character.Stats.Defence));
-
-            GUI.Label(new Rect(statsBoxLeft + 330.0f, statsBoxTop + 40.0f, 75, 25), "MSt:");
-            GUI.Label(new Rect(statsBoxLeft + 405.0f, statsBoxTop + 40.0f, 75, 25), string.Format("{0}/{1}", 0, 12));
-        }
 
         // Main Menu
         float mainMenuLeft = menuBoxLeft + characterBoxWidth - 20;

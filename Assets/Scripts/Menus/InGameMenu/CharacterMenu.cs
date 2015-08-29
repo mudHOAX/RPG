@@ -10,7 +10,7 @@ public class CharacterMenu : Menu
 
     public override void Update()
     {
-        if (!stopwatch.IsRunning || stopwatch.ElapsedMilliseconds > 700)
+        if (!stopwatch.IsRunning || stopwatch.ElapsedMilliseconds > 300)
         {
             stopwatch.Reset();
             stopwatch.Start();

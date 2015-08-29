@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    protected GUINavigableControlGroup primaryNavigation;
-    protected Stack<GUINavigableControlGroup> navigationHistory = new Stack<GUINavigableControlGroup>();
+    protected GUINavigableItemsGroup primaryNavigation;
+    protected Stack<GUINavigableItemsGroup> navigationHistory = new Stack<GUINavigableItemsGroup>();
 
-    protected GUINavigableControlGroup PrimaryNavigation
+    protected GUINavigableItemsGroup PrimaryNavigation
     {
         get { return primaryNavigation; }
         set
         {
             primaryNavigation = value;
+            primaryNavigation.isPrimary = true;
             ChangeNavigation(value);
         }
     }
@@ -21,10 +22,10 @@ public class Menu : MonoBehaviour
         if (Input.GetButtonDown("PS4_Circle"))
             NavigateBack();
         else if (Input.GetButtonDown("PS4_Cross") && navigationHistory.Count > 0)
-            navigationHistory.Peek().CurrentControl.Invoke();
+            navigationHistory.Peek().CurrentItem.Invoke();
     }
 
-    public void ChangeNavigation(GUINavigableControlGroup navigation)
+    public void ChangeNavigation(GUINavigableItemsGroup navigation)
     {
         if (navigationHistory.Count > 0) 
             navigationHistory.Peek().Deactivate();
