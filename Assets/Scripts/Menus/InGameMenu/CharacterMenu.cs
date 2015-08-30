@@ -21,6 +21,7 @@ public class CharacterMenu : Menu
 
             if (Input.GetButton("PS4_L2") || Input.GetButton("PS4_R2"))
             {
+                SoundManager.PlaySoundEffect(SoundEffects.Cursor);
                 CharacterInfo = characters.SkipWhile(c => c.Name != CharacterInfo.Name).Skip(1).FirstOrDefault();
                 if (CharacterInfo == null)
                     CharacterInfo = characters.First();

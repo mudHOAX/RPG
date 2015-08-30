@@ -15,12 +15,21 @@ public class MenuManager : MonoBehaviour
         if (inGame)
         {
             if (!InGameMenuOpen && Input.GetButtonDown("PS4_Triangle"))
+            {
+                SoundManager.PlaySoundEffect(SoundEffects.Cursor);
                 LoadMenu<InGameMenu>();
+            }
             else if (InGameMenuOpen && currentMenu.CanNavigateAway() && Input.GetButtonDown("PS4_Circle"))
+            {
+                SoundManager.PlaySoundEffect(SoundEffects.CursorCancel);
                 LoadPreviousMenu();
+            }
             else if (InGameMenuOpen && Input.GetButtonDown("PS4_Triangle"))
+            {
+                SoundManager.PlaySoundEffect(SoundEffects.CursorCancel);
                 while (InGameMenuOpen)
                     CloseCurrentMenu();
+            }
         }
     }
 

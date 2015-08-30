@@ -1,23 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
 public class InGameMenu : Menu
 {
-    private Stopwatch stopwatch = new Stopwatch();
-
     private Dictionary<string, Texture2D> characterPortraits = new Dictionary<string, Texture2D> { };
-    Texture2D menuBackgroundTexture;
-    Texture2D menuBoxTexture;
-    
     private List<GUIControl> controls;
 
     private GUINavigableContentGroup characterMenu;
     private List<GUIContent> characters;
 
-    public void OnGUI()
+    public override void OnGUI()
     {
+        base.OnGUI();
+
         if (controls == null)
             controls = new List<GUIControl>
             {
@@ -41,10 +37,6 @@ public class InGameMenu : Menu
                 new GUIControl { Name = "menu-cards", Label = "Cards", Action = () => { /*MenuManager.LoadMenu<CardsMenu>();*/ } },
                 new GUIControl { Name = "menu-config", Label = "Config", Action = () => { /*MenuManager.LoadMenu<ConfigMenu>();*/ } }
             };
-
-        Vector2 menuResolution = new Vector2(1024, 768);
-
-        GUI.Box(new Rect(0, 0, Screen.width, Screen.height), menuBackgroundTexture);
         
         GUIStyle nameStyle = new GUIStyle();
         nameStyle.fontSize = 25;

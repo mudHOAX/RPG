@@ -77,21 +77,22 @@ public abstract class GUINavigableItemsGroup : GUIItemsGroup
         {
             float axis = (orientation == Orientation.Vertical) ? Input.GetAxis("Vertical") : -Input.GetAxis("Horizontal");
 
-            if (!stopwatch.IsRunning || stopwatch.ElapsedMilliseconds > 300)
+            if (!stopwatch.IsRunning || stopwatch.ElapsedMilliseconds > 150)
             {
                 stopwatch.Reset();
                 stopwatch.Start();
 
                 if (axis > 0)
-                {
                     currentControlIdx--;
-                }
                 else if (axis < 0)
                     currentControlIdx++;
                 else if (axis == 0)
                     stopwatch.Stop();
 
-                currentControlIdx = Mathf.Clamp(currentControlIdx, 0, items.Length - 1);
+                if (axis != 0)
+                    SoundManager.PlaySoundEffect(SoundEffects.Cursor);
+
+                currentControlIdx = currentControlIdx >= items.Length ? 0 : currentControlIdx < 0 ? items.Length -1 : currentControlIdx;
             }
             GUI.FocusControl(CurrentItem.Name);
         }
